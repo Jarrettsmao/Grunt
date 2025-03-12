@@ -43,3 +43,9 @@ C:\Users\Boredom\Grunt\TodoApi\obj\Debug\net8.0\refint\TodoApi.dll
 C:\Users\Boredom\Grunt\TodoApi\obj\Debug\net8.0\TodoApi.pdb
 C:\Users\Boredom\Grunt\TodoApi\obj\Debug\net8.0\TodoApi.genruntimeconfig.cache
 C:\Users\Boredom\Grunt\TodoApi\obj\Debug\net8.0\ref\TodoApi.dll
+C:\Users\Boredom\Grunt\TodoApi\bin\Debug\net8.0\DnsClient.dll
+C:\Users\Boredom\Grunt\TodoApi\bin\Debug\net8.0\MongoDB.Bson.dll
+C:\Users\Boredom\Grunt\TodoApi\bin\Debug\net8.0\MongoDB.Driver.dll
+C:\Users\Boredom\Grunt\TodoApi\bin\Debug\net8.0\SharpCompress.dll
+C:\Users\Boredom\Grunt\TodoApi\bin\Debug\net8.0\Snappier.dll
+C:\Users\Boredom\Grunt\TodoApi\bin\Debug\net8.0\ZstdSharp.dll

@@ -1,4 +1,4 @@
-namespace MongoExample.Models;
+namespace TodoApi.Models;
 
 public class MongoDBSettings {
 

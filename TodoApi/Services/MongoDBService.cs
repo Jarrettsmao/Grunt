@@ -1,24 +1,35 @@
-using MongoExample.Models;
+// using MongoExample.Models;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 using MongoDB.Bson;
-using System;
+using TodoApi.Models; 
 
-namespace MongoExample.Services;
+namespace TodoApi.Services;
 
 public class MongoDBService {
-
-    private readonly IMongoCollection<Accounts> _accountsCollection;
+    
+    private readonly IMongoCollection<UserInfo> _userCollection;
 
     public MongoDBService(IOptions<MongoDBSettings> mongoDBSettings) {
         MongoClient client = new MongoClient(mongoDBSettings.Value.ConnectionURI);
         IMongoDatabase database = client.GetDatabase(mongoDBSettings.Value.DatabaseName);
-        _accountsCollection = database.GetCollection<Accounts>(mongoDBSettings.Value.CollectionName);
+        
+        _userCollection = database.GetCollection<UserInfo>("Users"); // Collection for users
     }
 
-    public async Task<List<Accounts>> GetAsync() { }
-    public async Task CreateAsync(UserInfo userInfo) { }
-    // public async Task AddToAccountsAsync(string id, string email, string password, DateTime createdDate) {}
-    public async Task DeleteAsync(string id) { }
+    public async Task<List<UserInfo>> GetAsync() {
+        return await _userCollection.Find(new BsonDocument()).ToListAsync();
+    }
 
+    public async Task CreateAsync(UserInfo userInfo) {
+        await _userCollection.InsertOneAsync(userInfo);
+    }
+
+    public async Task AddToUserInfoAsync(string id, string movieId) {
+        // Implement this method if needed
+    }
+
+    public async Task DeleteAsync(string id) {
+        // Implement deletion logic
+    }
 }
