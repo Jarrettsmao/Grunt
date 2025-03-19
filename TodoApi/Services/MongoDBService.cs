@@ -2,7 +2,8 @@
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 using MongoDB.Bson;
-using TodoApi.Models; 
+using TodoApi.Models;
+using TodoApi.Models.DTOs;
 
 namespace TodoApi.Services;
 
@@ -14,7 +15,7 @@ public class MongoDBService {
         MongoClient client = new MongoClient(mongoDBSettings.Value.ConnectionURI);
         IMongoDatabase database = client.GetDatabase(mongoDBSettings.Value.DatabaseName);
         
-        _userCollection = database.GetCollection<UserInfo>("Users"); // Collection for users
+        _userCollection = database.GetCollection<UserInfo>("Accounts"); // Collection for Accounts
     }
 
     public async Task<List<UserInfo>> GetAsync() {
@@ -25,11 +26,18 @@ public class MongoDBService {
         await _userCollection.InsertOneAsync(userInfo);
     }
 
-    public async Task AddToUserInfoAsync(string id, string movieId) {
-        // Implement this method if needed
+    public async Task AddToUserInfoAsync(string id, string pw) {
+        if (string.IsNullOrEmpty(pw)) {
+            throw new ArgumentException("Password cannot be null or empty.");
+        }
+        
+        FilterDefinition<UserInfo> filter = Builders<UserInfo>.Filter.Eq("Id", id);
+        UpdateDefinition<UserInfo> update = Builders<UserInfo>.Update.Set<string>("password", pw);
+        await _userCollection.UpdateOneAsync(filter, update);
+        return;
     }
 
     public async Task DeleteAsync(string id) {
         // Implement deletion logic
-    }
+    } 
 }
