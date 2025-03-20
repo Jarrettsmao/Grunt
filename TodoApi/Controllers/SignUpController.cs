@@ -33,7 +33,10 @@ public class SignUpController: Controller {
         await _mongoDBService.AddToUserInfoAsync(id, request.Password);
         return NoContent();
     }
-    // [HttpDelete("{id}")]
-    // public async Task<IActionResult> Delete(string id) {}
+    [HttpDelete("Delete/{id}")]
+    public async Task<IActionResult> Delete(string id) {
+        await _mongoDBService.DeleteAsync(id);
+        return NoContent();
+    }
 }
 

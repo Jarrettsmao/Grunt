@@ -38,6 +38,8 @@ public class MongoDBService {
     }
 
     public async Task DeleteAsync(string id) {
-        // Implement deletion logic
+        FilterDefinition<UserInfo> filter = Builders<UserInfo>.Filter.Eq("Id", id);
+        await _userCollection.DeleteOneAsync(filter);
+        return;
     } 
 }
