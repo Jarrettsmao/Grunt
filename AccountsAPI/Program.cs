@@ -6,6 +6,15 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.Configure<MongoDBSettings>(builder.Configuration.GetSection("MongoDB"));
 builder.Services.AddSingleton<MongoDBService>();
 
+// Enable CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+        policy.AllowAnyOrigin()  // Allow all origins (for development purposes, you can restrict later)
+              .AllowAnyMethod()
+              .AllowAnyHeader());
+});
+
 
 // Add services to the container.
 
@@ -26,6 +35,9 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+// Enable CORS globally
+app.UseCors("AllowAll");
 
 app.MapControllers();
 

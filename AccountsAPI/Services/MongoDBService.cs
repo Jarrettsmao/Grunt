@@ -1,4 +1,3 @@
-// using MongoExample.Models;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 using MongoDB.Bson;
