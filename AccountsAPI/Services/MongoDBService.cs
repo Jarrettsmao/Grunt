@@ -41,4 +41,9 @@ public class MongoDBService {
         await _userCollection.DeleteOneAsync(filter);
         return;
     } 
+
+    public async Task<UserInfo?> GetUserByUsernameAsync(string username){
+        FilterDefinition<UserInfo> filter = Builders<UserInfo>.Filter.Eq("username", username);
+        return await _userCollection.Find(filter).FirstOrDefaultAsync();
+    }
 }

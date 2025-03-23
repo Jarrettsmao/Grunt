@@ -7,6 +7,7 @@ using System;
 using AccountsAPI.Models;
 using AccountsAPI.Models.DTOs;
 using AccountsAPI.Services;
+using Microsoft.AspNetCore.Identity.Data;
 
 namespace AccountsAPI.Controllers;
 
@@ -37,6 +38,17 @@ public class SignUpController: Controller {
     public async Task<IActionResult> Delete(string id) {
         await _mongoDBService.DeleteAsync(id);
         return NoContent();
+    }
+
+    [HttpPost("Login")]
+    public async Task<IActionResult> Login([FromBody] LoginReq loginRequest){
+        var user = await _mongoDBService.GetUserByUsernameAsync(loginRequest.username);
+
+        if (user == null || user.password != loginRequest.password){
+            return Unauthorized(new { message = "Invalid username or password"});
+        }
+
+        return Ok(new { message = "Login successful" });
     }
 }
 

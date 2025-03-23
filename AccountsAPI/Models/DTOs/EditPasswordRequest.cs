@@ -1,6 +1,6 @@
 namespace AccountsAPI.Models.DTOs;
 public class EditPasswordRequest
 {
-    public string Password { get; set; }
+    public required string Password { get; set; }
 }
 
