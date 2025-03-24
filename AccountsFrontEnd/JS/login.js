@@ -1,17 +1,16 @@
 document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("signupForm").addEventListener("submit", submitForm);
+    document.getElementById("loginForm").addEventListener("submit", loginSubmit);
 });
 
-async function submitForm(event){
+async function loginSubmit(event){
     event.preventDefault();
 
     const formData = {
-        id: "",
         username: document.getElementById("username").value,
-        password: document.getElementById("password").value
-    };
+        password: document.getElementById("password").value,
+    }
 
-    const response = await fetch("https://localhost:8080/Accounts/SignUp", {
+    const response = await fetch("https://localhost:8080/Accounts/Login", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -21,9 +20,8 @@ async function submitForm(event){
 
     if (response.ok) {
         const result = await response.json();
-        alert(`User created with ID: ${result.id}`);
+        alert(`Login Successful!);
     }   else {
-        alert('Error signing up!');
+        alert('Invalid username or password!');
     }
 }
-
