@@ -20,7 +20,7 @@ async function loginSubmit(event){
 
     if (response.ok) {
         const result = await response.json();
-        alert(`Login Successful!);
+        alert(`Login Successful`);
     }   else {
         alert('Invalid username or password!');
     }
