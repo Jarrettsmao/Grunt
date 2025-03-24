@@ -6,7 +6,7 @@ async function loginSubmit(event){
     event.preventDefault();
 
     const formData = {
-        username: document.getElementById("username").value,
+        username: document.getElementById("email").value,
         password: document.getElementById("password").value,
     }
 

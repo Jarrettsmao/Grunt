@@ -7,6 +7,8 @@ public class UserInfo{
     [BsonId]
     [BsonRepresentation(BsonType.ObjectId)]
     public string? Id { get; set; }
+    [BsonElement("email")]
+    public string email { get; set; } = null!;
     [BsonElement("username")]
     public string username { get; set; } = null!;
     [BsonElement("password")]
