@@ -6,7 +6,7 @@ async function loginSubmit(event){
     event.preventDefault();
 
     const formData = {
-        username: document.getElementById("email").value,
+        email: document.getElementById("email").value,
         password: document.getElementById("password").value,
     }
 
@@ -20,8 +20,12 @@ async function loginSubmit(event){
 
     if (response.ok) {
         const result = await response.json();
-        alert(`Login Successful`);
-    }   else {
-        alert('Invalid username or password!');
+        localStorage.setItem("username", result.username);
+        console.log(localStorage.getItem("username"));
+        alert(`Login Successful for ${result.id}`);
+        window.location.href = "accountpage.html";
+    } else {
+        const error = await response.json(); // This will capture the error message sent by the backend
+        alert(`${error.message}`);
     }
 }

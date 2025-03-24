@@ -42,7 +42,7 @@ public class MongoDBService {
         return;
     } 
 
-    public async Task<UserInfo?> GetUserByUsernameAsync(string email){
+    public async Task<UserInfo?> GetUserByEmailAsync(string email){
         FilterDefinition<UserInfo> filter = Builders<UserInfo>.Filter.Eq("email", email);
         return await _userCollection.Find(filter).FirstOrDefaultAsync();
     }

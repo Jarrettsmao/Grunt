@@ -7,6 +7,7 @@ async function submitForm(event){
 
     const formData = {
         id: "",
+        email: document.getElementById("email").value,
         username: document.getElementById("username").value,
         password: document.getElementById("password").value
     };

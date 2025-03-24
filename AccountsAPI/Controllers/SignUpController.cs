@@ -42,13 +42,13 @@ public class SignUpController: Controller {
 
     [HttpPost("Login")]
     public async Task<IActionResult> Login([FromBody] LoginReq loginRequest){
-        var user = await _mongoDBService.GetUserByUsernameAsync(loginRequest.email);
+        var user = await _mongoDBService.GetUserByEmailAsync(loginRequest.email);
 
         if (user == null || user.password != loginRequest.password){
             return Unauthorized(new { message = "Invalid email or password"});
         }
 
-        return Ok(new { message = "Login successful" });
+        return Ok(new { message = "Login successful", username = user.username, id = user.Id });
     }
 }
 
