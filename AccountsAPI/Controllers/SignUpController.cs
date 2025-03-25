@@ -26,7 +26,10 @@ public class SignUpController: Controller {
     }
     [HttpPost("SignUp")]
     public async Task<IActionResult> Post([FromBody] UserInfo userInfo) {
-        await _mongoDBService.CreateAsync(userInfo);
+        bool created = await _mongoDBService.CreateAsync(userInfo);
+        if (!created){
+            return Conflict(new { message = "Email in use"});
+        }
         return CreatedAtAction(nameof(Get), new { id = userInfo.Id }, userInfo);
     }
     [HttpPut("Edit/{id}")]

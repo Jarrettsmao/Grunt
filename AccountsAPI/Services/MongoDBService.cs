@@ -21,8 +21,14 @@ public class MongoDBService {
         return await _userCollection.Find(new BsonDocument()).ToListAsync();
     }
 
-    public async Task CreateAsync(UserInfo userInfo) {
+    public async Task<bool> CreateAsync(UserInfo userInfo) {
+        var user = GetUserByEmailAsync(userInfo.email);
+
+        if (user != null){
+            return false;
+        }
         await _userCollection.InsertOneAsync(userInfo);
+        return true;
     }
 
     public async Task AddToUserInfoAsync(string id, string pw) {

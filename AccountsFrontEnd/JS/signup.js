@@ -23,8 +23,14 @@ async function submitForm(event){
     if (response.ok) {
         const result = await response.json();
         alert(`User created with ID: ${result.id}`);
-    }   else {
-        alert('Error signing up!');
+    } else {
+        // If email already in use, the backend should return a specific message
+        const error = await response.json();
+        if (error.message === "Email in use") {
+            alert("The email is already in use. Please try a different one.");
+        } else {
+            alert('Error signing up!');
+        }
     }
 }
 
