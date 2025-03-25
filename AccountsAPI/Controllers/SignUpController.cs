@@ -34,9 +34,18 @@ public class SignUpController: Controller {
         await _mongoDBService.AddToUserInfoAsync(id, request.Password);
         return NoContent();
     }
-    [HttpDelete("Delete/{id}")]
-    public async Task<IActionResult> Delete(string id) {
-        await _mongoDBService.DeleteAsync(id);
+    [HttpDelete("Delete")]
+    public async Task<IActionResult> Delete([FromBody] DeleteRequest deleteRequest) {
+        if (string.IsNullOrEmpty(deleteRequest.Id)){
+            return BadRequest(new { message = "User ID is required"});
+        }
+
+        var user = await _mongoDBService.GetUserByIdAsync(deleteRequest.Id);
+        if (user == null){
+            return NotFound(new { message = "User not found"});
+        }
+        
+        await _mongoDBService.DeleteAsync(deleteRequest.Id);
         return NoContent();
     }
 
