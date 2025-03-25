@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     displayWelcomeMessage();
     setupDeleteAccountButton();
+    document.getElementById("changeNameForm").addEventListener("submit", changeUsername);
 });
 
 //function to display welcome message
@@ -42,4 +43,8 @@ function setupDeleteAccountButton(){
             }
         }
     });
+}
+
+function changeUsername(){
+    
 }
