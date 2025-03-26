@@ -31,13 +31,13 @@ public class MongoDBService {
         return true;
     }
 
-    public async Task AddToUserInfoAsync(string id, string pw) {
-        if (string.IsNullOrEmpty(pw)) {
-            throw new ArgumentException("Password cannot be null or empty.");
+    public async Task AddToUserInfoAsync(string id, string un) {
+        if (string.IsNullOrEmpty(un)) {
+            throw new ArgumentException("Username cannot be null or empty.");
         }
         
         FilterDefinition<UserInfo> filter = Builders<UserInfo>.Filter.Eq("Id", id);
-        UpdateDefinition<UserInfo> update = Builders<UserInfo>.Update.Set<string>("password", pw);
+        UpdateDefinition<UserInfo> update = Builders<UserInfo>.Update.Set<string>("username", un);
         await _userCollection.UpdateOneAsync(filter, update);
         return;
     }

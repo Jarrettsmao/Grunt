@@ -32,23 +32,31 @@ public class SignUpController: Controller {
         }
         return CreatedAtAction(nameof(Get), new { id = userInfo.Id }, userInfo);
     }
-    [HttpPut("Edit/{id}")]
-    public async Task<IActionResult> Edit(string id, [FromBody] EditPasswordRequest request) {
-        await _mongoDBService.AddToUserInfoAsync(id, request.Password);
-        return NoContent();
-    }
-    [HttpDelete("Delete")]
-    public async Task<IActionResult> Delete([FromBody] DeleteRequest deleteRequest) {
-        if (string.IsNullOrEmpty(deleteRequest.Id)){
+    [HttpPut("Edit/Username")]
+    public async Task<IActionResult> EditUsername([FromBody] EditUsernameRequest request) {
+        if (string.IsNullOrEmpty(request.id)){
             return BadRequest(new { message = "User ID is required"});
         }
 
-        var user = await _mongoDBService.GetUserByIdAsync(deleteRequest.Id);
+        var user = await _mongoDBService.GetUserByIdAsync(request.id);
+        if (user == null){
+            return NotFound(new { message = "User not found"});
+        }
+        await _mongoDBService.AddToUserInfoAsync(request.id, request.username);
+        return Ok(new { message = "Username updated successfully", username = request.username });
+    }
+    [HttpDelete("Delete")]
+    public async Task<IActionResult> Delete([FromBody] DeleteRequest deleteRequest) {
+        if (string.IsNullOrEmpty(deleteRequest.id)){
+            return BadRequest(new { message = "User ID is required"});
+        }
+
+        var user = await _mongoDBService.GetUserByIdAsync(deleteRequest.id);
         if (user == null){
             return NotFound(new { message = "User not found"});
         }
         
-        await _mongoDBService.DeleteAsync(deleteRequest.Id);
+        await _mongoDBService.DeleteAsync(deleteRequest.id);
         return NoContent();
     }
 
