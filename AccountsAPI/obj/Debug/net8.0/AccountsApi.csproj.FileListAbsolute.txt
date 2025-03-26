@@ -57,6 +57,7 @@ C:\Users\admin\OneDrive\Documents\GitHub\Grunt\AccountsAPI\bin\Debug\net8.0\Acco
 C:\Users\admin\OneDrive\Documents\GitHub\Grunt\AccountsAPI\bin\Debug\net8.0\AccountsAPI.runtimeconfig.json
 C:\Users\admin\OneDrive\Documents\GitHub\Grunt\AccountsAPI\bin\Debug\net8.0\AccountsAPI.dll
 C:\Users\admin\OneDrive\Documents\GitHub\Grunt\AccountsAPI\bin\Debug\net8.0\AccountsAPI.pdb
+C:\Users\admin\OneDrive\Documents\GitHub\Grunt\AccountsAPI\bin\Debug\net8.0\BCrypt.Net-Next.dll
 C:\Users\admin\OneDrive\Documents\GitHub\Grunt\AccountsAPI\bin\Debug\net8.0\DnsClient.dll
 C:\Users\admin\OneDrive\Documents\GitHub\Grunt\AccountsAPI\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\admin\OneDrive\Documents\GitHub\Grunt\AccountsAPI\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll

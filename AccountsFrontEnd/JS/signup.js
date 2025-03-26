@@ -23,6 +23,8 @@ async function submitForm(event){
     if (response.ok) {
         const result = await response.json();
         alert(`User created with ID: ${result.id}`);
+        // window.location.href = "accountpage.html";
+        //make this redirect to the account page
     } else {
         // If email already in use, the backend should return a specific message
         const error = await response.json();

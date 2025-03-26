@@ -8,6 +8,7 @@ using AccountsAPI.Models;
 using AccountsAPI.Models.DTOs;
 using AccountsAPI.Services;
 using Microsoft.AspNetCore.Identity.Data;
+using BCrypt.Net;
 
 namespace AccountsAPI.Controllers;
 
@@ -64,7 +65,7 @@ public class SignUpController: Controller {
     public async Task<IActionResult> Login([FromBody] LoginReq loginRequest){
         var user = await _mongoDBService.GetUserByEmailAsync(loginRequest.email);
 
-        if (user == null || user.password != loginRequest.password){
+        if (user == null || !BCrypt.Net.BCrypt.Verify(loginRequest.password, user.password)){
             return Unauthorized(new { message = "Invalid email or password"});
         }
 

@@ -22,11 +22,12 @@ public class MongoDBService {
     }
 
     public async Task<bool> CreateAsync(UserInfo userInfo) {
-        var user = GetUserByEmailAsync(userInfo.email);
+        var user = await GetUserByEmailAsync(userInfo.email);
 
         if (user != null){
             return false;
         }
+        userInfo.password = BCrypt.Net.BCrypt.HashPassword(userInfo.password);
         await _userCollection.InsertOneAsync(userInfo);
         return true;
     }

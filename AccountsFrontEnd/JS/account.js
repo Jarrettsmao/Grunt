@@ -39,7 +39,7 @@ function setupDeleteAccountButton(){
                     alert("Friend gone...");
                     localStorage.removeItem("username");
                     localStorage.removeItem("userId");
-                    window.location.href = "login.html";
+                    window.location.href = "home.html";
                 } else {
                     alert("Failed to delete account.");
                 }
@@ -56,7 +56,7 @@ async function changeUsername(){
         event.preventDefault();
         if (confirm("Are you sure you want to change your username?")){
             const newName = document.getElementById("newName").value;
-            const confirmName =  document.getElementById("confirmName").value;
+            // const confirmName =  document.getElementById("confirmName").value;
 
             // if (newName === confirmName){
             const formData = {
