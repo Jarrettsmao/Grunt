@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Account Page</title>
-        <!-- <link rel="stylesheet" type="text/css" href="../CSS/style.css"> -->
+        <link rel="stylesheet" type="text/css" href="../CSS/account.css">
         <script src="../JS/account.js" defer></script>
         
     </head>
@@ -15,8 +15,10 @@
     
             <label for="confirmName">Confirm New Username:</label>
             <input type="text" id="confirmName" name="confirmName" required>
+
+            <p id="warningMessage" style="color: red; display: none;">Usernames do not match!</p>
     
-            <button type="submit">Submit</button>
+            <button type="submit" id="submitBtn">Change Username</button>
         </form>
 
         <!-- <button id="deleteAccountBtn">Delete Account</button>  -->
