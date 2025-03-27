@@ -52,46 +52,52 @@ function setupDeleteAccountButton(){
 }
 
 async function changeUsername(){
-    document.getElementById("changeNameForm").addEventListener("submit", async function(){
-        event.preventDefault();
-        if (confirm("Are you sure you want to change your username?")){
-            const newName = document.getElementById("newName").value;
-            // const confirmName =  document.getElementById("confirmName").value;
+    // 
+    const form = document.getElementById("changeNameForm");
 
-            // if (newName === confirmName){
-            const formData = {
-                id: localStorage.getItem("userId"),
-                username: newName
-            };
-            
-            try {
-                const response = await fetch("https://localhost:8080/Accounts/Edit/Username", {
-                    method: "PUT",
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-                    body: JSON.stringify(formData)
-                });
-
-                if (response.ok){
-                    const result = await response.json();
-                    localStorage.removeItem("username");
-                    localStorage.setItem("username", newName);
-                    alert("Username changed successfully! Reload page for it to take affect.");
-                } else {
-                    const errorData = await response.json();
-                    alert(`Error: ${errorData.message}`);
+    if (form){
+        form.addEventListener("submit", async function (event) {
+            event.preventDefault();
+            if (confirm("Are you sure you want to change your username?")){
+                const newName = document.getElementById("newName").value;
+                // const confirmName =  document.getElementById("confirmName").value;
+        
+                // if (newName === confirmName){
+                const formData = {
+                    id: localStorage.getItem("userId"),
+                    username: newName
+                };
+                
+                try {
+                    const response = await fetch("https://localhost:8080/Accounts/Edit/Username", {
+                        method: "PUT",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify(formData)
+                    });
+        
+                    if (response.ok){
+                        const result = await response.json();
+                        localStorage.removeItem("username");
+                        localStorage.setItem("username", newName);
+                        alert("Username changed successfully! Reload page for it to take affect.");
+                    } else {
+                        const errorData = await response.json();
+                        alert(`Error: ${errorData.message}`);
+                    }
+        
+                } catch (error){
+                    console.error("Error changing username.", error);
+                    alert("An error occurred while changing username.");
                 }
-
-            } catch (error){
-                console.error("Error changing username.", error);
-                alert("An error ocurred while changing username.");
+                // } else {
+                //     alert("Usernames do not match!");
+                // }
             }
-            // } else {
-            //     alert("Usernames do not match!");
-            // }
-        }
-    });
+        });
+    }
+    
 }
 
 function validateMatch(){
