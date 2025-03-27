@@ -9,6 +9,9 @@ using AccountsAPI.Models.DTOs;
 using AccountsAPI.Services;
 using Microsoft.AspNetCore.Identity.Data;
 using BCrypt.Net;
+using System.Text;
+using System.Security.Claims;
+using Microsoft.IdentityModel.Tokens;
 
 namespace AccountsAPI.Controllers;
 
@@ -17,8 +20,10 @@ namespace AccountsAPI.Controllers;
 public class SignUpController: Controller {
     
     private readonly MongoDBService _mongoDBService;
-    public SignUpController(MongoDBService mongoDBService) {
+    private readonly IConfiguration _configuration;
+    public SignUpController(MongoDBService mongoDBService, IConfiguration configuration) {
         _mongoDBService = mongoDBService;
+        _configuration = configuration;
     }
     //general GET request
     [HttpGet]
@@ -69,7 +74,28 @@ public class SignUpController: Controller {
             return Unauthorized(new { message = "Invalid email or password"});
         }
 
-        return Ok(new { message = "Login successful", username = user.username, id = user.Id });
+        // var token = GenerateJwtToken(user);
+        return Ok(new { message = "Login successful", username = user.username, id = user.Id/*, token*/});
     }
+
+    // private string GenerateJwtToken(UserInfo user){
+    //     var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JwtSettings:SecretKey"]));
+    //     var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+    //     var claims = new[]
+    //     {
+    //         new Claim(ClaimTypes.Name, user.username),
+    //         new Claim("UserId", user.Id.ToString())
+    //     };
+
+    //     var token = new SecurityTokenDescriptor(
+    //         issuer: "yourdomain.com",
+    //         AudienceValidator: "yourdomain.com",
+    //         claims: claims,
+    //         expires: DateTime.UtcNow.AddHours(1),
+    //         SigningCredentials: creds
+    //     );
+
+    //     return new JwtSecurityTokenHandler().WriteToken(token);
+    // }
 }
 
