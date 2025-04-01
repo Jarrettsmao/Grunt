@@ -12,6 +12,7 @@ using BCrypt.Net;
 using System.Text;
 using System.Security.Claims;
 using Microsoft.IdentityModel.Tokens;
+using System.Security.Cryptography;
 
 namespace AccountsAPI.Controllers;
 
@@ -66,7 +67,7 @@ public class SignUpController: Controller {
         return NoContent();
     }
 
-    [HttpPost("Login")]
+    [HttpPost("LoginReq")]
     public async Task<IActionResult> Login([FromBody] LoginReq loginRequest){
         var user = await _mongoDBService.GetUserByEmailAsync(loginRequest.email);
 
@@ -74,9 +75,40 @@ public class SignUpController: Controller {
             return Unauthorized(new { message = "Invalid email or password"});
         }
 
+        //Generate a hashed version of user ID
+        // string hashedUserId = GenerateHashedId(user.Id);
+
+        //redirect user to unique account page
+        string userRedirectUrl = $"https://localhost:8080/Accounts/{user.username}";
+
         // var token = GenerateJwtToken(user);
-        return Ok(new { message = "Login successful", username = user.username, id = user.Id/*, token*/});
+        return Ok(new 
+        { 
+            message = "Login successful", 
+            username = user.username, 
+            id = user.Id,
+            redirectUrl = userRedirectUrl    
+            /*, token*/
+        });
     }
+
+    [HttpGet("{username}")]
+    public IActionResult GetAccountPage(string username){
+        return PhysicalFile(Path.Combine(Directory.GetCurrentDirectory(), 
+        "wwwroot", "HTML", "accountpage.html"), "text/html");
+    }
+
+    [HttpGet("Login")]
+    public IActionResult GetLoginPage(string username){
+        return PhysicalFile(Path.Combine(Directory.GetCurrentDirectory(), 
+        "wwwroot", "HTML", "login.html"), "text/html");
+    }
+
+    // private string GenerateHashedId(string userId){
+    //     using (SHA256 sha256 = SHA256.Create()){
+    //         byte[] bytes = sha
+    //     }
+    // }
 
     // private string GenerateJwtToken(UserInfo user){
     //     var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JwtSettings:SecretKey"]));

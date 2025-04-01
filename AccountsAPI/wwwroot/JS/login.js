@@ -10,7 +10,7 @@ async function loginSubmit(event){
         password: document.getElementById("password").value,
     }
 
-    const response = await fetch("https://localhost:8080/Accounts/Login", {
+    const response = await fetch("https://localhost:8080/Accounts/LoginReq", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -25,7 +25,7 @@ async function loginSubmit(event){
         console.log(localStorage.getItem("username"));
         console.log(localStorage.getItem("userId"));
         alert(`Login Successful for ${result.id}`);
-        window.location.href = "accountpage.html";
+        window.location.href = result.redirectUrl;
     } else {
         const error = await response.json(); // This will capture the error message sent by the backend
         alert(`${error.message}`);
