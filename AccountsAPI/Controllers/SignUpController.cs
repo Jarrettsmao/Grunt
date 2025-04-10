@@ -13,6 +13,7 @@ using System.Text;
 using System.Security.Claims;
 using Microsoft.IdentityModel.Tokens;
 using System.Security.Cryptography;
+using Microsoft.AspNetCore.Authorization;
 
 namespace AccountsAPI.Controllers;
 
@@ -22,11 +23,14 @@ public class SignUpController: Controller {
     
     private readonly MongoDBService _mongoDBService;
     private readonly IConfiguration _configuration;
-    public SignUpController(MongoDBService mongoDBService, IConfiguration configuration) {
+    private readonly JwtService _jwtService;
+    public SignUpController(MongoDBService mongoDBService, IConfiguration configuration, JwtService jwtService) {
         _mongoDBService = mongoDBService;
         _configuration = configuration;
+        _jwtService = jwtService;
     }
     //general GET request
+    [Authorize]
     [HttpGet]
     public async Task<List<UserInfo>> Get() {
         return await _mongoDBService.GetAsync();
@@ -39,6 +43,7 @@ public class SignUpController: Controller {
         }
         return CreatedAtAction(nameof(Get), new { id = userInfo.Id }, userInfo);
     }
+    [Authorize]
     [HttpPut("Edit/Username")]
     public async Task<IActionResult> EditUsername([FromBody] EditUsernameRequest request) {
         if (string.IsNullOrEmpty(request.id)){
@@ -52,6 +57,7 @@ public class SignUpController: Controller {
         await _mongoDBService.AddToUserInfoAsync(request.id, request.username);
         return Ok(new { message = "Username updated successfully", username = request.username });
     }
+    [Authorize]
     [HttpDelete("Delete")]
     public async Task<IActionResult> Delete([FromBody] DeleteRequest deleteRequest) {
         if (string.IsNullOrEmpty(deleteRequest.id)){
@@ -81,26 +87,28 @@ public class SignUpController: Controller {
         //redirect user to unique account page
         string userRedirectUrl = $"https://localhost:8080/Accounts/{user.username}";
 
-        // var token = GenerateJwtToken(user);
+        var token = _jwtService.GenerateToken(user);
         return Ok(new 
         { 
             message = "Login successful", 
             username = user.username, 
             id = user.Id,
-            redirectUrl = userRedirectUrl    
-            /*, token*/
+            redirectUrl = userRedirectUrl, 
+            token
         });
     }
 
+    //serving static files
+    [Authorize]
     [HttpGet("{username}")]
     public IActionResult GetAccountPage(string username){
-        return PhysicalFile(Path.Combine(Directory.GetCurrentDirectory(), 
+        return PhysicalFile(Path.Combine(Directory.GetCurrentDirectory(),
         "wwwroot", "HTML", "accountpage.html"), "text/html");
     }
 
     [HttpGet("Login")]
     public IActionResult GetLoginPage(string username){
-        return PhysicalFile(Path.Combine(Directory.GetCurrentDirectory(), 
+        return PhysicalFile(Path.Combine(Directory.GetCurrentDirectory(),
         "wwwroot", "HTML", "login.html"), "text/html");
     }
 
