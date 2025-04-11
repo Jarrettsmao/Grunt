@@ -43,22 +43,22 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
     };
     options.Events = new JwtBearerEvents
     {
-        OnMessageReceived = context =>
-        {
-            var authHeader = context.Request.Headers["Authorization"].ToString();
-            if (!string.IsNullOrEmpty(authHeader) && authHeader.StartsWith("Bearer "))
-            {
-                var token = authHeader.Substring("Bearer ".Length);
-                Console.WriteLine($"Stripped Token: {token}");
-                context.Token = token; // 🔥 THIS IS THE CRUCIAL LINE 🔥
-            }
-            else
-            {
-                Console.WriteLine("No valid Bearer token found.");
-            }
+        // OnMessageReceived = context =>
+        // {
+        //     var authHeader = context.Request.Headers["Authorization"].ToString();
+        //     if (!string.IsNullOrEmpty(authHeader) && authHeader.StartsWith("Bearer "))
+        //     {
+        //         var token = authHeader.Substring("Bearer ".Length);
+        //         Console.WriteLine($"Stripped Token: {token}");
+        //         context.Token = token; // 🔥 THIS IS THE CRUCIAL LINE 🔥
+        //     }
+        //     else
+        //     {
+        //         Console.WriteLine("No valid Bearer token found.");
+        //     }
 
-            return Task.CompletedTask;
-        },
+        //     return Task.CompletedTask;
+        // },
 
         OnAuthenticationFailed = context =>
         {
