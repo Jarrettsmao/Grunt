@@ -62,9 +62,13 @@
               "target": "Package",
               "version": "[9.0.2, )"
             },
+            "Microsoft.IdentityModel.JsonWebTokens": {
+              "target": "Package",
+              "version": "[8.3.0, )"
+            },
             "Microsoft.IdentityModel.Tokens": {
               "target": "Package",
-              "version": "[8.7.0, )"
+              "version": "[8.3.0, )"
             },
             "MongoDB.Driver": {
               "target": "Package",

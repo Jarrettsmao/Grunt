@@ -30,7 +30,6 @@ public class SignUpController: Controller {
         _jwtService = jwtService;
     }
     //general GET request
-    [Authorize]
     [HttpGet]
     public async Task<List<UserInfo>> Get() {
         return await _mongoDBService.GetAsync();
@@ -98,8 +97,13 @@ public class SignUpController: Controller {
         });
     }
 
-    //serving static files
     [Authorize]
+    [HttpGet("ValidateToken")]
+    public IActionResult ValidateToken(){
+        return Ok(new {message = "Token is valid"});
+    }
+
+    //serving static files
     [HttpGet("{username}")]
     public IActionResult GetAccountPage(string username){
         return PhysicalFile(Path.Combine(Directory.GetCurrentDirectory(),

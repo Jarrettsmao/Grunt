@@ -1,17 +1,48 @@
 document.addEventListener("DOMContentLoaded", function() {
-    displayWelcomeMessage();
-    setupDeleteAccountButton();
-    changeUsername();
-    validateMatch();
+    CheckToken();
+    DisplayWelcomeMessage();
+    SetupDeleteAccountButton();
+    ChangeUsername();
+    ValidateMatch();
 
     const newNameInput = document.getElementById("newName");
     const confirmNameInput = document.getElementById("confirmName");
-    newNameInput.addEventListener("input", validateMatch);
-    confirmNameInput.addEventListener("input", validateMatch);
+    newNameInput.addEventListener("input", ValidateMatch);
+    confirmNameInput.addEventListener("input", ValidateMatch);
 });
 
+async function CheckToken(){
+    const token = localStorage.getItem("token");
+    console.log(token);
+    const username = localStorage.getItem("username");
+    if (!token) {
+        // alert("No token found, please log in.");
+        window.location.href = "login.html";
+        return;
+    }
+
+    try {
+        const response = await fetch(`https://localhost:8080/Accounts/ValidateToken`, {
+            method: "GET",
+            headers: {
+                "Authorization": `Bearer ${token}`
+            }
+        });
+
+        if (!response.ok) {
+            throw new Error("Unauthorized");
+        }
+
+        const data = await response.json();
+    } catch (error) {
+        alert("Invalid or expired token. Please log in again.");
+        localStorage.clear();
+        window.location.href = "login.html";
+    }
+}
+
 //function to display welcome message
-function displayWelcomeMessage() {
+function DisplayWelcomeMessage() {
     const username = localStorage.getItem("username"); // Retrieve username
     if (username) {
         const welcomeMessage = document.getElementById("welcomeMessage");
@@ -22,7 +53,7 @@ function displayWelcomeMessage() {
 }
 
 //function to handle account deletion
-function setupDeleteAccountButton(){
+function SetupDeleteAccountButton(){
     document.getElementById("deleteAccountBtn").addEventListener("click", async function(){
         const userId = localStorage.getItem("userId");
         if (confirm("Are you sure you want to delete your account?")){
@@ -51,7 +82,7 @@ function setupDeleteAccountButton(){
     });
 }
 
-async function changeUsername(){
+async function ChangeUsername(){
     // 
     const form = document.getElementById("changeNameForm");
 
@@ -100,7 +131,7 @@ async function changeUsername(){
     
 }
 
-function validateMatch(){
+function ValidateMatch(){
     const newNameInput = document.getElementById("newName");
     const confirmNameInput = document.getElementById("confirmName");
     const warningMessage = document.getElementById("warningMessage");
