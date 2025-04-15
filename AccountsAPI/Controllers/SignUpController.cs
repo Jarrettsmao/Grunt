@@ -34,7 +34,7 @@ public class SignUpController: Controller {
     public async Task<List<UserInfo>> Get() {
         return await _mongoDBService.GetAsync();
     }
-    [HttpPost("SignUp")]
+    [HttpPost("SignUpReq")]
     public async Task<IActionResult> Post([FromBody] UserInfo userInfo) {
         bool created = await _mongoDBService.CreateAsync(userInfo);
         if (!created){
@@ -114,6 +114,12 @@ public class SignUpController: Controller {
     public IActionResult GetLoginPage(string username){
         return PhysicalFile(Path.Combine(Directory.GetCurrentDirectory(),
         "wwwroot", "HTML", "login.html"), "text/html");
+    }
+
+    [HttpGet("Signup")]
+    public IActionResult GetSignUpPage(string username){
+        return PhysicalFile(Path.Combine(Directory.GetCurrentDirectory(),
+        "wwwroot", "HTML", "signup.html"), "text/html");
     }
 
     // private string GenerateHashedId(string userId){

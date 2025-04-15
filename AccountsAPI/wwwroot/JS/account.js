@@ -17,7 +17,7 @@ async function CheckToken(){
     const username = localStorage.getItem("username");
     if (!token) {
         // alert("No token found, please log in.");
-        window.location.href = "login.html";
+        window.location.href = "/Accounts/Login";
         return;
     }
 
@@ -37,7 +37,7 @@ async function CheckToken(){
     } catch (error) {
         alert("Invalid or expired token. Please log in again.");
         localStorage.clear();
-        window.location.href = "login.html";
+        window.location.href = "/Accounts/Login";
     }
 }
 

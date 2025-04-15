@@ -20,7 +20,7 @@ async function submitForm(){
             };
             
             try {
-                const response = await fetch("https://localhost:8080/Accounts/SignUp", {
+                const response = await fetch("https://localhost:8080/Accounts/SignUpReq", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"
@@ -31,8 +31,8 @@ async function submitForm(){
                 if (response.ok) {
                     const result = await response.json();
                     alert(`User created with ID: ${result.id}`);
-                    // window.location.href = "accountpage.html";
-                    //make this redirect to the account page
+                    window.location.href = "/Accounts/Login";
+                    
                 } else {
                     // If email already in use, the backend should return a specific message
                     const error = await response.json();
