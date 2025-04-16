@@ -87,14 +87,14 @@
     <StaticWebAssetEndpoint Include="_content/AccountsAPI/JS/signup.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\JS\signup.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-CfoUFlyuFEdORH3grU/WQWUMBH1HE1vzfltw\u002BAckJB0="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2018"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022CfoUFlyuFEdORH3grU/WQWUMBH1HE1vzfltw\u002BAckJB0=\u0022"},{"Name":"Last-Modified","Value":"Tue, 15 Apr 2025 04:48:18 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-GxtMxrWZgic4pUNsyv4arDQ\u002B5rB7yU42bZ\u002BzziBLtAM="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2022"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022GxtMxrWZgic4pUNsyv4arDQ\u002B5rB7yU42bZ\u002BzziBLtAM=\u0022"},{"Name":"Last-Modified","Value":"Tue, 15 Apr 2025 04:54:12 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/AccountsAPI/JS/signup.potzpsxzla.js">
+    <StaticWebAssetEndpoint Include="_content/AccountsAPI/JS/signup.zu8th2hddi.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\JS\signup.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"potzpsxzla"},{"Name":"integrity","Value":"sha256-CfoUFlyuFEdORH3grU/WQWUMBH1HE1vzfltw\u002BAckJB0="},{"Name":"label","Value":"_content/AccountsAPI/JS/signup.js"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2018"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022CfoUFlyuFEdORH3grU/WQWUMBH1HE1vzfltw\u002BAckJB0=\u0022"},{"Name":"Last-Modified","Value":"Tue, 15 Apr 2025 04:48:18 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"zu8th2hddi"},{"Name":"integrity","Value":"sha256-GxtMxrWZgic4pUNsyv4arDQ\u002B5rB7yU42bZ\u002BzziBLtAM="},{"Name":"label","Value":"_content/AccountsAPI/JS/signup.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2022"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022GxtMxrWZgic4pUNsyv4arDQ\u002B5rB7yU42bZ\u002BzziBLtAM=\u0022"},{"Name":"Last-Modified","Value":"Tue, 15 Apr 2025 04:54:12 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/AccountsAPI/Pictures/crossbones-icons.1nowk0cda8.png">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Pictures\crossbones-icons.png'))</AssetFile>
