@@ -90,8 +90,8 @@ public class SignUpController: Controller {
         return Ok(new 
         { 
             message = "Login successful", 
-            username = user.username, 
-            id = user.Id,
+            // username = user.username, 
+            // id = user.Id,
             redirectUrl = userRedirectUrl, 
             token
         });

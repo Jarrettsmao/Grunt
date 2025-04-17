@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "tyg5iDcI4pFwsgQRqzVRkw2ETmqYCl9N+qBg2WEiqNE=",
+  "Hash": "85S9hUM/KxooSqoiWPi/S/6+GMgFcx5SIVvPuqEOcKc=",
   "Source": "AccountsAPI",
   "BasePath": "_content/AccountsAPI",
   "Mode": "Default",
@@ -136,8 +136,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "kyjbtme5qx",
-      "Integrity": "NFHO3gzC7kaXWICKi8iWbeuDN5bln4RcO6C502+on34=",
+      "Fingerprint": "uk842n3f7e",
+      "Integrity": "kg0zkU+85JWdTNv/1r++/Hr+qfaQnk1rSflh0uHAHBM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\JS\\account.js"
@@ -157,8 +157,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "ozpuhe6jh8",
-      "Integrity": "7FeXoBbTzmG7C5lW28p25JUXLF0DyQAqN/x406/ZG0A=",
+      "Fingerprint": "6zhol9ig9m",
+      "Integrity": "/nUA66RQSAShYxWn3o4Jk7Qpb/VJzAJcPvwUsdBkfLc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\JS\\login.js"
@@ -628,7 +628,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5370"
+          "Value": "5513"
         },
         {
           "Name": "Content-Type",
@@ -636,11 +636,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"NFHO3gzC7kaXWICKi8iWbeuDN5bln4RcO6C502+on34=\""
+          "Value": "\"kg0zkU+85JWdTNv/1r++/Hr+qfaQnk1rSflh0uHAHBM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 15 Apr 2025 04:36:11 GMT"
+          "Value": "Thu, 17 Apr 2025 01:02:31 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -650,12 +650,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-NFHO3gzC7kaXWICKi8iWbeuDN5bln4RcO6C502+on34="
+          "Value": "sha256-kg0zkU+85JWdTNv/1r++/Hr+qfaQnk1rSflh0uHAHBM="
         }
       ]
     },
     {
-      "Route": "JS/account.kyjbtme5qx.js",
+      "Route": "JS/account.uk842n3f7e.js",
       "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\JS\\account.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -665,7 +665,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5370"
+          "Value": "5513"
         },
         {
           "Name": "Content-Type",
@@ -673,11 +673,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"NFHO3gzC7kaXWICKi8iWbeuDN5bln4RcO6C502+on34=\""
+          "Value": "\"kg0zkU+85JWdTNv/1r++/Hr+qfaQnk1rSflh0uHAHBM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 15 Apr 2025 04:36:11 GMT"
+          "Value": "Thu, 17 Apr 2025 01:02:31 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -687,7 +687,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "kyjbtme5qx"
+          "Value": "uk842n3f7e"
         },
         {
           "Name": "label",
@@ -695,7 +695,52 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-NFHO3gzC7kaXWICKi8iWbeuDN5bln4RcO6C502+on34="
+          "Value": "sha256-kg0zkU+85JWdTNv/1r++/Hr+qfaQnk1rSflh0uHAHBM="
+        }
+      ]
+    },
+    {
+      "Route": "JS/login.6zhol9ig9m.js",
+      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\JS\\login.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1302"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/nUA66RQSAShYxWn3o4Jk7Qpb/VJzAJcPvwUsdBkfLc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 00:50:56 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6zhol9ig9m"
+        },
+        {
+          "Name": "label",
+          "Value": "JS/login.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-/nUA66RQSAShYxWn3o4Jk7Qpb/VJzAJcPvwUsdBkfLc="
         }
       ]
     },
@@ -710,7 +755,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1271"
+          "Value": "1302"
         },
         {
           "Name": "Content-Type",
@@ -718,11 +763,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"7FeXoBbTzmG7C5lW28p25JUXLF0DyQAqN/x406/ZG0A=\""
+          "Value": "\"/nUA66RQSAShYxWn3o4Jk7Qpb/VJzAJcPvwUsdBkfLc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 11 Apr 2025 05:03:21 GMT"
+          "Value": "Thu, 17 Apr 2025 00:50:56 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -732,52 +777,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-7FeXoBbTzmG7C5lW28p25JUXLF0DyQAqN/x406/ZG0A="
-        }
-      ]
-    },
-    {
-      "Route": "JS/login.ozpuhe6jh8.js",
-      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\JS\\login.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1271"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"7FeXoBbTzmG7C5lW28p25JUXLF0DyQAqN/x406/ZG0A=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 11 Apr 2025 05:03:21 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "ozpuhe6jh8"
-        },
-        {
-          "Name": "label",
-          "Value": "JS/login.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-7FeXoBbTzmG7C5lW28p25JUXLF0DyQAqN/x406/ZG0A="
+          "Value": "sha256-/nUA66RQSAShYxWn3o4Jk7Qpb/VJzAJcPvwUsdBkfLc="
         }
       ]
     },

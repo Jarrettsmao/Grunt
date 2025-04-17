@@ -36,8 +36,8 @@ public class ReviewController: Controller {
     }
 
     [Authorize]
-    [HttpPost("ReviewReq")]
-    public async Task<IActionResult> Post([FromBody] ReviewInfo reviewInfo) {
+    [HttpPost("PostReq")]
+    public async Task<IActionResult> CreateReview([FromBody] ReviewInfo reviewInfo) {
         var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
 
         if (string.IsNullOrEmpty(userId)){

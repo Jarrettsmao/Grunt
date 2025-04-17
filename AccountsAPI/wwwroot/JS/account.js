@@ -1,5 +1,13 @@
+let userId;
+let username;
+
 document.addEventListener("DOMContentLoaded", function() {
     CheckToken();
+
+    const userInfo = GetUserInfoFromToken();
+    userId = userInfo.id;
+    username = userInfo.username;
+
     DisplayWelcomeMessage();
     SetupDeleteAccountButton();
     ChangeUsername();
@@ -12,9 +20,9 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 async function CheckToken(){
-    const token = localStorage.getItem("token");
+    const token = sessionStorage.getItem("token");
     console.log(token);
-    const username = localStorage.getItem("username");
+
     if (!token) {
         // alert("No token found, please log in.");
         window.location.href = "/Accounts/Login";
@@ -36,40 +44,40 @@ async function CheckToken(){
         const data = await response.json();
     } catch (error) {
         alert("Invalid or expired token. Please log in again.");
-        localStorage.clear();
+        sessionStorage.clear();
         window.location.href = "/Accounts/Login";
     }
 }
 
 //function to display welcome message
 function DisplayWelcomeMessage() {
-    const username = localStorage.getItem("username"); // Retrieve username
+    // const username = localStorage.getItem("username"); // Retrieve username
     if (username) {
         const welcomeMessage = document.getElementById("welcomeMessage");
         welcomeMessage.textContent = `UGG! ${username} Here! Good!`;
     } else {
-        console.log("Username not found in localstorage.");
+        console.log("Username not found.");
     }
 }
 
 //function to handle account deletion
 function SetupDeleteAccountButton(){
     document.getElementById("deleteAccountBtn").addEventListener("click", async function(){
-        const userId = localStorage.getItem("userId");
+        // const userId = localStorage.getItem("userId");
         if (confirm("Are you sure you want to delete your account?")){
             try {
                 const response = await fetch("https://localhost:8080/Accounts/Delete", {
                     method: "DELETE",
                     headers: {
-                        "Content-Type": "application/json"
+                        "Content-Type": "application/json",
+                        "Authorization": `Bearer ${sessionStorage.getItem("token")}`
                     },
-                    body: JSON.stringify({ Id: localStorage.getItem("userId")})
+                    body: JSON.stringify({ Id: userId})
                 });
 
                 if (response.ok){
                     alert("Friend gone...");
-                    localStorage.removeItem("username");
-                    localStorage.removeItem("userId");
+                    sessionStorage.clear();
                     window.location.href = "home.html";
                 } else {
                     alert("Failed to delete account.");
@@ -83,7 +91,6 @@ function SetupDeleteAccountButton(){
 }
 
 async function ChangeUsername(){
-    // 
     const form = document.getElementById("changeNameForm");
 
     if (form){
@@ -95,7 +102,7 @@ async function ChangeUsername(){
         
                 // if (newName === confirmName){
                 const formData = {
-                    id: localStorage.getItem("userId"),
+                    id: userId,
                     username: newName
                 };
                 
@@ -103,16 +110,17 @@ async function ChangeUsername(){
                     const response = await fetch("https://localhost:8080/Accounts/Edit/Username", {
                         method: "PUT",
                         headers: {
-                            "Content-Type": "application/json"
+                            "Content-Type": "application/json",
+                            "Authorization": `Bearer ${sessionStorage.getItem("token")}`
                         },
                         body: JSON.stringify(formData)
                     });
         
                     if (response.ok){
                         const result = await response.json();
-                        localStorage.removeItem("username");
-                        localStorage.setItem("username", newName);
-                        alert("Username changed successfully! Reload page for it to take affect.");
+                        sessionStorage.clear();
+                        alert("Username changed successfully! Log in again for it to take affect.");
+                        window.location.href = "/Accounts/Login";
                     } else {
                         const errorData = await response.json();
                         alert(`Error: ${errorData.message}`);
@@ -143,4 +151,19 @@ function ValidateMatch(){
         warningMessage.style.display = "none";
         submitBtn.disabled = false;
     }
+}
+
+function GetUserInfoFromToken(){
+    const token = sessionStorage.getItem("token");
+    if (!token){
+        return null;
+    }
+    const payload = JSON.parse(atob(token.split('.')[1]));
+
+    // console.log(payload.nameid);
+    // console.log(payload.unique_name);
+    return {
+        id: payload.nameid,
+        username: payload.unique_name
+    };
 }
