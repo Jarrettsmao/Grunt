@@ -9,9 +9,10 @@ document.addEventListener("DOMContentLoaded", function() {
     username = userInfo.username;
 
     DisplayWelcomeMessage();
-    SetupDeleteAccountButton();
+    DeleteAccount();
     ChangeUsername();
     ValidateMatch();
+    Logout();
 
     const newNameInput = document.getElementById("newName");
     const confirmNameInput = document.getElementById("confirmName");
@@ -61,7 +62,7 @@ function DisplayWelcomeMessage() {
 }
 
 //function to handle account deletion
-function SetupDeleteAccountButton(){
+function DeleteAccount(){
     document.getElementById("deleteAccountBtn").addEventListener("click", async function(){
         // const userId = localStorage.getItem("userId");
         if (confirm("Are you sure you want to delete your account?")){
@@ -87,6 +88,13 @@ function SetupDeleteAccountButton(){
                 alert("An error occured while deleting.");
             }
         }
+    });
+}
+
+function Logout(){
+    document.getElementById("logoutBtn").addEventListener("click", async function(){
+        sessionStorage.clear();
+        window.location.href = "/Accounts/Login";
     });
 }
 
