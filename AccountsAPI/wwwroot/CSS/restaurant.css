@@ -1,0 +1,21 @@
+.star-rating {
+    direction: ltr;
+    font-size: 2em; /* font size is twice the size of the parent */
+    display: inline-block;
+}
+
+.default-star {
+    cursor: pointer;
+    /* color: #ccc; Gray */
+    /* transition: color 0.2s ease; */
+}
+
+.hovered {
+    color: rgba(255, 215, 0, 0.25); /* Gold with 50% opacity */
+}
+
+.selected {
+    color: gold; 
+}
+
+

@@ -40,6 +40,8 @@ public class ReviewController: Controller {
     public async Task<IActionResult> CreateReview([FromBody] ReviewInfo reviewInfo) {
         var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
 
+        //needs to also get restaurant id and set it
+
         if (string.IsNullOrEmpty(userId)){
             return Unauthorized("Invalid token - no user ID found");
         }

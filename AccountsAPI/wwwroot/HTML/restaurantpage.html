@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Restaurant Page</title>
+        <link rel="stylesheet" type="text/css" href="/CSS/restaurant.css">
+        
+        <!-- for stars NOTE: replace with icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <script src="/JS/restaurant.js" defer></script>
+    </head>
+    <body>
+        <!-- <form id="reviewForm">
+            <label for="reviewText">Write a review:</label>
+            <input type="text" id="reviewText" name="reviewText" required>
+
+            <label for="reviewText">Write a review:</label>
+            <input type="text" id="reviewText" name="reviewText" required>
+        </form> -->
+        <div class="star-rating" id="starRating">
+            <span class="fa fa-star default-star" data-value="1"></span>
+            <span class="fa fa-star" data-value="2"></span>
+            <span class="fa fa-star" data-value="3"></span>
+            <span class="fa fa-star" data-value="4"></span>
+            <span class="fa fa-star" data-value="5"></span>
+        </div>
+
+        <p>Selected Rating: <span id="ratingValue">0</span></p>
+    </body>
+</html>

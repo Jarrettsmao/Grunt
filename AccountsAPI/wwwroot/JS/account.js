@@ -106,9 +106,7 @@ async function ChangeUsername(){
             event.preventDefault();
             if (confirm("Are you sure you want to change your username?")){
                 const newName = document.getElementById("newName").value;
-                // const confirmName =  document.getElementById("confirmName").value;
-        
-                // if (newName === confirmName){
+
                 const formData = {
                     id: userId,
                     username: newName
