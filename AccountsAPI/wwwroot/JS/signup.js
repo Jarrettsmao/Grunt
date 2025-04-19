@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
-    submitForm();
+    SubmitForm();
 });
 
-async function submitForm(){
+async function SubmitForm(){
     const form = document.getElementById("signupForm");
 
     if (form){
@@ -13,7 +13,7 @@ async function submitForm(){
             submitButton.disabled = true;
 
             const formData = {
-                id: "",
+                // id: "",
                 email: document.getElementById("email").value,
                 username: document.getElementById("username").value,
                 password: document.getElementById("password").value

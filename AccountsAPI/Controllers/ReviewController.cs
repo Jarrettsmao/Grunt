@@ -51,4 +51,12 @@ public class ReviewController: Controller {
         await _reviewService.CreateReviewAsync(reviewInfo);
         return Ok(new { message = "Review submitted successfully!"});
     }
+
+    //serving static files
+    // [HttpGet("{restaurantName}")]
+    [HttpGet("restaurantName")]
+    public IActionResult GetAccountPage(string username){
+        return PhysicalFile(Path.Combine(Directory.GetCurrentDirectory(),
+        "wwwroot", "HTML", "restaurantpage.html"), "text/html");
+    }
 }

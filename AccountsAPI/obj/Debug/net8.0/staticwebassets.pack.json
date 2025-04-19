@@ -37,6 +37,10 @@
       "PackagePath": "staticwebassets\\JS\\login.js"
     },
     {
+      "Id": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\JS\\restaurant.js",
+      "PackagePath": "staticwebassets\\JS\\restaurant.js"
+    },
+    {
       "Id": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\JS\\signup.js",
       "PackagePath": "staticwebassets\\JS\\signup.js"
     },

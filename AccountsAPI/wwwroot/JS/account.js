@@ -1,12 +1,14 @@
-let userId;
-let username;
+// let userId;
+// let username;
 
 document.addEventListener("DOMContentLoaded", function() {
     CheckToken();
 
     const userInfo = GetUserInfoFromToken();
-    userId = userInfo.id;
-    username = userInfo.username;
+    // userId = userInfo.id;
+    // username = userInfo.username;
+    sessionStorage.setItem("userId", userInfo.id);
+    sessionStorage.setItem("username", userInfo.username);
 
     DisplayWelcomeMessage();
     DeleteAccount();
@@ -52,7 +54,7 @@ async function CheckToken(){
 
 //function to display welcome message
 function DisplayWelcomeMessage() {
-    // const username = localStorage.getItem("username"); // Retrieve username
+    const username = sessionStorage.getItem("username"); // Retrieve username
     if (username) {
         const welcomeMessage = document.getElementById("welcomeMessage");
         welcomeMessage.textContent = `UGG! ${username} Here! Good!`;
@@ -166,8 +168,8 @@ function GetUserInfoFromToken(){
     }
     const payload = JSON.parse(atob(token.split('.')[1]));
 
-    // console.log(payload.nameid);
-    // console.log(payload.unique_name);
+    console.log(payload.nameid);
+    console.log(payload.unique_name);
     return {
         id: payload.nameid,
         username: payload.unique_name

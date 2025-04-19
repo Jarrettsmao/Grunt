@@ -5,43 +5,88 @@ const stars = document.querySelectorAll('#starRating .fa-star');
 //     star.style.transitionDelay = `${index * 0.05}s`;
 // });
 
-const ratingValue = document.getElementById('ratingValue'); //this is the number rating value
+document.addEventListener("DOMContentLoaded", function() {
+    SubmitReview();
+});
+
 let selectedRating = 0;
 let prevRating = 0;
 
 stars.forEach(function(star) {
     star.addEventListener('mouseover', function() {
-        const value = parseInt(star.getAttribute('data-value')); //this is the data value of the selected star-rating
-        // clearHover();
-        highlightStars(value, false);
+        const value = star.getAttribute('data-value'); //this is the data value of the selected star-rating
+        HighlightStars(value, false);
     });
 
     star.addEventListener('mouseout', function() {
-        clearHover();
-        highlightStars(selectedRating, false);
+        star.classList.remove('hovered');
+        HighlightStars(selectedRating, false);
     })
 
     star.addEventListener('click', function(){
-        selectedRating = parseInt(star.getAttribute('data-value'));
+        selectedRating = star.getAttribute('data-value');
 
         if (selectedRating === prevRating){
             selectedRating = 0;
             prevRating = 0;
-            ratingValue.textContent = '';
         } else {
-            ratingValue.textContent = selectedRating;
             prevRating = selectedRating;
         }
         
-        highlightStars(selectedRating, true);
+        HighlightStars(selectedRating, true);
         console.log("Submitted Rating: " + selectedRating);
     })
 });
 
-function highlightStars(rating, isSelect) {
+async function SubmitReview(){
+    const form = document.getElementById("reviewForm");
+    const token = sessionStorage.getItem("token");
+
+    if (form){
+        form.addEventListener("submit", async function (event){
+            event.preventDefault();
+            
+            const submitButton = document.getElementById("reviewBtn");
+            submitButton.disabled = true;
+
+            const formData = {
+                authorId: sessionStorage.getItem("UserId"),
+                restaurantId: "",
+                reviewText: document.getElementById("reviewText").value,
+                rating: selectedRating
+            }
+
+            if (!token){
+                alert("Please login before submitting a review.");
+                window.location.href = "/Accounts/Login";
+            }
+ 
+            try {
+                const response = await fetch("https://localhost:8080/Reviews/PostReq", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Authorization": `Bearer ${token}`
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                if (response.ok){
+                    const result = await response.json();
+                    console.log("review submitted.");
+                }
+            } catch (error) {
+                console.error("Error submitting review:", error);
+            } finally {
+                submitButton.disabled = false;
+            }
+        });
+    }
+}
+
+function HighlightStars(rating, isSelect) {
     stars.forEach(function(star) {
-        const value = parseInt(star.getAttribute('data-value')); //if change data-value to int can remove parseint
-        // star.classList.remove('selected', 'hovered');
+        const value = star.getAttribute('data-value'); //if change data-value to int can remove parseint
         if (isSelect){
             if(value <= rating){
                 star.classList.remove('hovered', 'selected');
@@ -55,23 +100,5 @@ function highlightStars(rating, isSelect) {
                 star.classList.add('hovered');
             }
         }
-    });
-
-    // if (select) {
-    //     stars.forEach(function(star) {
-    //         const value = parseInt(star.getAttribute('data-value')); //if change data-value to int can remove parseint
-    //         star.classList.toggle('selected', value <= rating);
-    //     })
-    // } else {
-    //     stars.forEach(function(star) {
-    //         const value = parseInt(star.getAttribute('data-value')); //if change data-value to int can remove parseint
-    //         star.classList.toggle('hovered', value <= rating);
-    //     })
-    // }
-}
-
-function clearHover(){
-    stars.forEach(function(star) {
-        star.classList.remove('hovered');
     });
 }
