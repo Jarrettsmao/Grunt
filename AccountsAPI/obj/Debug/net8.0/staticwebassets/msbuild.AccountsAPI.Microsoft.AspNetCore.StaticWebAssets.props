@@ -102,8 +102,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>wrs6wd0cql</Fingerprint>
-      <Integrity>LEsc2ImxOOksxfr5x4jUlw01coZoxP4+YDrc6MzVnlA=</Integrity>
+      <Fingerprint>q4vsoyjsvu</Fingerprint>
+      <Integrity>ZmMmyNnK3WCu4lytmJ1GKCpZsywYuktPE39noATAFQY=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\HTML\restaurantpage.html'))</OriginalItemSpec>
@@ -174,8 +174,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>b2t0gvjndo</Fingerprint>
-      <Integrity>I29H5Ae0w6luZm8p3l8n369PlMqS/nRQwknT9YDzxH4=</Integrity>
+      <Fingerprint>1nm0gk4ukv</Fingerprint>
+      <Integrity>nRLXigTQSnQueiMz+PdcL3VokQbInmOKjopoGIMx3u4=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\JS\restaurant.js'))</OriginalItemSpec>

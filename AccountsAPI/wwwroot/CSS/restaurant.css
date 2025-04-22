@@ -18,4 +18,17 @@
     color: gold; 
 }
 
+.rating-row {
+    display: flex;
+    align-items: center; /* vertically center */
+    gap: 10px; /* optional spacing between stars and text */
+}
 
+.star-rating {
+    display: flex;
+}
+
+.rating-label {
+    font-size: 1rem;
+    color: #727272;
+}
