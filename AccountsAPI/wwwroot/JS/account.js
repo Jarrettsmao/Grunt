@@ -213,9 +213,16 @@ function displayReviews(reviews){
         .then(function(template) {
             reviews.forEach(function(review) {
                 var reviewHTML = template;
+                var rawDate = new Date(review.createdDate);
+                var formattedDate = rawDate.toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric"
+            });
+
                 reviewHTML = reviewHTML.replace(`{{rating}}`, review.rating);
                 reviewHTML = reviewHTML.replace(`{{reviewText}}`, review.reviewText);
-                reviewHTML = reviewHTML.replace(`{{createdDate}}`, new Date(review.createdDate));
+                reviewHTML = reviewHTML.replace(`{{createdDate}}`, formattedDate);
 
                 container.innerHTML += reviewHTML;
             });

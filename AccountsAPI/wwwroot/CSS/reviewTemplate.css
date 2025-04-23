@@ -1,0 +1,9 @@
+.first-row {
+    display: flex;
+    gap: 1rem;
+    align-items: center;            /* vertically centers them */
+}
+
+.review-date {
+    color: #ccc;
+}
