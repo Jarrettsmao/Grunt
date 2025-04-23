@@ -25,6 +25,10 @@
       "PackagePath": "staticwebassets\\HTML\\restaurantpage.html"
     },
     {
+      "Id": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\HTML\\reviewTemplate.html",
+      "PackagePath": "staticwebassets\\HTML\\reviewTemplate.html"
+    },
+    {
       "Id": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\HTML\\signup.html",
       "PackagePath": "staticwebassets\\HTML\\signup.html"
     },

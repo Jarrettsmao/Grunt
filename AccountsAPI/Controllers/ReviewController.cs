@@ -60,8 +60,16 @@ public class ReviewController: Controller {
         "wwwroot", "HTML", "restaurantpage.html"), "text/html");
     }
 
-    [HttpGet("UserReviews/{id}")]
+    [Authorize]
+    [HttpGet("UserReviews")]
     public async Task<List<ReviewInfo>> GetUserReviews(string id){     
-        return await _reviewService.GetReviewsByAuthorIdAsync(id);
+        var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+
+        if (string.IsNullOrEmpty(userId))
+        {
+            return new List<ReviewInfo>(); // Or return BadRequest() if you want to handle this case differently
+        }
+
+        return await _reviewService.GetReviewsByAuthorIdAsync(userId);
     }
 }

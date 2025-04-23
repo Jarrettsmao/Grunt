@@ -2,27 +2,28 @@
 // let username;
 
 document.addEventListener("DOMContentLoaded", function() {
-    CheckToken();
+    checkToken();
 
-    const userInfo = GetUserInfoFromToken();
+    const userInfo = getUserInfoFromToken();
     // userId = userInfo.id;
     // username = userInfo.username;
     sessionStorage.setItem("userId", userInfo.id);
     sessionStorage.setItem("username", userInfo.username);
 
-    DisplayWelcomeMessage();
-    DeleteAccount();
-    ChangeUsername();
-    ValidateMatch();
-    Logout();
+    displayWelcomeMessage();
+    getUserReviews();
+    deleteAccount();
+    changeUsername();
+    validateMatch();
+    logout();
 
     const newNameInput = document.getElementById("newName");
     const confirmNameInput = document.getElementById("confirmName");
-    newNameInput.addEventListener("input", ValidateMatch);
-    confirmNameInput.addEventListener("input", ValidateMatch);
+    newNameInput.addEventListener("input", validateMatch);
+    confirmNameInput.addEventListener("input", validateMatch);
 });
 
-async function CheckToken(){
+async function checkToken(){
     const token = sessionStorage.getItem("token");
     console.log(token);
 
@@ -53,7 +54,7 @@ async function CheckToken(){
 }
 
 //function to display welcome message
-function DisplayWelcomeMessage() {
+function displayWelcomeMessage() {
     const username = sessionStorage.getItem("username"); // Retrieve username
     if (username) {
         const welcomeMessage = document.getElementById("welcomeMessage");
@@ -64,7 +65,7 @@ function DisplayWelcomeMessage() {
 }
 
 //function to handle account deletion
-function DeleteAccount(){
+function deleteAccount(){
     document.getElementById("deleteAccountBtn").addEventListener("click", async function(){
         // const userId = localStorage.getItem("userId");
         if (confirm("Are you sure you want to delete your account?")){
@@ -93,14 +94,14 @@ function DeleteAccount(){
     });
 }
 
-function Logout(){
+function logout(){
     document.getElementById("logoutBtn").addEventListener("click", async function(){
         sessionStorage.clear();
         window.location.href = "/Accounts/Login";
     });
 }
 
-async function ChangeUsername(){
+async function changeUsername(){
     const form = document.getElementById("changeNameForm");
 
     if (form){
@@ -144,10 +145,9 @@ async function ChangeUsername(){
             }
         });
     }
-    
 }
 
-function ValidateMatch(){
+function validateMatch(){
     const newNameInput = document.getElementById("newName");
     const confirmNameInput = document.getElementById("confirmName");
     const warningMessage = document.getElementById("warningMessage");
@@ -161,7 +161,7 @@ function ValidateMatch(){
     }
 }
 
-function GetUserInfoFromToken(){
+function getUserInfoFromToken(){
     const token = sessionStorage.getItem("token");
     if (!token){
         return null;
@@ -174,4 +174,54 @@ function GetUserInfoFromToken(){
         id: payload.nameid,
         username: payload.unique_name
     };
+}
+
+async function getUserReviews(){
+    const token = sessionStorage.getItem("token");
+    try {
+        const response = await fetch("https://localhost:8080/Reviews/UserReviews", {
+            method: "GET",
+            headers: {
+                "Authorization": `Bearer ${token}`
+            }
+        });
+
+        if (response.ok){
+            const reviews = await response.json();
+            displayReviews(reviews);
+        } else {
+            console.error("Failed to load reviews");
+        }
+    } catch (error) {
+        console.error("Error fetching reviews:", error);
+    }
+}
+
+function displayReviews(reviews){
+    const container = document.getElementById("userReviews");
+
+    if (reviews.length === 0){
+        container.innerHTML = "<p>No reviews yet.</p>";
+        return;
+    }
+
+    //Fetch the review template HTML
+    fetch('/HTML/reviewTemplate.html')
+        .then(function(response) {
+            return response.text();
+        })
+        .then(function(template) {
+            reviews.forEach(function(review) {
+                var reviewHTML = template;
+                reviewHTML = reviewHTML.replace(`{{rating}}`, review.rating);
+                reviewHTML = reviewHTML.replace(`{{reviewText}}`, review.reviewText);
+                reviewHTML = reviewHTML.replace(`{{createdDate}}`, new Date(review.createdDate));
+
+                container.innerHTML += reviewHTML;
+            });
+        })
+        .catch(function(error) {
+            console.error("Error loading review template:", error);
+            container.innerHTML = "<p>There was an error loading the reviews.</p>";
+        });
 }
