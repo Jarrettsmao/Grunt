@@ -1,3 +1,41 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.invisTextArea {
+    resize: none;
+    width: 100%;
+    height: 30vh;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.review-container{
+    width:40vh;
+    border: 0.1rem solid;
+    border-radius: 4px; /* rounded corners */
+    padding: 1rem; 
+}
+
+/* #reviewForm{
+    height:200%;
+} */
+
+.page-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 15vh;
+    height: 100vh;
+    background-color: #f8f8f8;
+}
+
 .star-rating {
     direction: ltr;
     font-size: 2em; /* font size is twice the size of the parent */
@@ -31,4 +69,15 @@
 .rating-label {
     font-size: 1rem;
     color: #727272;
+}
+
+#reviewBtn {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    height: 3.5vh;
+    width: 10vh;
+    font-size: 1rem; 
+    cursor: pointer;
 }

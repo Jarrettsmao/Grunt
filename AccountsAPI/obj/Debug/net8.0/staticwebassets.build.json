@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "z7JKt9bQheagyPnoVKapDD134/lVa2oiu0L9x36YHQc=",
+  "Hash": "FLAI9s8YXvTE5mzc/9N4cgo9dly3EuW0IQArtaiF370=",
   "Source": "AccountsAPI",
   "BasePath": "_content/AccountsAPI",
   "Mode": "Default",
@@ -52,8 +52,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "m4ikn2fsvh",
-      "Integrity": "Ori6FVGj1GC7teselA0bRTcp111NDsl9vlu4qHGnr4Y=",
+      "Fingerprint": "a35fissvu2",
+      "Integrity": "enYo5ZwLWsS7QKRrj6w4H4Ry+sgp4Q5eq4+QwR+WP2c=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\CSS\\restaurant.css"
@@ -136,8 +136,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "q4vsoyjsvu",
-      "Integrity": "ZmMmyNnK3WCu4lytmJ1GKCpZsywYuktPE39noATAFQY=",
+      "Fingerprint": "beu5aswzdn",
+      "Integrity": "3dyz0b3USoTAET2MvQUV3cSGfJFipOKuef512Uxlx8w=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\HTML\\restaurantpage.html"
@@ -353,6 +353,51 @@
       ]
     },
     {
+      "Route": "CSS/restaurant.a35fissvu2.css",
+      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\CSS\\restaurant.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1470"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"enYo5ZwLWsS7QKRrj6w4H4Ry+sgp4Q5eq4+QwR+WP2c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 23 Apr 2025 03:34:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "a35fissvu2"
+        },
+        {
+          "Name": "label",
+          "Value": "CSS/restaurant.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-enYo5ZwLWsS7QKRrj6w4H4Ry+sgp4Q5eq4+QwR+WP2c="
+        }
+      ]
+    },
+    {
       "Route": "CSS/restaurant.css",
       "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\CSS\\restaurant.css",
       "Selectors": [],
@@ -363,7 +408,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "373"
+          "Value": "1470"
         },
         {
           "Name": "Content-Type",
@@ -371,11 +416,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Ori6FVGj1GC7teselA0bRTcp111NDsl9vlu4qHGnr4Y=\""
+          "Value": "\"enYo5ZwLWsS7QKRrj6w4H4Ry+sgp4Q5eq4+QwR+WP2c=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 17 Apr 2025 06:14:28 GMT"
+          "Value": "Wed, 23 Apr 2025 03:34:15 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -385,52 +430,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Ori6FVGj1GC7teselA0bRTcp111NDsl9vlu4qHGnr4Y="
-        }
-      ]
-    },
-    {
-      "Route": "CSS/restaurant.m4ikn2fsvh.css",
-      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\CSS\\restaurant.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "373"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Ori6FVGj1GC7teselA0bRTcp111NDsl9vlu4qHGnr4Y=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 17 Apr 2025 06:14:28 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "m4ikn2fsvh"
-        },
-        {
-          "Name": "label",
-          "Value": "CSS/restaurant.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-Ori6FVGj1GC7teselA0bRTcp111NDsl9vlu4qHGnr4Y="
+          "Value": "sha256-enYo5ZwLWsS7QKRrj6w4H4Ry+sgp4Q5eq4+QwR+WP2c="
         }
       ]
     },
@@ -681,6 +681,51 @@
       ]
     },
     {
+      "Route": "HTML/restaurantpage.beu5aswzdn.html",
+      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\HTML\\restaurantpage.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1457"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"3dyz0b3USoTAET2MvQUV3cSGfJFipOKuef512Uxlx8w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 23 Apr 2025 04:12:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "beu5aswzdn"
+        },
+        {
+          "Name": "label",
+          "Value": "HTML/restaurantpage.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-3dyz0b3USoTAET2MvQUV3cSGfJFipOKuef512Uxlx8w="
+        }
+      ]
+    },
+    {
       "Route": "HTML/restaurantpage.html",
       "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\HTML\\restaurantpage.html",
       "Selectors": [],
@@ -691,7 +736,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1176"
+          "Value": "1457"
         },
         {
           "Name": "Content-Type",
@@ -699,11 +744,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"ZmMmyNnK3WCu4lytmJ1GKCpZsywYuktPE39noATAFQY=\""
+          "Value": "\"3dyz0b3USoTAET2MvQUV3cSGfJFipOKuef512Uxlx8w=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 18 Apr 2025 05:36:21 GMT"
+          "Value": "Wed, 23 Apr 2025 04:12:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -713,52 +758,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-ZmMmyNnK3WCu4lytmJ1GKCpZsywYuktPE39noATAFQY="
-        }
-      ]
-    },
-    {
-      "Route": "HTML/restaurantpage.q4vsoyjsvu.html",
-      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\HTML\\restaurantpage.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1176"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"ZmMmyNnK3WCu4lytmJ1GKCpZsywYuktPE39noATAFQY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 18 Apr 2025 05:36:21 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "q4vsoyjsvu"
-        },
-        {
-          "Name": "label",
-          "Value": "HTML/restaurantpage.html"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-ZmMmyNnK3WCu4lytmJ1GKCpZsywYuktPE39noATAFQY="
+          "Value": "sha256-3dyz0b3USoTAET2MvQUV3cSGfJFipOKuef512Uxlx8w="
         }
       ]
     },

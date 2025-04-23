@@ -30,4 +30,9 @@ public class ReviewService {
         await _reviewsCollection.InsertOneAsync(reviewInfo);
         return true;
     }
+
+    public async Task<List<ReviewInfo>> GetReviewsByAuthorIdAsync(string id){
+        var filter = Builders<ReviewInfo>.Filter.Eq(nameof(ReviewInfo.authorId), id);
+        return await _reviewsCollection.Find(filter).ToListAsync();
+    }
 }

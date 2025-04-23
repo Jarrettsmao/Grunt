@@ -54,9 +54,14 @@ public class ReviewController: Controller {
 
     //serving static files
     // [HttpGet("{restaurantName}")]
-    [HttpGet("restaurantName")]
+    [HttpGet("WriteReview")]
     public IActionResult GetAccountPage(string username){
         return PhysicalFile(Path.Combine(Directory.GetCurrentDirectory(),
         "wwwroot", "HTML", "restaurantpage.html"), "text/html");
+    }
+
+    [HttpGet("UserReviews/{id}")]
+    public async Task<List<ReviewInfo>> GetUserReviews(string id){     
+        return await _reviewService.GetReviewsByAuthorIdAsync(id);
     }
 }
