@@ -1,0 +1,44 @@
+.main-header {
+    width: 99%;
+    background-color: #f8f8f8;
+    padding: 1em 1em 1em 0.3em; /* top right bottom left */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-left a,
+  .nav-right a {
+    text-decoration: none;
+    /* color: #333; */
+    margin-left: 15px;
+  }
+  
+  /* .nav-left a:first-child {
+    margin-left: 0;
+  } */
+  
+  .nav-right {
+    display: flex;
+    /* gap: 10px; */
+  }
+
+  .login{
+    border: solid 0.1rem;
+    border-radius: 0.3rem;
+    padding: 0.5rem;
+    background-color: white;
+    /* margin: 0.1rem; */
+  }
+
+  .signup{
+    border: solid 0.1rem;
+    border-radius: 0.3rem;
+    padding: 0.5rem;
+    background-color: maroon;
+    color:white;
+  }
