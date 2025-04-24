@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\CSS\\account.css"
     },
     {
+      "Id": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\CSS\\header.css",
+      "PackagePath": "staticwebassets\\CSS\\header.css"
+    },
+    {
       "Id": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\CSS\\restaurant.css",
       "PackagePath": "staticwebassets\\CSS\\restaurant.css"
     },
