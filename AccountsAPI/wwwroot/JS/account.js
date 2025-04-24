@@ -206,7 +206,7 @@ function displayReviews(reviews){
     }
 
     //Fetch the review template HTML
-    fetch('/HTML/reviewTemplate.html')
+    fetch('/HTML/Templates/reviewTemplate.html')
         .then(function(response) {
             return response.text();
         })
