@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "J/FbUKvoz489RyvNx8CJufn0Eu3Ad6hzxPJkmM538wI=",
+  "Hash": "KBa0FoBQHGU+YSqCBtaDmIRGw5I34GtNbTnQV+LzFlY=",
   "Source": "AccountsAPI",
   "BasePath": "_content/AccountsAPI",
   "Mode": "Default",
@@ -52,8 +52,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "ni2p45fx5c",
-      "Integrity": "/8Ca+FLuzp4ODkxPjpVIRAlmosLgRyuaMfEMxwoGajk=",
+      "Fingerprint": "1apxvtg35d",
+      "Integrity": "xy7EvgZBvFbs9W7NJtFVBxsG1A0yg+bL2F93Z9gOxZc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\CSS\\header.css"
@@ -458,6 +458,51 @@
       ]
     },
     {
+      "Route": "CSS/header.1apxvtg35d.css",
+      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\CSS\\header.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "716"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xy7EvgZBvFbs9W7NJtFVBxsG1A0yg+bL2F93Z9gOxZc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 06:57:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1apxvtg35d"
+        },
+        {
+          "Name": "label",
+          "Value": "CSS/header.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-xy7EvgZBvFbs9W7NJtFVBxsG1A0yg+bL2F93Z9gOxZc="
+        }
+      ]
+    },
+    {
       "Route": "CSS/header.css",
       "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\CSS\\header.css",
       "Selectors": [],
@@ -468,7 +513,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "720"
+          "Value": "716"
         },
         {
           "Name": "Content-Type",
@@ -476,11 +521,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"/8Ca+FLuzp4ODkxPjpVIRAlmosLgRyuaMfEMxwoGajk=\""
+          "Value": "\"xy7EvgZBvFbs9W7NJtFVBxsG1A0yg+bL2F93Z9gOxZc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 06:56:50 GMT"
+          "Value": "Thu, 24 Apr 2025 06:57:38 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -490,52 +535,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-/8Ca+FLuzp4ODkxPjpVIRAlmosLgRyuaMfEMxwoGajk="
-        }
-      ]
-    },
-    {
-      "Route": "CSS/header.ni2p45fx5c.css",
-      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\CSS\\header.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "720"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"/8Ca+FLuzp4ODkxPjpVIRAlmosLgRyuaMfEMxwoGajk=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 06:56:50 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "ni2p45fx5c"
-        },
-        {
-          "Name": "label",
-          "Value": "CSS/header.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-/8Ca+FLuzp4ODkxPjpVIRAlmosLgRyuaMfEMxwoGajk="
+          "Value": "sha256-xy7EvgZBvFbs9W7NJtFVBxsG1A0yg+bL2F93Z9gOxZc="
         }
       ]
     },

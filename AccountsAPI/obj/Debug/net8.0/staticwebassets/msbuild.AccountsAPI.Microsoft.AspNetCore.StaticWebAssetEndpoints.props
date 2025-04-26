@@ -12,17 +12,17 @@
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"zh7k0wpju9"},{"Name":"integrity","Value":"sha256-Cc0DGw062VuTyYl5JJIsS25R/7lUAXFQdalxbR1IMns="},{"Name":"label","Value":"_content/AccountsAPI/CSS/account.css"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"77"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022Cc0DGw062VuTyYl5JJIsS25R/7lUAXFQdalxbR1IMns=\u0022"},{"Name":"Last-Modified","Value":"Wed, 26 Mar 2025 05:26:46 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/AccountsAPI/CSS/header.1apxvtg35d.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CSS\header.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"1apxvtg35d"},{"Name":"integrity","Value":"sha256-xy7EvgZBvFbs9W7NJtFVBxsG1A0yg\u002BbL2F93Z9gOxZc="},{"Name":"label","Value":"_content/AccountsAPI/CSS/header.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"716"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022xy7EvgZBvFbs9W7NJtFVBxsG1A0yg\u002BbL2F93Z9gOxZc=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 06:57:38 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/AccountsAPI/CSS/header.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CSS\header.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-/8Ca\u002BFLuzp4ODkxPjpVIRAlmosLgRyuaMfEMxwoGajk="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"720"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022/8Ca\u002BFLuzp4ODkxPjpVIRAlmosLgRyuaMfEMxwoGajk=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 06:56:50 GMT"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/AccountsAPI/CSS/header.ni2p45fx5c.css">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CSS\header.css'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"ni2p45fx5c"},{"Name":"integrity","Value":"sha256-/8Ca\u002BFLuzp4ODkxPjpVIRAlmosLgRyuaMfEMxwoGajk="},{"Name":"label","Value":"_content/AccountsAPI/CSS/header.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"720"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022/8Ca\u002BFLuzp4ODkxPjpVIRAlmosLgRyuaMfEMxwoGajk=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 06:56:50 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-xy7EvgZBvFbs9W7NJtFVBxsG1A0yg\u002BbL2F93Z9gOxZc="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"716"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022xy7EvgZBvFbs9W7NJtFVBxsG1A0yg\u002BbL2F93Z9gOxZc=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 06:57:38 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/AccountsAPI/CSS/restaurant.a35fissvu2.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CSS\restaurant.css'))</AssetFile>

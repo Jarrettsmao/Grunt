@@ -1,7 +1,8 @@
-.first-row {
+.rating-row {
     display: flex;
     gap: 1rem;
     align-items: center;            /* vertically centers them */
+    flex-wrap: nowrap;
 }
 
 .review-date {
