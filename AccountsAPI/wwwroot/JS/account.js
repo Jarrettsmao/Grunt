@@ -82,7 +82,7 @@ function deleteAccount(){
                 if (response.ok){
                     alert("Friend gone...");
                     sessionStorage.clear();
-                    window.location.href = "home.html";
+                    window.location.href = "/HTML/home.html";
                 } else {
                     alert("Failed to delete account.");
                 }

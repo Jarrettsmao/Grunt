@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\CSS\\header.css"
     },
     {
+      "Id": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\CSS\\home.css",
+      "PackagePath": "staticwebassets\\CSS\\home.css"
+    },
+    {
       "Id": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\CSS\\restaurant.css",
       "PackagePath": "staticwebassets\\CSS\\restaurant.css"
     },
@@ -47,6 +51,10 @@
     {
       "Id": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\JS\\account.js",
       "PackagePath": "staticwebassets\\JS\\account.js"
+    },
+    {
+      "Id": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\JS\\home.js",
+      "PackagePath": "staticwebassets\\JS\\home.js"
     },
     {
       "Id": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\JS\\loadheader.js",

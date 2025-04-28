@@ -1,4 +1,36 @@
 #map {
-    height: 400px;
-    width: 100%;
+    height: 50rem;
+    width: 60%;
+    margin: auto;
+}
+
+.search-section {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-section input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.3rem;
+}
+
+#searchBtn {
+    padding: 0.5rem 1rem;
+    background-color: maroon;
+    color: white;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+
+#locationSearch {
+    width: 30rem;
+}
+
+#searchBtn:hover {
+    background-color: darkred;
 }
