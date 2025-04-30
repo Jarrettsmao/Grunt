@@ -1,84 +1,80 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\CSS\\account.css",
+      "Id": "C:\\Users\\Boredom\\Grunt\\AccountsAPI\\wwwroot\\CSS\\account.css",
       "PackagePath": "staticwebassets\\CSS\\account.css"
     },
     {
-      "Id": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\CSS\\header.css",
+      "Id": "C:\\Users\\Boredom\\Grunt\\AccountsAPI\\wwwroot\\CSS\\header.css",
       "PackagePath": "staticwebassets\\CSS\\header.css"
     },
     {
-      "Id": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\CSS\\home.css",
+      "Id": "C:\\Users\\Boredom\\Grunt\\AccountsAPI\\wwwroot\\CSS\\home.css",
       "PackagePath": "staticwebassets\\CSS\\home.css"
     },
     {
-      "Id": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\CSS\\restaurant.css",
+      "Id": "C:\\Users\\Boredom\\Grunt\\AccountsAPI\\wwwroot\\CSS\\restaurant.css",
       "PackagePath": "staticwebassets\\CSS\\restaurant.css"
     },
     {
-      "Id": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\CSS\\reviewTemplate.css",
+      "Id": "C:\\Users\\Boredom\\Grunt\\AccountsAPI\\wwwroot\\CSS\\reviewTemplate.css",
       "PackagePath": "staticwebassets\\CSS\\reviewTemplate.css"
     },
     {
-      "Id": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\HTML\\Templates\\header.html",
+      "Id": "C:\\Users\\Boredom\\Grunt\\AccountsAPI\\wwwroot\\HTML\\Templates\\header.html",
       "PackagePath": "staticwebassets\\HTML\\Templates\\header.html"
     },
     {
-      "Id": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\HTML\\Templates\\reviewTemplate.html",
+      "Id": "C:\\Users\\Boredom\\Grunt\\AccountsAPI\\wwwroot\\HTML\\Templates\\reviewTemplate.html",
       "PackagePath": "staticwebassets\\HTML\\Templates\\reviewTemplate.html"
     },
     {
-      "Id": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\HTML\\accountpage.html",
+      "Id": "C:\\Users\\Boredom\\Grunt\\AccountsAPI\\wwwroot\\HTML\\accountpage.html",
       "PackagePath": "staticwebassets\\HTML\\accountpage.html"
     },
     {
-      "Id": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\HTML\\home.html",
+      "Id": "C:\\Users\\Boredom\\Grunt\\AccountsAPI\\wwwroot\\HTML\\home.html",
       "PackagePath": "staticwebassets\\HTML\\home.html"
     },
     {
-      "Id": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\HTML\\login.html",
+      "Id": "C:\\Users\\Boredom\\Grunt\\AccountsAPI\\wwwroot\\HTML\\login.html",
       "PackagePath": "staticwebassets\\HTML\\login.html"
     },
     {
-      "Id": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\HTML\\restaurantpage.html",
+      "Id": "C:\\Users\\Boredom\\Grunt\\AccountsAPI\\wwwroot\\HTML\\restaurantpage.html",
       "PackagePath": "staticwebassets\\HTML\\restaurantpage.html"
     },
     {
-      "Id": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\HTML\\signup.html",
+      "Id": "C:\\Users\\Boredom\\Grunt\\AccountsAPI\\wwwroot\\HTML\\signup.html",
       "PackagePath": "staticwebassets\\HTML\\signup.html"
     },
     {
-      "Id": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\JS\\account.js",
+      "Id": "C:\\Users\\Boredom\\Grunt\\AccountsAPI\\wwwroot\\JS\\account.js",
       "PackagePath": "staticwebassets\\JS\\account.js"
     },
     {
-      "Id": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\JS\\home.js",
+      "Id": "C:\\Users\\Boredom\\Grunt\\AccountsAPI\\wwwroot\\JS\\home.js",
       "PackagePath": "staticwebassets\\JS\\home.js"
     },
     {
-      "Id": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\JS\\loadheader.js",
+      "Id": "C:\\Users\\Boredom\\Grunt\\AccountsAPI\\wwwroot\\JS\\loadheader.js",
       "PackagePath": "staticwebassets\\JS\\loadheader.js"
     },
     {
-      "Id": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\JS\\login.js",
+      "Id": "C:\\Users\\Boredom\\Grunt\\AccountsAPI\\wwwroot\\JS\\login.js",
       "PackagePath": "staticwebassets\\JS\\login.js"
     },
     {
-      "Id": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\JS\\restaurant.js",
+      "Id": "C:\\Users\\Boredom\\Grunt\\AccountsAPI\\wwwroot\\JS\\restaurant.js",
       "PackagePath": "staticwebassets\\JS\\restaurant.js"
     },
     {
-      "Id": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\JS\\signup.js",
+      "Id": "C:\\Users\\Boredom\\Grunt\\AccountsAPI\\wwwroot\\JS\\signup.js",
       "PackagePath": "staticwebassets\\JS\\signup.js"
     },
     {
-      "Id": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\Pictures\\crossbones-icons.png",
+      "Id": "C:\\Users\\Boredom\\Grunt\\AccountsAPI\\wwwroot\\Pictures\\crossbones-icons.png",
       "PackagePath": "staticwebassets\\Pictures\\crossbones-icons.png"
-    },
-    {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.AccountsAPI.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
-      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.AccountsAPI.Microsoft.AspNetCore.StaticWebAssets.props",

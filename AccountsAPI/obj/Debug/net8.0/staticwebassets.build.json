@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "rtb6H0riu3OmySD0McDbvD93D+eYQcCh0xpR99rVq3o=",
+  "Hash": "bOE4GruuHrxHOC7lPGcWtO9dSztEJtvbRcUPCF8xt7I=",
   "Source": "AccountsAPI",
   "BasePath": "_content/AccountsAPI",
   "Mode": "Default",
@@ -10,1970 +10,372 @@
     {
       "Name": "AccountsAPI\\wwwroot",
       "Source": "AccountsAPI",
-      "ContentRoot": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Boredom\\Grunt\\AccountsAPI\\wwwroot\\",
       "BasePath": "_content/AccountsAPI",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\CSS\\account.css",
+      "Identity": "C:\\Users\\Boredom\\Grunt\\AccountsAPI\\wwwroot\\CSS\\account.css",
       "SourceId": "AccountsAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Boredom\\Grunt\\AccountsAPI\\wwwroot\\",
       "BasePath": "_content/AccountsAPI",
-      "RelativePath": "CSS/account#[.{fingerprint}]?.css",
+      "RelativePath": "CSS/account.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "zh7k0wpju9",
-      "Integrity": "Cc0DGw062VuTyYl5JJIsS25R/7lUAXFQdalxbR1IMns=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\CSS\\account.css"
     },
     {
-      "Identity": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\CSS\\header.css",
+      "Identity": "C:\\Users\\Boredom\\Grunt\\AccountsAPI\\wwwroot\\CSS\\header.css",
       "SourceId": "AccountsAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Boredom\\Grunt\\AccountsAPI\\wwwroot\\",
       "BasePath": "_content/AccountsAPI",
-      "RelativePath": "CSS/header#[.{fingerprint}]?.css",
+      "RelativePath": "CSS/header.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "1apxvtg35d",
-      "Integrity": "xy7EvgZBvFbs9W7NJtFVBxsG1A0yg+bL2F93Z9gOxZc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\CSS\\header.css"
     },
     {
-      "Identity": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\CSS\\home.css",
+      "Identity": "C:\\Users\\Boredom\\Grunt\\AccountsAPI\\wwwroot\\CSS\\home.css",
       "SourceId": "AccountsAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Boredom\\Grunt\\AccountsAPI\\wwwroot\\",
       "BasePath": "_content/AccountsAPI",
-      "RelativePath": "CSS/home#[.{fingerprint}]?.css",
+      "RelativePath": "CSS/home.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "vp48a13et3",
-      "Integrity": "HZgxEaNrAHaaseR0GRdRzSsu8zLlM30JiGMwTNl3rg0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\CSS\\home.css"
     },
     {
-      "Identity": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\CSS\\restaurant.css",
+      "Identity": "C:\\Users\\Boredom\\Grunt\\AccountsAPI\\wwwroot\\CSS\\restaurant.css",
       "SourceId": "AccountsAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Boredom\\Grunt\\AccountsAPI\\wwwroot\\",
       "BasePath": "_content/AccountsAPI",
-      "RelativePath": "CSS/restaurant#[.{fingerprint}]?.css",
+      "RelativePath": "CSS/restaurant.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "a35fissvu2",
-      "Integrity": "enYo5ZwLWsS7QKRrj6w4H4Ry+sgp4Q5eq4+QwR+WP2c=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\CSS\\restaurant.css"
     },
     {
-      "Identity": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\CSS\\reviewTemplate.css",
+      "Identity": "C:\\Users\\Boredom\\Grunt\\AccountsAPI\\wwwroot\\CSS\\reviewTemplate.css",
       "SourceId": "AccountsAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Boredom\\Grunt\\AccountsAPI\\wwwroot\\",
       "BasePath": "_content/AccountsAPI",
-      "RelativePath": "CSS/reviewTemplate#[.{fingerprint}]?.css",
+      "RelativePath": "CSS/reviewTemplate.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "igblvcvhrj",
-      "Integrity": "vnNqPwZSaMbN7AOhEpf8MeVTxMuIXZerDLt+1ooujTg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\CSS\\reviewTemplate.css"
     },
     {
-      "Identity": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\HTML\\accountpage.html",
+      "Identity": "C:\\Users\\Boredom\\Grunt\\AccountsAPI\\wwwroot\\HTML\\accountpage.html",
       "SourceId": "AccountsAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Boredom\\Grunt\\AccountsAPI\\wwwroot\\",
       "BasePath": "_content/AccountsAPI",
-      "RelativePath": "HTML/accountpage#[.{fingerprint}]?.html",
+      "RelativePath": "HTML/accountpage.html",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "zhdw9wo5dh",
-      "Integrity": "V/WjP+PbUOB6GOSdOq3HFGMDmu0lijJqueTca5PJo5s=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\HTML\\accountpage.html"
     },
     {
-      "Identity": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\HTML\\home.html",
+      "Identity": "C:\\Users\\Boredom\\Grunt\\AccountsAPI\\wwwroot\\HTML\\home.html",
       "SourceId": "AccountsAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Boredom\\Grunt\\AccountsAPI\\wwwroot\\",
       "BasePath": "_content/AccountsAPI",
-      "RelativePath": "HTML/home#[.{fingerprint}]?.html",
+      "RelativePath": "HTML/home.html",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "yabavoqka3",
-      "Integrity": "utbrzMhRnn9ppKsPxcAVTQiyAQ2i8CExy8bPA244VMk=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\HTML\\home.html"
     },
     {
-      "Identity": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\HTML\\login.html",
+      "Identity": "C:\\Users\\Boredom\\Grunt\\AccountsAPI\\wwwroot\\HTML\\login.html",
       "SourceId": "AccountsAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Boredom\\Grunt\\AccountsAPI\\wwwroot\\",
       "BasePath": "_content/AccountsAPI",
-      "RelativePath": "HTML/login#[.{fingerprint}]?.html",
+      "RelativePath": "HTML/login.html",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "ldq9uwaw17",
-      "Integrity": "yesX9KsljxYoNSdmu7hiZatf1Wl0js2Jkva+A28H7gc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\HTML\\login.html"
     },
     {
-      "Identity": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\HTML\\restaurantpage.html",
+      "Identity": "C:\\Users\\Boredom\\Grunt\\AccountsAPI\\wwwroot\\HTML\\restaurantpage.html",
       "SourceId": "AccountsAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Boredom\\Grunt\\AccountsAPI\\wwwroot\\",
       "BasePath": "_content/AccountsAPI",
-      "RelativePath": "HTML/restaurantpage#[.{fingerprint}]?.html",
+      "RelativePath": "HTML/restaurantpage.html",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "134ul5xx90",
-      "Integrity": "LSlVGV5Twk9aPFRBLED9uSoikl31Z5SJhH7sCpJBuY4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\HTML\\restaurantpage.html"
     },
     {
-      "Identity": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\HTML\\signup.html",
+      "Identity": "C:\\Users\\Boredom\\Grunt\\AccountsAPI\\wwwroot\\HTML\\signup.html",
       "SourceId": "AccountsAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Boredom\\Grunt\\AccountsAPI\\wwwroot\\",
       "BasePath": "_content/AccountsAPI",
-      "RelativePath": "HTML/signup#[.{fingerprint}]?.html",
+      "RelativePath": "HTML/signup.html",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "jyl4y665sb",
-      "Integrity": "KyJEXSEsb3gZlhSbDkl3/I8G+xx117bjuiz9ak6rkI0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\HTML\\signup.html"
     },
     {
-      "Identity": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\HTML\\Templates\\header.html",
+      "Identity": "C:\\Users\\Boredom\\Grunt\\AccountsAPI\\wwwroot\\HTML\\Templates\\header.html",
       "SourceId": "AccountsAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Boredom\\Grunt\\AccountsAPI\\wwwroot\\",
       "BasePath": "_content/AccountsAPI",
-      "RelativePath": "HTML/Templates/header#[.{fingerprint}]?.html",
+      "RelativePath": "HTML/Templates/header.html",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "30pm8ia6e6",
-      "Integrity": "7SdBo1lkHDWXuZc9RtfyJg0+dcznDuPSPcT05Nk7mbE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\HTML\\Templates\\header.html"
     },
     {
-      "Identity": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\HTML\\Templates\\reviewTemplate.html",
+      "Identity": "C:\\Users\\Boredom\\Grunt\\AccountsAPI\\wwwroot\\HTML\\Templates\\reviewTemplate.html",
       "SourceId": "AccountsAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Boredom\\Grunt\\AccountsAPI\\wwwroot\\",
       "BasePath": "_content/AccountsAPI",
-      "RelativePath": "HTML/Templates/reviewTemplate#[.{fingerprint}]?.html",
+      "RelativePath": "HTML/Templates/reviewTemplate.html",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "hwa0pdrozb",
-      "Integrity": "zwvZsZIaXuW276hOBQJpm1jxbCORY0EFUK7NHcfoDqM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\HTML\\Templates\\reviewTemplate.html"
     },
     {
-      "Identity": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\JS\\account.js",
+      "Identity": "C:\\Users\\Boredom\\Grunt\\AccountsAPI\\wwwroot\\JS\\account.js",
       "SourceId": "AccountsAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Boredom\\Grunt\\AccountsAPI\\wwwroot\\",
       "BasePath": "_content/AccountsAPI",
-      "RelativePath": "JS/account#[.{fingerprint}]?.js",
+      "RelativePath": "JS/account.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "86u6o32ptr",
-      "Integrity": "wL2ofGwYxvGxikKPduAweRT1AH9NxbcZxJ9UMkR8+XA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\JS\\account.js"
     },
     {
-      "Identity": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\JS\\home.js",
+      "Identity": "C:\\Users\\Boredom\\Grunt\\AccountsAPI\\wwwroot\\JS\\home.js",
       "SourceId": "AccountsAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Boredom\\Grunt\\AccountsAPI\\wwwroot\\",
       "BasePath": "_content/AccountsAPI",
-      "RelativePath": "JS/home#[.{fingerprint}]?.js",
+      "RelativePath": "JS/home.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "uny0737125",
-      "Integrity": "erKROI1lFisFHwlWom/dh4pDpGiZ45pp5HcQuziV9hQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\JS\\home.js"
     },
     {
-      "Identity": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\JS\\loadheader.js",
+      "Identity": "C:\\Users\\Boredom\\Grunt\\AccountsAPI\\wwwroot\\JS\\loadheader.js",
       "SourceId": "AccountsAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Boredom\\Grunt\\AccountsAPI\\wwwroot\\",
       "BasePath": "_content/AccountsAPI",
-      "RelativePath": "JS/loadheader#[.{fingerprint}]?.js",
+      "RelativePath": "JS/loadheader.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "9acvf9vcja",
-      "Integrity": "8XKPbiIsm2kFwEy61EiNMwHc2k/wi688jxsI3d17ep0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\JS\\loadheader.js"
     },
     {
-      "Identity": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\JS\\login.js",
+      "Identity": "C:\\Users\\Boredom\\Grunt\\AccountsAPI\\wwwroot\\JS\\login.js",
       "SourceId": "AccountsAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Boredom\\Grunt\\AccountsAPI\\wwwroot\\",
       "BasePath": "_content/AccountsAPI",
-      "RelativePath": "JS/login#[.{fingerprint}]?.js",
+      "RelativePath": "JS/login.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "3orkvs4mq7",
-      "Integrity": "7QdBgV+IP8SKfma2Uq4RksvKTP4xcm+cGgd0Bf1uN3M=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\JS\\login.js"
     },
     {
-      "Identity": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\JS\\restaurant.js",
+      "Identity": "C:\\Users\\Boredom\\Grunt\\AccountsAPI\\wwwroot\\JS\\restaurant.js",
       "SourceId": "AccountsAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Boredom\\Grunt\\AccountsAPI\\wwwroot\\",
       "BasePath": "_content/AccountsAPI",
-      "RelativePath": "JS/restaurant#[.{fingerprint}]?.js",
+      "RelativePath": "JS/restaurant.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "1nm0gk4ukv",
-      "Integrity": "nRLXigTQSnQueiMz+PdcL3VokQbInmOKjopoGIMx3u4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\JS\\restaurant.js"
     },
     {
-      "Identity": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\JS\\signup.js",
+      "Identity": "C:\\Users\\Boredom\\Grunt\\AccountsAPI\\wwwroot\\JS\\signup.js",
       "SourceId": "AccountsAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Boredom\\Grunt\\AccountsAPI\\wwwroot\\",
       "BasePath": "_content/AccountsAPI",
-      "RelativePath": "JS/signup#[.{fingerprint}]?.js",
+      "RelativePath": "JS/signup.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "36o7v0iszg",
-      "Integrity": "GxVBstVSEpxo2NPjStzdUxJgZRq7A7TbUVqVR7K4xIY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\JS\\signup.js"
     },
     {
-      "Identity": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\Pictures\\crossbones-icons.png",
+      "Identity": "C:\\Users\\Boredom\\Grunt\\AccountsAPI\\wwwroot\\Pictures\\crossbones-icons.png",
       "SourceId": "AccountsAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Boredom\\Grunt\\AccountsAPI\\wwwroot\\",
       "BasePath": "_content/AccountsAPI",
-      "RelativePath": "Pictures/crossbones-icons#[.{fingerprint}]?.png",
+      "RelativePath": "Pictures/crossbones-icons.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "1nowk0cda8",
-      "Integrity": "vdhP17vQ4ngZM2NFQjrYhZ5KRlfH8uTmJM/0GEoWTao=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Pictures\\crossbones-icons.png"
-    }
-  ],
-  "Endpoints": [
-    {
-      "Route": "CSS/account.css",
-      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\CSS\\account.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "77"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Cc0DGw062VuTyYl5JJIsS25R/7lUAXFQdalxbR1IMns=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 26 Mar 2025 05:26:46 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-Cc0DGw062VuTyYl5JJIsS25R/7lUAXFQdalxbR1IMns="
-        }
-      ]
-    },
-    {
-      "Route": "CSS/account.zh7k0wpju9.css",
-      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\CSS\\account.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "77"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Cc0DGw062VuTyYl5JJIsS25R/7lUAXFQdalxbR1IMns=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 26 Mar 2025 05:26:46 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "zh7k0wpju9"
-        },
-        {
-          "Name": "label",
-          "Value": "CSS/account.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-Cc0DGw062VuTyYl5JJIsS25R/7lUAXFQdalxbR1IMns="
-        }
-      ]
-    },
-    {
-      "Route": "CSS/header.1apxvtg35d.css",
-      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\CSS\\header.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "716"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"xy7EvgZBvFbs9W7NJtFVBxsG1A0yg+bL2F93Z9gOxZc=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 06:57:38 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "1apxvtg35d"
-        },
-        {
-          "Name": "label",
-          "Value": "CSS/header.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-xy7EvgZBvFbs9W7NJtFVBxsG1A0yg+bL2F93Z9gOxZc="
-        }
-      ]
-    },
-    {
-      "Route": "CSS/header.css",
-      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\CSS\\header.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "716"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"xy7EvgZBvFbs9W7NJtFVBxsG1A0yg+bL2F93Z9gOxZc=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 06:57:38 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-xy7EvgZBvFbs9W7NJtFVBxsG1A0yg+bL2F93Z9gOxZc="
-        }
-      ]
-    },
-    {
-      "Route": "CSS/home.css",
-      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\CSS\\home.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "47"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"HZgxEaNrAHaaseR0GRdRzSsu8zLlM30JiGMwTNl3rg0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 26 Apr 2025 01:02:44 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-HZgxEaNrAHaaseR0GRdRzSsu8zLlM30JiGMwTNl3rg0="
-        }
-      ]
-    },
-    {
-      "Route": "CSS/home.vp48a13et3.css",
-      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\CSS\\home.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "47"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"HZgxEaNrAHaaseR0GRdRzSsu8zLlM30JiGMwTNl3rg0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 26 Apr 2025 01:02:44 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "vp48a13et3"
-        },
-        {
-          "Name": "label",
-          "Value": "CSS/home.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-HZgxEaNrAHaaseR0GRdRzSsu8zLlM30JiGMwTNl3rg0="
-        }
-      ]
-    },
-    {
-      "Route": "CSS/restaurant.a35fissvu2.css",
-      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\CSS\\restaurant.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1470"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"enYo5ZwLWsS7QKRrj6w4H4Ry+sgp4Q5eq4+QwR+WP2c=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 23 Apr 2025 03:34:15 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "a35fissvu2"
-        },
-        {
-          "Name": "label",
-          "Value": "CSS/restaurant.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-enYo5ZwLWsS7QKRrj6w4H4Ry+sgp4Q5eq4+QwR+WP2c="
-        }
-      ]
-    },
-    {
-      "Route": "CSS/restaurant.css",
-      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\CSS\\restaurant.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1470"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"enYo5ZwLWsS7QKRrj6w4H4Ry+sgp4Q5eq4+QwR+WP2c=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 23 Apr 2025 03:34:15 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-enYo5ZwLWsS7QKRrj6w4H4Ry+sgp4Q5eq4+QwR+WP2c="
-        }
-      ]
-    },
-    {
-      "Route": "CSS/reviewTemplate.css",
-      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\CSS\\reviewTemplate.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "184"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"vnNqPwZSaMbN7AOhEpf8MeVTxMuIXZerDLt+1ooujTg=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 26 Apr 2025 00:14:28 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-vnNqPwZSaMbN7AOhEpf8MeVTxMuIXZerDLt+1ooujTg="
-        }
-      ]
-    },
-    {
-      "Route": "CSS/reviewTemplate.igblvcvhrj.css",
-      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\CSS\\reviewTemplate.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "184"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"vnNqPwZSaMbN7AOhEpf8MeVTxMuIXZerDLt+1ooujTg=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 26 Apr 2025 00:14:28 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "igblvcvhrj"
-        },
-        {
-          "Name": "label",
-          "Value": "CSS/reviewTemplate.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-vnNqPwZSaMbN7AOhEpf8MeVTxMuIXZerDLt+1ooujTg="
-        }
-      ]
-    },
-    {
-      "Route": "HTML/accountpage.html",
-      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\HTML\\accountpage.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1276"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"V/WjP+PbUOB6GOSdOq3HFGMDmu0lijJqueTca5PJo5s=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:13:12 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-V/WjP+PbUOB6GOSdOq3HFGMDmu0lijJqueTca5PJo5s="
-        }
-      ]
-    },
-    {
-      "Route": "HTML/accountpage.zhdw9wo5dh.html",
-      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\HTML\\accountpage.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1276"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"V/WjP+PbUOB6GOSdOq3HFGMDmu0lijJqueTca5PJo5s=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:13:12 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "zhdw9wo5dh"
-        },
-        {
-          "Name": "label",
-          "Value": "HTML/accountpage.html"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-V/WjP+PbUOB6GOSdOq3HFGMDmu0lijJqueTca5PJo5s="
-        }
-      ]
-    },
-    {
-      "Route": "HTML/home.html",
-      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\HTML\\home.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1288"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"utbrzMhRnn9ppKsPxcAVTQiyAQ2i8CExy8bPA244VMk=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 26 Apr 2025 01:04:40 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-utbrzMhRnn9ppKsPxcAVTQiyAQ2i8CExy8bPA244VMk="
-        }
-      ]
-    },
-    {
-      "Route": "HTML/home.yabavoqka3.html",
-      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\HTML\\home.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1288"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"utbrzMhRnn9ppKsPxcAVTQiyAQ2i8CExy8bPA244VMk=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 26 Apr 2025 01:04:40 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "yabavoqka3"
-        },
-        {
-          "Name": "label",
-          "Value": "HTML/home.html"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-utbrzMhRnn9ppKsPxcAVTQiyAQ2i8CExy8bPA244VMk="
-        }
-      ]
-    },
-    {
-      "Route": "HTML/login.html",
-      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\HTML\\login.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "767"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"yesX9KsljxYoNSdmu7hiZatf1Wl0js2Jkva+A28H7gc=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:26:37 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-yesX9KsljxYoNSdmu7hiZatf1Wl0js2Jkva+A28H7gc="
-        }
-      ]
-    },
-    {
-      "Route": "HTML/login.ldq9uwaw17.html",
-      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\HTML\\login.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "767"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"yesX9KsljxYoNSdmu7hiZatf1Wl0js2Jkva+A28H7gc=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:26:37 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "ldq9uwaw17"
-        },
-        {
-          "Name": "label",
-          "Value": "HTML/login.html"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-yesX9KsljxYoNSdmu7hiZatf1Wl0js2Jkva+A28H7gc="
-        }
-      ]
-    },
-    {
-      "Route": "HTML/restaurantpage.134ul5xx90.html",
-      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\HTML\\restaurantpage.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1554"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"LSlVGV5Twk9aPFRBLED9uSoikl31Z5SJhH7sCpJBuY4=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 06:18:19 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "134ul5xx90"
-        },
-        {
-          "Name": "label",
-          "Value": "HTML/restaurantpage.html"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-LSlVGV5Twk9aPFRBLED9uSoikl31Z5SJhH7sCpJBuY4="
-        }
-      ]
-    },
-    {
-      "Route": "HTML/restaurantpage.html",
-      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\HTML\\restaurantpage.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1554"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"LSlVGV5Twk9aPFRBLED9uSoikl31Z5SJhH7sCpJBuY4=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 06:18:19 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-LSlVGV5Twk9aPFRBLED9uSoikl31Z5SJhH7sCpJBuY4="
-        }
-      ]
-    },
-    {
-      "Route": "HTML/signup.html",
-      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\HTML\\signup.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "917"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"KyJEXSEsb3gZlhSbDkl3/I8G+xx117bjuiz9ak6rkI0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:26:46 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-KyJEXSEsb3gZlhSbDkl3/I8G+xx117bjuiz9ak6rkI0="
-        }
-      ]
-    },
-    {
-      "Route": "HTML/signup.jyl4y665sb.html",
-      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\HTML\\signup.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "917"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"KyJEXSEsb3gZlhSbDkl3/I8G+xx117bjuiz9ak6rkI0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:26:46 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "jyl4y665sb"
-        },
-        {
-          "Name": "label",
-          "Value": "HTML/signup.html"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-KyJEXSEsb3gZlhSbDkl3/I8G+xx117bjuiz9ak6rkI0="
-        }
-      ]
-    },
-    {
-      "Route": "HTML/Templates/header.30pm8ia6e6.html",
-      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\HTML\\Templates\\header.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "374"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"7SdBo1lkHDWXuZc9RtfyJg0+dcznDuPSPcT05Nk7mbE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 06:22:32 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "30pm8ia6e6"
-        },
-        {
-          "Name": "label",
-          "Value": "HTML/Templates/header.html"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-7SdBo1lkHDWXuZc9RtfyJg0+dcznDuPSPcT05Nk7mbE="
-        }
-      ]
-    },
-    {
-      "Route": "HTML/Templates/header.html",
-      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\HTML\\Templates\\header.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "374"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"7SdBo1lkHDWXuZc9RtfyJg0+dcznDuPSPcT05Nk7mbE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 06:22:32 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-7SdBo1lkHDWXuZc9RtfyJg0+dcznDuPSPcT05Nk7mbE="
-        }
-      ]
-    },
-    {
-      "Route": "HTML/Templates/reviewTemplate.html",
-      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\HTML\\Templates\\reviewTemplate.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "369"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"zwvZsZIaXuW276hOBQJpm1jxbCORY0EFUK7NHcfoDqM=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 26 Apr 2025 00:11:05 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-zwvZsZIaXuW276hOBQJpm1jxbCORY0EFUK7NHcfoDqM="
-        }
-      ]
-    },
-    {
-      "Route": "HTML/Templates/reviewTemplate.hwa0pdrozb.html",
-      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\HTML\\Templates\\reviewTemplate.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "369"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"zwvZsZIaXuW276hOBQJpm1jxbCORY0EFUK7NHcfoDqM=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 26 Apr 2025 00:11:05 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "hwa0pdrozb"
-        },
-        {
-          "Name": "label",
-          "Value": "HTML/Templates/reviewTemplate.html"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-zwvZsZIaXuW276hOBQJpm1jxbCORY0EFUK7NHcfoDqM="
-        }
-      ]
-    },
-    {
-      "Route": "JS/account.86u6o32ptr.js",
-      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\JS\\account.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "7976"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"wL2ofGwYxvGxikKPduAweRT1AH9NxbcZxJ9UMkR8+XA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:15:39 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "86u6o32ptr"
-        },
-        {
-          "Name": "label",
-          "Value": "JS/account.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-wL2ofGwYxvGxikKPduAweRT1AH9NxbcZxJ9UMkR8+XA="
-        }
-      ]
-    },
-    {
-      "Route": "JS/account.js",
-      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\JS\\account.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "7976"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"wL2ofGwYxvGxikKPduAweRT1AH9NxbcZxJ9UMkR8+XA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:15:39 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-wL2ofGwYxvGxikKPduAweRT1AH9NxbcZxJ9UMkR8+XA="
-        }
-      ]
-    },
-    {
-      "Route": "JS/home.js",
-      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\JS\\home.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "722"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"erKROI1lFisFHwlWom/dh4pDpGiZ45pp5HcQuziV9hQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 26 Apr 2025 01:05:05 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-erKROI1lFisFHwlWom/dh4pDpGiZ45pp5HcQuziV9hQ="
-        }
-      ]
-    },
-    {
-      "Route": "JS/home.uny0737125.js",
-      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\JS\\home.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "722"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"erKROI1lFisFHwlWom/dh4pDpGiZ45pp5HcQuziV9hQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 26 Apr 2025 01:05:05 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "uny0737125"
-        },
-        {
-          "Name": "label",
-          "Value": "JS/home.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-erKROI1lFisFHwlWom/dh4pDpGiZ45pp5HcQuziV9hQ="
-        }
-      ]
-    },
-    {
-      "Route": "JS/loadheader.9acvf9vcja.js",
-      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\JS\\loadheader.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1064"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"8XKPbiIsm2kFwEy61EiNMwHc2k/wi688jxsI3d17ep0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 06:41:41 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "9acvf9vcja"
-        },
-        {
-          "Name": "label",
-          "Value": "JS/loadheader.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-8XKPbiIsm2kFwEy61EiNMwHc2k/wi688jxsI3d17ep0="
-        }
-      ]
-    },
-    {
-      "Route": "JS/loadheader.js",
-      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\JS\\loadheader.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1064"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"8XKPbiIsm2kFwEy61EiNMwHc2k/wi688jxsI3d17ep0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 06:41:41 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-8XKPbiIsm2kFwEy61EiNMwHc2k/wi688jxsI3d17ep0="
-        }
-      ]
-    },
-    {
-      "Route": "JS/login.3orkvs4mq7.js",
-      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\JS\\login.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1058"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"7QdBgV+IP8SKfma2Uq4RksvKTP4xcm+cGgd0Bf1uN3M=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 17 Apr 2025 02:34:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "3orkvs4mq7"
-        },
-        {
-          "Name": "label",
-          "Value": "JS/login.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-7QdBgV+IP8SKfma2Uq4RksvKTP4xcm+cGgd0Bf1uN3M="
-        }
-      ]
-    },
-    {
-      "Route": "JS/login.js",
-      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\JS\\login.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1058"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"7QdBgV+IP8SKfma2Uq4RksvKTP4xcm+cGgd0Bf1uN3M=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 17 Apr 2025 02:34:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-7QdBgV+IP8SKfma2Uq4RksvKTP4xcm+cGgd0Bf1uN3M="
-        }
-      ]
-    },
-    {
-      "Route": "JS/restaurant.1nm0gk4ukv.js",
-      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\JS\\restaurant.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "3376"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"nRLXigTQSnQueiMz+PdcL3VokQbInmOKjopoGIMx3u4=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 18 Apr 2025 05:45:11 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "1nm0gk4ukv"
-        },
-        {
-          "Name": "label",
-          "Value": "JS/restaurant.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-nRLXigTQSnQueiMz+PdcL3VokQbInmOKjopoGIMx3u4="
-        }
-      ]
-    },
-    {
-      "Route": "JS/restaurant.js",
-      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\JS\\restaurant.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "3376"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"nRLXigTQSnQueiMz+PdcL3VokQbInmOKjopoGIMx3u4=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 18 Apr 2025 05:45:11 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-nRLXigTQSnQueiMz+PdcL3VokQbInmOKjopoGIMx3u4="
-        }
-      ]
-    },
-    {
-      "Route": "JS/signup.36o7v0iszg.js",
-      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\JS\\signup.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2025"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"GxVBstVSEpxo2NPjStzdUxJgZRq7A7TbUVqVR7K4xIY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 18 Apr 2025 04:51:09 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "36o7v0iszg"
-        },
-        {
-          "Name": "label",
-          "Value": "JS/signup.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-GxVBstVSEpxo2NPjStzdUxJgZRq7A7TbUVqVR7K4xIY="
-        }
-      ]
-    },
-    {
-      "Route": "JS/signup.js",
-      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\JS\\signup.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2025"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"GxVBstVSEpxo2NPjStzdUxJgZRq7A7TbUVqVR7K4xIY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 18 Apr 2025 04:51:09 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-GxVBstVSEpxo2NPjStzdUxJgZRq7A7TbUVqVR7K4xIY="
-        }
-      ]
-    },
-    {
-      "Route": "Pictures/crossbones-icons.1nowk0cda8.png",
-      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\Pictures\\crossbones-icons.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "783"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"vdhP17vQ4ngZM2NFQjrYhZ5KRlfH8uTmJM/0GEoWTao=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 25 Mar 2025 05:33:24 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "1nowk0cda8"
-        },
-        {
-          "Name": "label",
-          "Value": "Pictures/crossbones-icons.png"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-vdhP17vQ4ngZM2NFQjrYhZ5KRlfH8uTmJM/0GEoWTao="
-        }
-      ]
-    },
-    {
-      "Route": "Pictures/crossbones-icons.png",
-      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\Pictures\\crossbones-icons.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "783"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"vdhP17vQ4ngZM2NFQjrYhZ5KRlfH8uTmJM/0GEoWTao=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 25 Mar 2025 05:33:24 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-vdhP17vQ4ngZM2NFQjrYhZ5KRlfH8uTmJM/0GEoWTao="
-        }
-      ]
     }
   ]
 }
