@@ -8,13 +8,12 @@ window.addEventListener("DOMContentLoaded", async () => {
 });
 
 async function initMap() {
-    const position = { lat: 37, lng: -120 };
-
     // Load libraries
     const { Map } = await google.maps.importLibrary("maps");
     const { Geocoder } = await google.maps.importLibrary("geocoding");
     places = await google.maps.importLibrary("places"); // ✅ new Places API
 
+    const position = { lat: 37, lng: -120 };
     map = new Map(document.getElementById("map"), {
         zoom: 8,
         center: position,
@@ -22,6 +21,18 @@ async function initMap() {
     });
 
     geocoder = new Geocoder();
+
+    const areacode = sessionStorage.getItem("areacode");
+    geocoder.geocode({ address: areacode }, (results, status) => {
+        if (status === "OK" && results.length > 0) {
+            const location = results[0].geometry.location;
+            map.setCenter(location);
+            map.setZoom(12);
+        } else {
+            console.warn("Could not geocode area code:", status);
+        }
+    });
+
 }
 
 function setupSearchListeners() {
@@ -82,16 +93,23 @@ async function restaurantSearch(mapCenter) {
 
     try {
         const { places } = await Place.searchNearby(request);
+        const infoWindow = new google.maps.InfoWindow();
     
         if (places.length) {
-          const bounds = new LatLngBounds();
+            const bounds = new LatLngBounds();
     
-          for (const place of places) {
-            new AdvancedMarkerElement({
+            for (const place of places) {
+                const marker = new AdvancedMarkerElement({
                 map,
                 position: place.location,
                 title: place.displayName?.text || "Restaurant"
             });
+
+            marker.addListener("gmp-click", () => {
+                infoWindow.setContent(`<strong>${place.displayName?.text || "Restaurant"}</strong><br>${place.businessStatus}`);
+                infoWindow.open(map, marker);
+            })
+            
     
             bounds.extend(place.location);
           }

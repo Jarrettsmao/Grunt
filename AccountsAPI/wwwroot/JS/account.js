@@ -9,8 +9,10 @@ document.addEventListener("DOMContentLoaded", function() {
     // username = userInfo.username;
     sessionStorage.setItem("userId", userInfo.id);
     sessionStorage.setItem("username", userInfo.username);
+    sessionStorage.setItem("areacode", userInfo.areacode);
 
     displayWelcomeMessage();
+    displayAreaCode();
     getUserReviews();
     deleteAccount();
     changeUsername();
@@ -64,6 +66,16 @@ function displayWelcomeMessage() {
     }
 }
 
+function displayAreaCode(){
+    const areacode = sessionStorage.getItem("areacode");
+    if (areacode) {
+        const areacodeMessage = document.getElementById("areacodeMessage");
+        areacodeMessage.textContent = `${areacode}`; 
+    } else {
+        console.log("No area code found.");
+    }
+}
+
 //function to handle account deletion
 function deleteAccount(){
     document.getElementById("deleteAccountBtn").addEventListener("click", async function(){
@@ -82,7 +94,7 @@ function deleteAccount(){
                 if (response.ok){
                     alert("Friend gone...");
                     sessionStorage.clear();
-                    window.location.href = "/HTML/home.html";
+                    window.location.href = "https://localhost:8080/Home";
                 } else {
                     alert("Failed to delete account.");
                 }
@@ -170,9 +182,11 @@ function getUserInfoFromToken(){
 
     console.log(payload.nameid);
     console.log(payload.unique_name);
+    console.log(payload.area_code);
     return {
         id: payload.nameid,
-        username: payload.unique_name
+        username: payload.unique_name,
+        areacode: payload.area_code
     };
 }
 

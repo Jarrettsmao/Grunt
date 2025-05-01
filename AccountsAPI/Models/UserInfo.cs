@@ -11,6 +11,7 @@ public class UserInfo{
     public string email { get; set; } = null!;
     [BsonElement("username")]
     public string username { get; set; } = null!;
+    public string areacode { get; set; } = null!; 
     [BsonElement("password")]
     public string password { get; set; } = null!;
     public DateTime createdDate { get; set; } = DateTime.UtcNow;

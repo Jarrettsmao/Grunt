@@ -13,10 +13,10 @@ async function SubmitForm(){
             submitButton.disabled = true;
 
             const formData = {
-                // id: "",
                 email: document.getElementById("email").value,
                 username: document.getElementById("username").value,
-                password: document.getElementById("password").value
+                password: document.getElementById("password").value,
+                areacode: document.getElementById("areacode").value
             };
             
             try {

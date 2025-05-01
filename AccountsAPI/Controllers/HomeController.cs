@@ -31,7 +31,7 @@ public class HomeController: Controller {
     }
 
     //serving static files
-    [HttpGet("home")]
+    [HttpGet("Home")]
     public IActionResult GetAccountPage(){
         return PhysicalFile(Path.Combine(Directory.GetCurrentDirectory(),
         "wwwroot", "HTML", "home.html"), "text/html");
