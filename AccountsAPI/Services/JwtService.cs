@@ -18,8 +18,12 @@ public class JwtService {
         var claims = new List<Claim>{
             new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
             new Claim(ClaimTypes.Name, user.username),
-            new Claim("area_code", user.areacode)
         };
+
+        if (!string.IsNullOrEmpty(user.areacode)){
+            claims.Add(new Claim("area_code", user.areacode));
+        }
+            
 
         var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtSettings.SecretKey));
         var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);

@@ -36,50 +36,126 @@ async function initMap() {
 }
 
 function setupSearchListeners() {
-    const input = document.getElementById("zipCodeSearch");
+    const areaInput = document.getElementById("zipCodeSearch");
+    const locationInput = document.getElementById("locationSearch");
     const button = document.getElementById("searchBtn");
 
     button.addEventListener("click", () => {
-        const query = input.value.trim();
-        if (query) {
-            geocodeAndSearch(query);
-        } else {
-            alert("Please enter a zip code or location.");
-        }
+        const areaVal = areaInput.value.trim();
+        const locationVal = locationInput.value.trim();
+        // if (!areaVal) {
+        //     alert("Please enter an area code.");
+        //     return;
+        // }
+        
+        const fullQuery = locationVal ? `${locationVal} ${areaVal}` : areaVal;
+        geocodeAndSearch(fullQuery, locationVal);
     });
 
-    input.addEventListener("keypress", (e) => {
-        if (e.key === "Enter") {
-            const query = input.value.trim();
-            if (query) {
-                geocodeAndSearch(query);
-            } else {
-                alert("Please enter a zip code or location.");
+    [areaInput, locationInput].forEach(input => {
+        input.addEventListener("keypress", (e) => {
+            const areaVal = areaInput.value.trim();
+            const locationVal = locationInput.value.trim();
+            if (e.key === "Enter") {
+                // if (!areaVal){
+                //     alert("Please enter an area code.");
+                //     return;
+                // }
+
+                const fullQuery = locationVal ? `${locationVal} ${areaVal}` : areaVal;
+                geocodeAndSearch(fullQuery, locationVal);
             }
-        }
+        });
     });
 }
 
-function geocodeAndSearch(inputValue) {
-    geocoder.geocode({ address: inputValue }, (results, status) => {
+function geocodeAndSearch(fullQuery, locationName) {
+    geocoder.geocode({ address: fullQuery }, (results, status) => {
         if (status === "OK" && results.length > 0) {
             const location = results[0].geometry.location;
             map.setCenter(location);
-            // map.setZoom(12);
-            restaurantSearch(location);
+
+            //decide between searching just zip or restaurant & zip
+            if (locationName) {
+                restaurantSearch(location);
+            } else {
+                areaCodeSearch(location);
+            }
         } else {
             console.error("Geocode was not successful:", status);
+            alert("Location not found.");
         }
     });
 }
 
-async function restaurantSearch(mapCenter) {
+async function restaurantSearch(mapCenter){
     const { Place, SearchNearbyRankPreference } = await google.maps.importLibrary("places");
     const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
     const { LatLngBounds } = await google.maps.importLibrary("core");
 
     const request = {
-        fields: ["displayName", "location", "businessStatus"],
+        fields: ["displayName", "location", "businessStatus", "formattedAddress"],
+        locationRestriction: {
+          center: mapCenter,
+          radius: 500
+        },
+        includedPrimaryTypes: ["restaurant"],
+        maxResultCount: 1,
+        rankPreference: SearchNearbyRankPreference.POPULARITY,
+        language: "en-US",
+        region: "us"
+    };
+
+    try {
+        const { places } = await Place.searchNearby(request);
+        const infoWindow = new google.maps.InfoWindow();
+    
+        if (places.length) {
+            const bounds = new LatLngBounds();
+    
+            //adds markers to search results
+            for (const place of places) {
+                const marker = new AdvancedMarkerElement({
+                map,
+                position: place.location,
+                title: place.displayName, 
+            });
+
+            const name = place.displayName;
+            const address = place.formattedAddress;
+            const query = `${name}, ${address}`;
+            const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
+
+            marker.addListener("gmp-click", () => {
+                infoWindow.setContent(`
+                    <strong>${name}</strong><br>
+                    // use grunt rating here<br> 
+                    ${address}<br>
+                    <a href="${mapsUrl}" target="_blank" rel="noopener noreferrer">View on Google Maps</a>`
+                );
+                infoWindow.open(map, marker);
+            })
+            
+    
+            bounds.extend(place.location);
+          }
+    
+        map.fitBounds(bounds);
+        } else {
+          console.log("No restaurants found.");
+        }
+      } catch (error) {
+        console.error("Error searching for restaurants:", error);
+      }
+}
+
+async function areaCodeSearch(mapCenter) {
+    const { Place, SearchNearbyRankPreference } = await google.maps.importLibrary("places");
+    const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+    const { LatLngBounds } = await google.maps.importLibrary("core");
+
+    const request = {
+        fields: ["displayName", "location", "businessStatus", "formattedAddress"],
         locationRestriction: {
           center: mapCenter,
           radius: 5000
@@ -98,15 +174,26 @@ async function restaurantSearch(mapCenter) {
         if (places.length) {
             const bounds = new LatLngBounds();
     
+            //adds markers to search results
             for (const place of places) {
                 const marker = new AdvancedMarkerElement({
                 map,
                 position: place.location,
-                title: place.displayName?.text || "Restaurant"
+                title: place.displayName, 
             });
 
+            const name = place.displayName;
+            const address = place.formattedAddress;
+            const query = `${name}, ${address}`;
+            const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
+
             marker.addListener("gmp-click", () => {
-                infoWindow.setContent(`<strong>${place.displayName?.text || "Restaurant"}</strong><br>${place.businessStatus}`);
+                infoWindow.setContent(`
+                    <strong>${name}</strong><br>
+                    // use grunt rating here<br> 
+                    ${address}<br>
+                    <a href="${mapsUrl}" target="_blank" rel="noopener noreferrer">View on Google Maps</a>`
+                );
                 infoWindow.open(map, marker);
             })
             
