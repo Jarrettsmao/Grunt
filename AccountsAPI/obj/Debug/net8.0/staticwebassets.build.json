@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "+TaYLwAy0UEdTrqiN/xBPbZ3KC/aewsyuiTGkMlNJw0=",
+  "Hash": "aq+BpXv1rcymh+d1EtG9TtL4XnZBLwmiS23L6v/+Gdk=",
   "Source": "AccountsAPI",
   "BasePath": "_content/AccountsAPI",
   "Mode": "Default",
@@ -304,8 +304,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "vfntr2dj49",
-      "Integrity": "6+4ILf+9vdQ3+uV43aQISBZg+PNkP2ccTZhLWO4tUqk=",
+      "Fingerprint": "7nzl3l2hcx",
+      "Integrity": "s16cHPWLSXEntK6foBD45Ml+hX/DVfd2YQCvTsXuskc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\JS\\home.js"
@@ -1484,6 +1484,51 @@
       ]
     },
     {
+      "Route": "JS/home.7nzl3l2hcx.js",
+      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\JS\\home.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7312"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"s16cHPWLSXEntK6foBD45Ml+hX/DVfd2YQCvTsXuskc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 02 May 2025 06:24:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "7nzl3l2hcx"
+        },
+        {
+          "Name": "label",
+          "Value": "JS/home.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-s16cHPWLSXEntK6foBD45Ml+hX/DVfd2YQCvTsXuskc="
+        }
+      ]
+    },
+    {
       "Route": "JS/home.js",
       "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\JS\\home.js",
       "Selectors": [],
@@ -1494,7 +1539,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3924"
+          "Value": "7312"
         },
         {
           "Name": "Content-Type",
@@ -1502,11 +1547,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"6+4ILf+9vdQ3+uV43aQISBZg+PNkP2ccTZhLWO4tUqk=\""
+          "Value": "\"s16cHPWLSXEntK6foBD45Ml+hX/DVfd2YQCvTsXuskc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 01 May 2025 07:01:41 GMT"
+          "Value": "Fri, 02 May 2025 06:24:13 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1516,52 +1561,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-6+4ILf+9vdQ3+uV43aQISBZg+PNkP2ccTZhLWO4tUqk="
-        }
-      ]
-    },
-    {
-      "Route": "JS/home.vfntr2dj49.js",
-      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\JS\\home.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "3924"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"6+4ILf+9vdQ3+uV43aQISBZg+PNkP2ccTZhLWO4tUqk=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 01 May 2025 07:01:41 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "vfntr2dj49"
-        },
-        {
-          "Name": "label",
-          "Value": "JS/home.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-6+4ILf+9vdQ3+uV43aQISBZg+PNkP2ccTZhLWO4tUqk="
+          "Value": "sha256-s16cHPWLSXEntK6foBD45Ml+hX/DVfd2YQCvTsXuskc="
         }
       ]
     },

@@ -41,35 +41,32 @@ function setupSearchListeners() {
     const button = document.getElementById("searchBtn");
 
     button.addEventListener("click", () => {
-        const areaVal = areaInput.value.trim();
+        let zipVal = areaInput.value.trim();
         const locationVal = locationInput.value.trim();
-        // if (!areaVal) {
-        //     alert("Please enter an area code.");
-        //     return;
-        // }
+        if (!zipVal) {
+            zipVal = sessionStorage.getItem("areacode");
+        }
         
-        const fullQuery = locationVal ? `${locationVal} ${areaVal}` : areaVal;
-        geocodeAndSearch(fullQuery, locationVal);
+        const fullQuery = locationVal ? `${locationVal} ${zipVal}` : zipVal;
+        geocodeAndSearch(fullQuery, locationVal, zipVal);
     });
 
     [areaInput, locationInput].forEach(input => {
         input.addEventListener("keypress", (e) => {
-            const areaVal = areaInput.value.trim();
-            const locationVal = locationInput.value.trim();
             if (e.key === "Enter") {
-                // if (!areaVal){
-                //     alert("Please enter an area code.");
-                //     return;
-                // }
-
-                const fullQuery = locationVal ? `${locationVal} ${areaVal}` : areaVal;
-                geocodeAndSearch(fullQuery, locationVal);
+                let zipVal = areaInput.value.trim();
+                const locationVal = locationInput.value.trim();
+                if (!zipVal) {
+                    zipVal = sessionStorage.getItem("areacode");
+                }
+                const fullQuery = locationVal ? `${locationVal} ${zipVal}` : zipVal;
+                geocodeAndSearch(fullQuery, locationVal, zipVal);
             }
         });
     });
 }
 
-function geocodeAndSearch(fullQuery, locationName) {
+function geocodeAndSearch(fullQuery, locationName, zipCode) {
     geocoder.geocode({ address: fullQuery }, (results, status) => {
         if (status === "OK" && results.length > 0) {
             const location = results[0].geometry.location;
@@ -77,7 +74,7 @@ function geocodeAndSearch(fullQuery, locationName) {
 
             //decide between searching just zip or restaurant & zip
             if (locationName) {
-                restaurantSearch(location);
+                restaurantSearch(location, locationName, zipCode);
             } else {
                 areaCodeSearch(location);
             }
@@ -88,26 +85,27 @@ function geocodeAndSearch(fullQuery, locationName) {
     });
 }
 
-async function restaurantSearch(mapCenter){
+async function restaurantSearch(mapCenter, restaurantName, zipCode){
     const { Place, SearchNearbyRankPreference } = await google.maps.importLibrary("places");
     const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
     const { LatLngBounds } = await google.maps.importLibrary("core");
 
+    // const restaurantName =     
+    const textQuery = `${restaurantName} restaurant ${zipCode}`;
+
     const request = {
+        textQuery: textQuery,
         fields: ["displayName", "location", "businessStatus", "formattedAddress"],
-        locationRestriction: {
-          center: mapCenter,
-          radius: 500
-        },
-        includedPrimaryTypes: ["restaurant"],
-        maxResultCount: 1,
-        rankPreference: SearchNearbyRankPreference.POPULARITY,
+        maxResultCount: 5,
         language: "en-US",
-        region: "us"
+        region: "us",
+        locationBias: mapCenter
     };
 
+    console.log("rest search");
+
     try {
-        const { places } = await Place.searchNearby(request);
+        const { places } = await Place.searchByText(request);
         const infoWindow = new google.maps.InfoWindow();
     
         if (places.length) {
@@ -123,7 +121,7 @@ async function restaurantSearch(mapCenter){
 
             const name = place.displayName;
             const address = place.formattedAddress;
-            const query = `${name}, ${address}`;
+            const query = `${name} restaurant ${address}`;
             const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
 
             marker.addListener("gmp-click", () => {
