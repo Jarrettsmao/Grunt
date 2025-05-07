@@ -16,7 +16,7 @@ public class ReviewService {
         MongoClient client = new MongoClient(mongoDBSettings.Value.ConnectionURI);
         IMongoDatabase database = client.GetDatabase(mongoDBSettings.Value.DatabaseName);
         
-        _reviewsCollection = database.GetCollection<ReviewInfo>("Reviews"); // Collection for Reviews
+        _reviewsCollection = database.GetCollection<ReviewInfo>("Restaurants"); // Collection for Reviews
 
         _mongoDBService = mongoDBService;
     }

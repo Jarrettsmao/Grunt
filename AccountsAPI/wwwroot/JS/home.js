@@ -99,7 +99,7 @@ async function restaurantSearch(mapCenter, restaurantName, zipCode){
         maxResultCount: 5,
         language: "en-US",
         region: "us",
-        locationBias: mapCenter
+        // locationBias: mapCenter
     };
 
     console.log("rest search");

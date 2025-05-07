@@ -57,7 +57,7 @@ public class ReviewController: Controller {
     [HttpGet("WriteReview")]
     public IActionResult GetAccountPage(string username){
         return PhysicalFile(Path.Combine(Directory.GetCurrentDirectory(),
-        "wwwroot", "HTML", "restaurantpage.html"), "text/html");
+        "wwwroot", "HTML", "restaurantreviewpage.html"), "text/html");
     }
 
     [Authorize]

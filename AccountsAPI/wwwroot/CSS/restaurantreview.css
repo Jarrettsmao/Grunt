@@ -16,6 +16,13 @@ html, body {
     box-shadow: none;
 }
 
+#name-container{
+    padding: 0.1rem;
+    text-align: center;
+    background-color: #f8f8f8;
+}
+
+
 .review-container{
     width:40vh;
     border: 0.1rem solid;

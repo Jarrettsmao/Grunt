@@ -7,6 +7,7 @@ const stars = document.querySelectorAll('#starRating .fa-star');
 
 document.addEventListener("DOMContentLoaded", function() {
     SubmitReview();
+    displayRestaurantName()
 });
 
 let selectedRating = 0;
@@ -37,6 +38,16 @@ stars.forEach(function(star) {
         console.log("Submitted Rating: " + selectedRating);
     })
 });
+
+function displayRestaurantName() {
+    const name = "Restaurant"; // Retrieve username
+    // if (restaurantName) {
+        const restaurantName = document.getElementById("restaurantName");
+        restaurantName.textContent = `${name}`;
+    // } else {
+    //     console.log("Username not found.");
+    // }
+}
 
 async function SubmitReview(){
     const form = document.getElementById("reviewForm");

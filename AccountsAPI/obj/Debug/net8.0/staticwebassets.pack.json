@@ -13,8 +13,8 @@
       "PackagePath": "staticwebassets\\CSS\\home.css"
     },
     {
-      "Id": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\CSS\\restaurant.css",
-      "PackagePath": "staticwebassets\\CSS\\restaurant.css"
+      "Id": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\CSS\\restaurantreview.css",
+      "PackagePath": "staticwebassets\\CSS\\restaurantreview.css"
     },
     {
       "Id": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\CSS\\reviewTemplate.css",
@@ -41,8 +41,8 @@
       "PackagePath": "staticwebassets\\HTML\\login.html"
     },
     {
-      "Id": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\HTML\\restaurantpage.html",
-      "PackagePath": "staticwebassets\\HTML\\restaurantpage.html"
+      "Id": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\HTML\\restaurantreviewpage.html",
+      "PackagePath": "staticwebassets\\HTML\\restaurantreviewpage.html"
     },
     {
       "Id": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\HTML\\signup.html",
@@ -65,8 +65,8 @@
       "PackagePath": "staticwebassets\\JS\\login.js"
     },
     {
-      "Id": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\JS\\restaurant.js",
-      "PackagePath": "staticwebassets\\JS\\restaurant.js"
+      "Id": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\JS\\restaurantreview.js",
+      "PackagePath": "staticwebassets\\JS\\restaurantreview.js"
     },
     {
       "Id": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\JS\\signup.js",

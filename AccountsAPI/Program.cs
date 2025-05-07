@@ -9,6 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.Configure<MongoDBSettings>(builder.Configuration.GetSection("MongoDB"));
 builder.Services.AddSingleton<MongoDBService>();
 builder.Services.AddSingleton<ReviewService>();
+builder.Services.AddSingleton<RestaurantService>();
 
 // Enable CORS
 builder.Services.AddCors(options =>
