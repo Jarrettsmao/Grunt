@@ -34,4 +34,14 @@ public class RestaurantService {
         FilterDefinition<RestaurantInfo> filter = Builders<RestaurantInfo>.Filter.Eq("restaurantId", id);
         return await _restaurantCollection.Find(filter).FirstOrDefaultAsync();
     }
+
+    public async Task UpdateRating(string id, int newTotalReviews, double newAvgRating){
+        var filter = Builders<RestaurantInfo>.Filter.Eq("restaurantId", id);
+
+        var update = Builders<RestaurantInfo>.Update.Combine(
+            Builders<RestaurantInfo>.Update.Set<int>("totalReviews", newTotalReviews),
+            Builders<RestaurantInfo>.Update.Set<double>("averageRating", newAvgRating)
+        );
+        await _restaurantCollection.UpdateOneAsync(filter, update);
+    }
 }

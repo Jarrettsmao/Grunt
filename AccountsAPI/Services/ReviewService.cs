@@ -28,6 +28,15 @@ public class ReviewService {
     }
     public async Task<bool> CreateReviewAsync(ReviewInfo reviewInfo) {
         await _reviewsCollection.InsertOneAsync(reviewInfo);
+
+        var restaurant = await _restaurantService.GetByRestaurantIdAsync(reviewInfo.restaurantId);
+
+        // if (restaurant != null){
+            int newTotalReviews = restaurant.totalReviews + 1;
+            double newAvgRating = ((restaurant.averageRating * restaurant.totalReviews) + reviewInfo.rating) / newTotalReviews;
+            // Console.WriteLine(newAvgRating);
+            await _restaurantService.UpdateRating(reviewInfo.restaurantId, newTotalReviews, newAvgRating);
+        // }
         return true;
     }
 
@@ -48,4 +57,8 @@ public class ReviewService {
             await _restaurantService.CreateRestaurantAsync(newRestaurant);
         }
     }
+
+    // public async Task UpdateRatingAverage(){
+
+    // }
 }
