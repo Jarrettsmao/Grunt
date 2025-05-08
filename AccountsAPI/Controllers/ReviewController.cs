@@ -48,6 +48,8 @@ public class ReviewController: Controller {
 
         reviewInfo.authorId = userId;
 
+        await _reviewService.CheckRestaurantAsync(reviewInfo.restaurantId, reviewInfo.restaurantName);
+
         await _reviewService.CreateReviewAsync(reviewInfo);
         return Ok(new { message = "Review submitted successfully!"});
     }

@@ -11,22 +11,22 @@ public class ReviewService {
     
     private readonly IMongoCollection<ReviewInfo> _reviewsCollection;
     private readonly MongoDBService _mongoDBService;
+    private readonly RestaurantService _restaurantService;
 
-    public ReviewService(IOptions<MongoDBSettings> mongoDBSettings, MongoDBService mongoDBService) {
+    public ReviewService(RestaurantService restaurantService, IOptions<MongoDBSettings> mongoDBSettings, MongoDBService mongoDBService) {
         MongoClient client = new MongoClient(mongoDBSettings.Value.ConnectionURI);
         IMongoDatabase database = client.GetDatabase(mongoDBSettings.Value.DatabaseName);
         
-        _reviewsCollection = database.GetCollection<ReviewInfo>("Restaurants"); // Collection for Reviews
+        _reviewsCollection = database.GetCollection<ReviewInfo>("Reviews"); // Collection for Reviews
 
         _mongoDBService = mongoDBService;
+        _restaurantService = restaurantService;
     }
 
     public async Task<List<ReviewInfo>> GetAsync() {
         return await _reviewsCollection.Find(new BsonDocument()).ToListAsync();
     }
     public async Task<bool> CreateReviewAsync(ReviewInfo reviewInfo) {
-        //needs to first take info from jwt 
-
         await _reviewsCollection.InsertOneAsync(reviewInfo);
         return true;
     }
@@ -34,5 +34,18 @@ public class ReviewService {
     public async Task<List<ReviewInfo>> GetReviewsByAuthorIdAsync(string id){
         var filter = Builders<ReviewInfo>.Filter.Eq(nameof(ReviewInfo.authorId), id);
         return await _reviewsCollection.Find(filter).ToListAsync();
+    }
+
+    public async Task CheckRestaurantAsync(string restaurantId, string restaurantName){
+        var restaurant = await _restaurantService.GetByRestaurantIdAsync(restaurantId);
+        if (restaurant == null) {
+            var newRestaurant = new RestaurantInfo {
+                restaurantId = restaurantId,
+                restaurantName = restaurantName,
+                createdDate = DateTime.UtcNow
+            };
+
+            await _restaurantService.CreateRestaurantAsync(newRestaurant);
+        }
     }
 }

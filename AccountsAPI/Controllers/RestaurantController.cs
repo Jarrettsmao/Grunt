@@ -35,22 +35,20 @@ public class RestaurantController: Controller {
         return await _restaurantService.GetAsync();
     }
 
+    //change authorize
     // [Authorize]
-    // [HttpPost("PostReq")]
-    // public async Task<IActionResult> CreateReview([FromBody] ReviewInfo reviewInfo) {
-    //     var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+    [HttpPost("CreateReq")]
+    public async Task<IActionResult> CreateRestaurant([FromBody] RestaurantInfo restaurantInfo) {
 
-    //     //needs to also get restaurant id and set it
+        //needs to also get restaurant id and set it
 
-    //     if (string.IsNullOrEmpty(userId)){
-    //         return Unauthorized("Invalid token - no user ID found");
-    //     }
+        // if (string.IsNullOrEmpty(userId)){
+        //     return Unauthorized("Invalid token - no user ID found");
+        // }
 
-    //     reviewInfo.authorId = userId;
-
-    //     await _reviewService.CreateReviewAsync(reviewInfo);
-    //     return Ok(new { message = "Review submitted successfully!"});
-    // }
+        await _restaurantService.CreateRestaurantAsync(restaurantInfo);
+        return Ok(new { message = "Restaurant created successfully!"});
+    }
 
     //serving static files
 

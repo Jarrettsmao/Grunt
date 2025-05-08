@@ -16,7 +16,7 @@ public class RestaurantService {
         MongoClient client = new MongoClient(mongoDBSettings.Value.ConnectionURI);
         IMongoDatabase database = client.GetDatabase(mongoDBSettings.Value.DatabaseName);
         
-        _restaurantCollection = database.GetCollection<RestaurantInfo>("Restaurants"); // Collection for Reviews
+        _restaurantCollection = database.GetCollection<RestaurantInfo>("Restaurants"); // Collection for restaurants
 
         _mongoDBService = mongoDBService;
     }
@@ -24,9 +24,14 @@ public class RestaurantService {
     public async Task<List<RestaurantInfo>> GetAsync() {
         return await _restaurantCollection.Find(new BsonDocument()).ToListAsync();
     }
-    // public async Task<bool> CreateReviewAsync(RestaurantInfo restaurantInfo) {
+    public async Task<bool> CreateRestaurantAsync(RestaurantInfo restaurantInfo) {
 
-    //     await _restaurantCollection.InsertOneAsync(restaurantInfo);
-    //     return true;
-    // }
+        await _restaurantCollection.InsertOneAsync(restaurantInfo);
+        return true;
+    }
+
+    public async Task<RestaurantInfo> GetByRestaurantIdAsync(string id){
+        FilterDefinition<RestaurantInfo> filter = Builders<RestaurantInfo>.Filter.Eq("restaurantId", id);
+        return await _restaurantCollection.Find(filter).FirstOrDefaultAsync();
+    }
 }
