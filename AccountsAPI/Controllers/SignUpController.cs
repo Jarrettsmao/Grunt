@@ -121,31 +121,5 @@ public class SignUpController: Controller {
         return PhysicalFile(Path.Combine(Directory.GetCurrentDirectory(),
         "wwwroot", "HTML", "signup.html"), "text/html");
     }
-
-    // private string GenerateHashedId(string userId){
-    //     using (SHA256 sha256 = SHA256.Create()){
-    //         byte[] bytes = sha
-    //     }
-    // }
-
-    // private string GenerateJwtToken(UserInfo user){
-    //     var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JwtSettings:SecretKey"]));
-    //     var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-    //     var claims = new[]
-    //     {
-    //         new Claim(ClaimTypes.Name, user.username),
-    //         new Claim("UserId", user.Id.ToString())
-    //     };
-
-    //     var token = new SecurityTokenDescriptor(
-    //         issuer: "yourdomain.com",
-    //         AudienceValidator: "yourdomain.com",
-    //         claims: claims,
-    //         expires: DateTime.UtcNow.AddHours(1),
-    //         SigningCredentials: creds
-    //     );
-
-    //     return new JwtSecurityTokenHandler().WriteToken(token);
-    // }
 }
 

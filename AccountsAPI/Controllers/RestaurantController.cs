@@ -52,11 +52,11 @@ public class RestaurantController: Controller {
 
     //serving static files
 
-    // [HttpGet("WriteReview")]
-    // public IActionResult GetAccountPage(string username){
-    //     return PhysicalFile(Path.Combine(Directory.GetCurrentDirectory(),
-    //     "wwwroot", "HTML", "restaurantreviewpage.html"), "text/html");
-    // }
+    [HttpGet("Page")]
+    public IActionResult GetRestaurantPage(){
+        return PhysicalFile(Path.Combine(Directory.GetCurrentDirectory(),
+        "wwwroot", "HTML", "restaurant.html"), "text/html");
+    }
 
     // [Authorize]
     // [HttpGet("UserReviews")]

@@ -95,7 +95,7 @@ async function restaurantSearch(mapCenter, restaurantName, zipCode){
 
     const request = {
         textQuery: textQuery,
-        fields: ["displayName", "location", "businessStatus", "formattedAddress"],
+        fields: ["id", "displayName", "location", "businessStatus", "formattedAddress"],
         maxResultCount: 5,
         language: "en-US",
         region: "us",
@@ -121,19 +121,25 @@ async function restaurantSearch(mapCenter, restaurantName, zipCode){
 
             const name = place.displayName;
             const address = place.formattedAddress;
+            const placeId = place.id;
             const query = `${name} restaurant ${address}`;
-            const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
+
+            const mapsUrl = new URL('/restaurants/page', window.location.origin);
+            mapsUrl.searchParams.set('id', placeId);
+            mapsUrl.searchParams.set('name', name);
+          
+            // window.location.href = mapsUrl.toString();
 
             marker.addListener("gmp-click", () => {
                 infoWindow.setContent(`
                     <strong>${name}</strong><br>
                     // use grunt rating here<br> 
                     ${address}<br>
-                    <a href="${mapsUrl}" target="_blank" rel="noopener noreferrer">View on Google Maps</a>`
+                    <a href="${mapsUrl}" target="_blank" rel="noopener noreferrer">View restaurant details</a>`
                 );
                 infoWindow.open(map, marker);
             })
-            
+            console.log("Place ID:", placeId);
     
             bounds.extend(place.location);
           }

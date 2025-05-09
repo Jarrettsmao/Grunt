@@ -31,12 +31,9 @@ public class ReviewService {
 
         var restaurant = await _restaurantService.GetByRestaurantIdAsync(reviewInfo.restaurantId);
 
-        // if (restaurant != null){
-            int newTotalReviews = restaurant.totalReviews + 1;
-            double newAvgRating = ((restaurant.averageRating * restaurant.totalReviews) + reviewInfo.rating) / newTotalReviews;
-            // Console.WriteLine(newAvgRating);
-            await _restaurantService.UpdateRating(reviewInfo.restaurantId, newTotalReviews, newAvgRating);
-        // }
+        int newTotalReviews = restaurant.totalReviews + 1;
+        double newAvgRating = ((restaurant.averageRating * restaurant.totalReviews) + reviewInfo.rating) / newTotalReviews;
+        await _restaurantService.UpdateRating(reviewInfo.restaurantId, newTotalReviews, newAvgRating);
         return true;
     }
 
@@ -57,8 +54,4 @@ public class ReviewService {
             await _restaurantService.CreateRestaurantAsync(newRestaurant);
         }
     }
-
-    // public async Task UpdateRatingAverage(){
-
-    // }
 }
