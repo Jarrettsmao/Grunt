@@ -7,9 +7,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const userInfo = getUserInfoFromToken();
     // userId = userInfo.id;
     // username = userInfo.username;
-    sessionStorage.setItem("userId", userInfo.id);
-    sessionStorage.setItem("username", userInfo.username);
-    sessionStorage.setItem("areacode", userInfo.areacode);
+    localStorage.setItem("userId", userInfo.id);
+    localStorage.setItem("username", userInfo.username);
+    localStorage.setItem("areacode", userInfo.areacode);
 
     displayWelcomeMessage();
     displayAreaCode();
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 async function checkToken(){
-    const token = sessionStorage.getItem("token");
+    const token = localStorage.getItem("token");
     console.log(token);
 
     if (!token) {
@@ -50,14 +50,14 @@ async function checkToken(){
         const data = await response.json();
     } catch (error) {
         alert("Invalid or expired token. Please log in again.");
-        sessionStorage.clear();
+        localStorage.clear();
         window.location.href = "/Accounts/Login";
     }
 }
 
 //function to display welcome message
 function displayWelcomeMessage() {
-    const username = sessionStorage.getItem("username"); // Retrieve username
+    const username = localStorage.getItem("username"); // Retrieve username
     if (username) {
         const welcomeMessage = document.getElementById("welcomeMessage");
         welcomeMessage.textContent = `UGG! ${username} Here! Good!`;
@@ -67,7 +67,7 @@ function displayWelcomeMessage() {
 }
 
 function displayAreaCode(){
-    const areacode = sessionStorage.getItem("areacode");
+    const areacode = localStorage.getItem("areacode");
     if (areacode) {
         const areacodeMessage = document.getElementById("areacodeMessage");
         areacodeMessage.textContent = `${areacode}`; 
@@ -86,14 +86,14 @@ function deleteAccount(){
                     method: "DELETE",
                     headers: {
                         "Content-Type": "application/json",
-                        "Authorization": `Bearer ${sessionStorage.getItem("token")}`
+                        "Authorization": `Bearer ${localStorage.getItem("token")}`
                     },
                     body: JSON.stringify({ Id: userId})
                 });
 
                 if (response.ok){
                     alert("Friend gone...");
-                    sessionStorage.clear();
+                    localStorage.clear();
                     window.location.href = "https://localhost:8080/Home";
                 } else {
                     alert("Failed to delete account.");
@@ -108,7 +108,7 @@ function deleteAccount(){
 
 function logout(){
     document.getElementById("logoutBtn").addEventListener("click", async function(){
-        sessionStorage.clear();
+        localStorage.clear();
         window.location.href = "/Accounts/Login";
     });
 }
@@ -132,14 +132,14 @@ async function changeUsername(){
                         method: "PUT",
                         headers: {
                             "Content-Type": "application/json",
-                            "Authorization": `Bearer ${sessionStorage.getItem("token")}`
+                            "Authorization": `Bearer ${localStorage.getItem("token")}`
                         },
                         body: JSON.stringify(formData)
                     });
         
                     if (response.ok){
                         const result = await response.json();
-                        sessionStorage.clear();
+                        localStorage.clear();
                         alert("Username changed successfully! Log in again for it to take affect.");
                         window.location.href = "/Accounts/Login";
                     } else {
@@ -174,7 +174,7 @@ function validateMatch(){
 }
 
 function getUserInfoFromToken(){
-    const token = sessionStorage.getItem("token");
+    const token = localStorage.getItem("token");
     if (!token){
         return null;
     }
@@ -191,7 +191,7 @@ function getUserInfoFromToken(){
 }
 
 async function getUserReviews(){
-    const token = sessionStorage.getItem("token");
+    const token = localStorage.getItem("token");
     try {
         const response = await fetch("https://localhost:8080/Reviews/UserReviews", {
             method: "GET",

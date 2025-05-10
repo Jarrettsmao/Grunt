@@ -22,7 +22,7 @@ async function initMap() {
 
     geocoder = new Geocoder();
 
-    const areacode = sessionStorage.getItem("areacode");
+    const areacode = localStorage.getItem("areacode");
     geocoder.geocode({ address: areacode }, (results, status) => {
         if (status === "OK" && results.length > 0) {
             const location = results[0].geometry.location;
@@ -44,7 +44,7 @@ function setupSearchListeners() {
         let zipVal = areaInput.value.trim();
         const locationVal = locationInput.value.trim();
         if (!zipVal) {
-            zipVal = sessionStorage.getItem("areacode");
+            zipVal = localStorage.getItem("areacode");
         }
         
         const fullQuery = locationVal ? `${locationVal} ${zipVal}` : zipVal;
@@ -57,7 +57,7 @@ function setupSearchListeners() {
                 let zipVal = areaInput.value.trim();
                 const locationVal = locationInput.value.trim();
                 if (!zipVal) {
-                    zipVal = sessionStorage.getItem("areacode");
+                    zipVal = localStorage.getItem("areacode");
                 }
                 const fullQuery = locationVal ? `${locationVal} ${zipVal}` : zipVal;
                 geocodeAndSearch(fullQuery, locationVal, zipVal);

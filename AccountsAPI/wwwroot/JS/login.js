@@ -21,8 +21,8 @@ async function loginSubmit(event){
     if (response.ok) {
         const result = await response.json();
 
-        sessionStorage.setItem("token", result.token)
-        console.log(sessionStorage.getItem("token"));
+        localStorage.setItem("token", result.token)
+        console.log(localStorage.getItem("token"));
         // alert(`Login Successful for ${result.id}`);
         window.location.href = result.redirectUrl;
     } else {

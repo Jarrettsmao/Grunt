@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById('header-placeholder').innerHTML = data;
 
             const navLinks = document.getElementById('nav-links');
-            const token = sessionStorage.getItem("token");
+            const token = localStorage.getItem("token");
 
             if (navLinks){
                 if (token){

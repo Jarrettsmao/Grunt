@@ -56,6 +56,7 @@ public class ReviewController: Controller {
 
     //serving static files
     // [HttpGet("{restaurantName}")]
+    [Authorize]
     [HttpGet("WriteReview")]
     public IActionResult GetAccountPage(string username){
         return PhysicalFile(Path.Combine(Directory.GetCurrentDirectory(),

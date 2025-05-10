@@ -13,6 +13,9 @@ document.addEventListener("DOMContentLoaded", function() {
 let selectedRating = 0;
 let prevRating = 0;
 
+let decodedName;
+let restaurantId;
+
 stars.forEach(function(star) {
     star.addEventListener('mouseover', function() {
         const value = star.getAttribute('data-value'); //this is the data value of the selected star-rating
@@ -40,18 +43,27 @@ stars.forEach(function(star) {
 });
 
 function displayRestaurantName() {
-    const name = "Restaurant"; // Retrieve username
-    // if (restaurantName) {
-        const restaurantName = document.getElementById("restaurantName");
-        restaurantName.textContent = `${name}`;
-    // } else {
-    //     console.log("Username not found.");
-    // }
+    const params = new URLSearchParams(window.location.search);
+
+    if (params.has('name')){
+        //get the value of the 'name' parameter from URL
+        const restaurantName = params.get('name');
+        
+        //decode the paramater in case it contains encoded characters
+        decodedName = decodeURIComponent(restaurantName);
+
+        document.getElementById('restaurantName').textContent = decodedName;
+    }
 }
 
 async function SubmitReview(){
     const form = document.getElementById("reviewForm");
-    const token = sessionStorage.getItem("token");
+    const token = localStorage.getItem("token");
+
+    const params = new URLSearchParams(window.location.search);
+    if (params.has('id')){
+        id = params.get('id');
+    }
 
     if (form){
         form.addEventListener("submit", async function (event){
@@ -61,8 +73,9 @@ async function SubmitReview(){
             submitButton.disabled = true;
 
             const formData = {
-                authorId: sessionStorage.getItem("UserId"),
-                restaurantId: "",
+                authorId: localStorage.getItem("UserId"),
+                restaurantName: decodedName,
+                restaurantId: id,
                 reviewText: document.getElementById("reviewText").value,
                 rating: selectedRating
             }
