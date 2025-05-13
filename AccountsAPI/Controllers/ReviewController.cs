@@ -56,7 +56,7 @@ public class ReviewController: Controller {
 
     //serving static files
     // [HttpGet("{restaurantName}")]
-    [Authorize]
+    // [Authorize]
     [HttpGet("WriteReview")]
     public IActionResult GetAccountPage(string username){
         return PhysicalFile(Path.Combine(Directory.GetCurrentDirectory(),
@@ -64,15 +64,25 @@ public class ReviewController: Controller {
     }
 
     [Authorize]
-    [HttpGet("UserReviews")]
-    public async Task<List<ReviewInfo>> GetUserReviews(string id){     
-        var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+    [HttpGet("GetReviews")]
+    public async Task<IActionResult> GetUserReviews([FromQuery] string restId = null!){   
 
-        if (string.IsNullOrEmpty(userId))
-        {
-            return new List<ReviewInfo>(); // Or return BadRequest() if you want to handle this case differently
-        }
+        try {
+            if (!string.IsNullOrEmpty(restId)){
+                var reviews = await _reviewService.GetReviewsByRestaurantIdAsync(restId);
+                return Ok(reviews);
+            } else {
+                var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+                if (string.IsNullOrEmpty(userId)){
+                    return Unauthorized("User ID not found in token."); // Or return BadRequest() if you want to handle this case differently
+                }
+                return Ok(await _reviewService.GetReviewsByAuthorIdAsync(userId));
+            }
+        } catch (Exception ex){
+            Console.WriteLine(ex);
+            return StatusCode(500, "An error occured while retrieving reviews.");
+        }  
 
-        return await _reviewService.GetReviewsByAuthorIdAsync(userId);
+
     }
 }

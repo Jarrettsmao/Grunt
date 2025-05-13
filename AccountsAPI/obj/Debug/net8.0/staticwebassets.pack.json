@@ -81,6 +81,10 @@
       "PackagePath": "staticwebassets\\JS\\restaurantreview.js"
     },
     {
+      "Id": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\JS\\reviewutils.js",
+      "PackagePath": "staticwebassets\\JS\\reviewutils.js"
+    },
+    {
       "Id": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\JS\\signup.js",
       "PackagePath": "staticwebassets\\JS\\signup.js"
     },

@@ -42,6 +42,11 @@ public class ReviewService {
         return await _reviewsCollection.Find(filter).ToListAsync();
     }
 
+    public async Task<List<ReviewInfo>> GetReviewsByRestaurantIdAsync(string id){
+        var filter = Builders<ReviewInfo>.Filter.Eq(nameof(ReviewInfo.restaurantId), id);
+        return await _reviewsCollection.Find(filter).ToListAsync();
+    }
+
     public async Task CheckRestaurantAsync(string restaurantId, string restaurantName){
         var restaurant = await _restaurantService.GetByRestaurantIdAsync(restaurantId);
         if (restaurant == null) {
