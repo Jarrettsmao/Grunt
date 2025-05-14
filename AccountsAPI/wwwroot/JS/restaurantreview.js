@@ -70,6 +70,25 @@ async function SubmitReview(){
             event.preventDefault();
             
             const submitButton = document.getElementById("reviewBtn");
+
+            if (selectedRating === 0){
+                const ratingError = document.getElementById("ratingError");
+                if (ratingError) {
+                    ratingError.style.display = "block";
+                }
+                return; // Prevent form submission
+            } else {
+                const ratingError = document.getElementById("ratingError");
+                if (ratingError) {
+                    ratingError.style.display = "none";
+                }
+            }
+
+            if (!token){
+                alert("Please login before submitting a review.");
+                window.location.href = "/Accounts/Login";
+            }
+
             submitButton.disabled = true;
 
             const formData = {
@@ -79,11 +98,6 @@ async function SubmitReview(){
                 restaurantId: id,
                 reviewText: document.getElementById("reviewText").value,
                 rating: selectedRating
-            }
-
-            if (!token){
-                alert("Please login before submitting a review.");
-                window.location.href = "/Accounts/Login";
             }
  
             try {
@@ -98,13 +112,17 @@ async function SubmitReview(){
 
                 if (response.ok){
                     const result = await response.json();
+                    alert("Review submitted successfully!");
+                    window.location.href = `/restaurants/page?id=${id}&name=${encodeURIComponent(decodedName)}`;
                     console.log("review submitted.");
                 }
             } catch (error) {
                 console.error("Error submitting review:", error);
-            } finally {
-                submitButton.disabled = false;
-            }
+                submitButton.disabled = false
+            } 
+            // finally {
+            //     submitButton.disabled = false;
+            // }
         });
     }
 }

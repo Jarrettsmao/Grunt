@@ -88,3 +88,8 @@ html, body {
     font-size: 1rem; 
     cursor: pointer;
 }
+
+.error-message {
+    display: none;
+    color: red;
+}

@@ -63,7 +63,7 @@ public class ReviewController: Controller {
         "wwwroot", "HTML", "restaurantreviewpage.html"), "text/html");
     }
 
-    [Authorize]
+    // [Authorize]
     [HttpGet("GetReviews")]
     public async Task<IActionResult> GetUserReviews([FromQuery] string restId = null!){   
 
