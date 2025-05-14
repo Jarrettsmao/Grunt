@@ -87,8 +87,6 @@ function geocodeAndSearch(fullQuery, locationName, zipCode) {
 
 async function restaurantSearch(mapCenter, restaurantName, zipCode){
     const { Place, SearchNearbyRankPreference } = await google.maps.importLibrary("places");
-    const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
-    const { LatLngBounds } = await google.maps.importLibrary("core");
 
     // const restaurantName =     
     const textQuery = `${restaurantName} restaurant ${zipCode}`;
@@ -106,57 +104,14 @@ async function restaurantSearch(mapCenter, restaurantName, zipCode){
 
     try {
         const { places } = await Place.searchByText(request);
-        const infoWindow = new google.maps.InfoWindow();
-    
-        if (places.length) {
-            const bounds = new LatLngBounds();
-    
-            //adds markers to search results
-            for (const place of places) {
-                const marker = new AdvancedMarkerElement({
-                map,
-                position: place.location,
-                title: place.displayName, 
-            });
-
-            const name = place.displayName;
-            const address = place.formattedAddress;
-            const placeId = place.id;
-            // const query = `${name} restaurant ${address}`;
-
-            const mapsUrl = new URL('/restaurants/page', window.location.origin);
-            mapsUrl.searchParams.set('id', placeId);
-            mapsUrl.searchParams.set('name', name);
-          
-            // window.location.href = mapsUrl.toString();
-
-            marker.addListener("gmp-click", () => {
-                infoWindow.setContent(`
-                    <strong>${name}</strong><br>
-                    // use grunt rating here<br> 
-                    ${address}<br>
-                    <a href="${mapsUrl}" target="_blank" rel="noopener noreferrer">View restaurant details</a>`
-                );
-                infoWindow.open(map, marker);
-            })
-            console.log("Place ID:", placeId);
-    
-            bounds.extend(place.location);
-          }
-    
-        map.fitBounds(bounds);
-        } else {
-          console.log("No restaurants found.");
-        }
-      } catch (error) {
-        console.error("Error searching for restaurants:", error);
-      }
+        createMarker(places);
+    } catch (error) {
+    console.error("Error searching for restaurants:", error);
+    }
 }
 
 async function areaCodeSearch(mapCenter) {
     const { Place, SearchNearbyRankPreference } = await google.maps.importLibrary("places");
-    const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
-    const { LatLngBounds } = await google.maps.importLibrary("core");
 
     const request = {
         fields: ["id", "displayName", "location", "businessStatus", "formattedAddress"],
@@ -173,45 +128,72 @@ async function areaCodeSearch(mapCenter) {
 
     try {
         const { places } = await Place.searchNearby(request);
-        const infoWindow = new google.maps.InfoWindow();
-    
-        if (places.length) {
-            const bounds = new LatLngBounds();
-    
-            //adds markers to search results
-            for (const place of places) {
-                const marker = new AdvancedMarkerElement({
-                map,
-                position: place.location,
-                title: place.displayName, 
-            });
+        createMarker(places);
+    } catch (error) {
+    console.error("Nearby search failed:", error);
+    }
+}
 
-            const name = place.displayName;
-            const address = place.formattedAddress;
-            const placeId = place.id;
-            const mapsUrl = new URL('/restaurants/page', window.location.origin);
-            mapsUrl.searchParams.set('id', placeId);
-            mapsUrl.searchParams.set('name', name);
+async function createMarker(places){
+    const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+    const { LatLngBounds } = await google.maps.importLibrary("core");
 
-            marker.addListener("gmp-click", () => {
-                infoWindow.setContent(`
-                    <strong>${name}</strong><br>
-                    // use grunt rating here<br> 
-                    ${address}<br>
-                    <a href="${mapsUrl}" target="_blank" rel="noopener noreferrer">View restaurant details</a>`
-                );
-                infoWindow.open(map, marker);
-            })
-            
+    const infoWindow = new google.maps.InfoWindow();
     
-            bounds.extend(place.location);
-          }
-    
-        map.fitBounds(bounds);
-        } else {
-          console.log("No restaurants found.");
-        }
-      } catch (error) {
-        console.error("Nearby search failed:", error);
+    if (places.length) {
+        const bounds = new LatLngBounds();
+
+        //adds markers to search results
+        for (const place of places) {
+            const marker = new AdvancedMarkerElement({
+            map,
+            position: place.location,
+            title: place.displayName, 
+        });
+
+        const name = place.displayName;
+        const address = place.formattedAddress;
+        const placeId = place.id;
+
+        const mapsUrl = new URL('/restaurants/page', window.location.origin);
+        mapsUrl.searchParams.set('id', placeId);
+        mapsUrl.searchParams.set('name', name);
+
+        //Fetch rating from your API
+        const {rating, numReviews} = await fetchRestaurantRating(placeId);
+
+        marker.addListener("gmp-click", () => {
+            infoWindow.setContent(`
+                <strong>${name}</strong><br>
+                ⭐${rating} (${numReviews})<br> 
+                ${address}<br>
+                <a href="${mapsUrl}" target="_blank" rel="noopener noreferrer">View restaurant details</a>`
+            );
+            infoWindow.open(map, marker);
+        })
+        bounds.extend(place.location);
       }
+
+    map.fitBounds(bounds);
+    } else {
+      console.log("No restaurants found.");
+    }
+}
+
+async function fetchRestaurantRating(placeId){
+    try {
+        const ratingUrl = new URL("https://localhost:8080/Reviews/GetRatingAndReviews", window.location.origin);
+        ratingUrl.searchParams.set('placeId', placeId);
+        const response = await fetch(ratingUrl);
+        const data = await response.json();
+
+        //Handle missing data
+        const rating = data.rating || 'N/A';
+        const numReviews = data.numReviews || 0;
+
+        return {rating, numReviews};
+    } catch (error) {
+        console.error("Failed to fetch rating", error);
+        return { rating: 'N/A', numReviews: 0 };  // Return defaults in case of an error
+    }
 }

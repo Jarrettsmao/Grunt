@@ -8,3 +8,15 @@
 .review-date {
     color: #ccc;
 }
+
+.review{
+    margin-bottom: 1rem;
+}
+
+.author-name{
+    font-weight: bold;
+}
+
+.restaurant-name{
+    font-weight: bold;
+}

@@ -59,4 +59,22 @@ public class ReviewService {
             await _restaurantService.CreateRestaurantAsync(newRestaurant);
         }
     }
+
+    public async Task<double> GetRestaurantRatingByPlaceIdAsync(string id){
+        var restaurant = await _restaurantService.GetByRestaurantIdAsync(id);
+
+        if(restaurant == null){
+            throw new Exception("Restaurant not found");
+        }
+        return restaurant.averageRating;
+    }
+
+    public async Task<double> GetRestaurantNumReviewsByPlaceIdAsync(string id){
+        var restaurant = await _restaurantService.GetByRestaurantIdAsync(id);
+
+        if(restaurant == null){
+            throw new Exception("Restaurant not found");
+        }
+        return restaurant.totalReviews;
+    }
 }
