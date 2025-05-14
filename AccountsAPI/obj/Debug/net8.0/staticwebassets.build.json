@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7PIwJMpXuEs/5PVX+Rdt6Uy2A+5Mj/SWBUygNZE32EE=",
+  "Hash": "FvYz+/s7dIpqYDDfxXym+rTp4xTX9HMCDo+UGYaBmPE=",
   "Source": "AccountsAPI",
   "BasePath": "_content/AccountsAPI",
   "Mode": "Default",
@@ -269,6 +269,27 @@
       "OriginalItemSpec": "wwwroot\\HTML\\signup.html"
     },
     {
+      "Identity": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\HTML\\Templates\\accountreviewtemplate.html",
+      "SourceId": "AccountsAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\",
+      "BasePath": "_content/AccountsAPI",
+      "RelativePath": "HTML/Templates/accountreviewtemplate#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "hwa0pdrozb",
+      "Integrity": "zwvZsZIaXuW276hOBQJpm1jxbCORY0EFUK7NHcfoDqM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\HTML\\Templates\\accountreviewtemplate.html"
+    },
+    {
       "Identity": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\HTML\\Templates\\header.html",
       "SourceId": "AccountsAPI",
       "SourceType": "Discovered",
@@ -290,12 +311,12 @@
       "OriginalItemSpec": "wwwroot\\HTML\\Templates\\header.html"
     },
     {
-      "Identity": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\HTML\\Templates\\reviewTemplate.html",
+      "Identity": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\HTML\\Templates\\restaurantreviewtemplate.html",
       "SourceId": "AccountsAPI",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\",
       "BasePath": "_content/AccountsAPI",
-      "RelativePath": "HTML/Templates/reviewTemplate#[.{fingerprint}]?.html",
+      "RelativePath": "HTML/Templates/restaurantreviewtemplate#[.{fingerprint}]?.html",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -304,11 +325,11 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "hwa0pdrozb",
-      "Integrity": "zwvZsZIaXuW276hOBQJpm1jxbCORY0EFUK7NHcfoDqM=",
+      "Fingerprint": "c3z66g1a6m",
+      "Integrity": "2HK7unug8OOKFVjbtgN5UtlCJU3C6BuwMB8OPlV60NY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\HTML\\Templates\\reviewTemplate.html"
+      "OriginalItemSpec": "wwwroot\\HTML\\Templates\\restaurantreviewtemplate.html"
     },
     {
       "Identity": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\JS\\account.js",
@@ -430,8 +451,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "ly6tejkuaz",
-      "Integrity": "fYIUVBU5ChcKRvRzTxLi0cx/kDIEKpHQDh6UoBEXOVg=",
+      "Fingerprint": "j1p7ml1twn",
+      "Integrity": "eetOUafAwZ+jwVJDn5XuCcfS2fBaD3OH/8TXwnBYZ4Y=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\JS\\restaurantreview.js"
@@ -451,8 +472,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "lvjnbtnx1y",
-      "Integrity": "nwznwKqsTjinIng5o0GFQ+XK63v//Pndw0azil3tTVg=",
+      "Fingerprint": "ccmrsmgrcq",
+      "Integrity": "3B0x1+HKlNxOyemPjBqATX8GkfRN6QJPfJng47dETTM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\JS\\reviewutils.js"
@@ -1486,6 +1507,88 @@
       ]
     },
     {
+      "Route": "HTML/Templates/accountreviewtemplate.html",
+      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\HTML\\Templates\\accountreviewtemplate.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "369"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zwvZsZIaXuW276hOBQJpm1jxbCORY0EFUK7NHcfoDqM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 13 May 2025 02:54:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-zwvZsZIaXuW276hOBQJpm1jxbCORY0EFUK7NHcfoDqM="
+        }
+      ]
+    },
+    {
+      "Route": "HTML/Templates/accountreviewtemplate.hwa0pdrozb.html",
+      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\HTML\\Templates\\accountreviewtemplate.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "369"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zwvZsZIaXuW276hOBQJpm1jxbCORY0EFUK7NHcfoDqM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 13 May 2025 02:54:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hwa0pdrozb"
+        },
+        {
+          "Name": "label",
+          "Value": "HTML/Templates/accountreviewtemplate.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-zwvZsZIaXuW276hOBQJpm1jxbCORY0EFUK7NHcfoDqM="
+        }
+      ]
+    },
+    {
       "Route": "HTML/Templates/header.9m5rxh3yzz.html",
       "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\HTML\\Templates\\header.html",
       "Selectors": [],
@@ -1568,8 +1671,8 @@
       ]
     },
     {
-      "Route": "HTML/Templates/reviewTemplate.html",
-      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\HTML\\Templates\\reviewTemplate.html",
+      "Route": "HTML/Templates/restaurantreviewtemplate.c3z66g1a6m.html",
+      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\HTML\\Templates\\restaurantreviewtemplate.html",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1578,7 +1681,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "369"
+          "Value": "361"
         },
         {
           "Name": "Content-Type",
@@ -1586,48 +1689,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"zwvZsZIaXuW276hOBQJpm1jxbCORY0EFUK7NHcfoDqM=\""
+          "Value": "\"2HK7unug8OOKFVjbtgN5UtlCJU3C6BuwMB8OPlV60NY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 13 May 2025 02:54:13 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-zwvZsZIaXuW276hOBQJpm1jxbCORY0EFUK7NHcfoDqM="
-        }
-      ]
-    },
-    {
-      "Route": "HTML/Templates/reviewTemplate.hwa0pdrozb.html",
-      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\HTML\\Templates\\reviewTemplate.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "369"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"zwvZsZIaXuW276hOBQJpm1jxbCORY0EFUK7NHcfoDqM=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 13 May 2025 02:54:13 GMT"
+          "Value": "Wed, 14 May 2025 00:14:38 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1637,15 +1703,52 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "hwa0pdrozb"
+          "Value": "c3z66g1a6m"
         },
         {
           "Name": "label",
-          "Value": "HTML/Templates/reviewTemplate.html"
+          "Value": "HTML/Templates/restaurantreviewtemplate.html"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-zwvZsZIaXuW276hOBQJpm1jxbCORY0EFUK7NHcfoDqM="
+          "Value": "sha256-2HK7unug8OOKFVjbtgN5UtlCJU3C6BuwMB8OPlV60NY="
+        }
+      ]
+    },
+    {
+      "Route": "HTML/Templates/restaurantreviewtemplate.html",
+      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\HTML\\Templates\\restaurantreviewtemplate.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "361"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2HK7unug8OOKFVjbtgN5UtlCJU3C6BuwMB8OPlV60NY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 14 May 2025 00:14:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-2HK7unug8OOKFVjbtgN5UtlCJU3C6BuwMB8OPlV60NY="
         }
       ]
     },
@@ -2060,6 +2163,51 @@
       ]
     },
     {
+      "Route": "JS/restaurantreview.j1p7ml1twn.js",
+      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\JS\\restaurantreview.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4158"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"eetOUafAwZ+jwVJDn5XuCcfS2fBaD3OH/8TXwnBYZ4Y=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 14 May 2025 00:37:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "j1p7ml1twn"
+        },
+        {
+          "Name": "label",
+          "Value": "JS/restaurantreview.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-eetOUafAwZ+jwVJDn5XuCcfS2fBaD3OH/8TXwnBYZ4Y="
+        }
+      ]
+    },
+    {
       "Route": "JS/restaurantreview.js",
       "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\JS\\restaurantreview.js",
       "Selectors": [],
@@ -2070,7 +2218,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4095"
+          "Value": "4158"
         },
         {
           "Name": "Content-Type",
@@ -2078,11 +2226,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"fYIUVBU5ChcKRvRzTxLi0cx/kDIEKpHQDh6UoBEXOVg=\""
+          "Value": "\"eetOUafAwZ+jwVJDn5XuCcfS2fBaD3OH/8TXwnBYZ4Y=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 01:20:44 GMT"
+          "Value": "Wed, 14 May 2025 00:37:23 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2092,13 +2240,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-fYIUVBU5ChcKRvRzTxLi0cx/kDIEKpHQDh6UoBEXOVg="
+          "Value": "sha256-eetOUafAwZ+jwVJDn5XuCcfS2fBaD3OH/8TXwnBYZ4Y="
         }
       ]
     },
     {
-      "Route": "JS/restaurantreview.ly6tejkuaz.js",
-      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\JS\\restaurantreview.js",
+      "Route": "JS/reviewutils.ccmrsmgrcq.js",
+      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\JS\\reviewutils.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2107,7 +2255,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4095"
+          "Value": "3564"
         },
         {
           "Name": "Content-Type",
@@ -2115,11 +2263,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"fYIUVBU5ChcKRvRzTxLi0cx/kDIEKpHQDh6UoBEXOVg=\""
+          "Value": "\"3B0x1+HKlNxOyemPjBqATX8GkfRN6QJPfJng47dETTM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 01:20:44 GMT"
+          "Value": "Wed, 14 May 2025 00:24:08 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2129,15 +2277,15 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "ly6tejkuaz"
+          "Value": "ccmrsmgrcq"
         },
         {
           "Name": "label",
-          "Value": "JS/restaurantreview.js"
+          "Value": "JS/reviewutils.js"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-fYIUVBU5ChcKRvRzTxLi0cx/kDIEKpHQDh6UoBEXOVg="
+          "Value": "sha256-3B0x1+HKlNxOyemPjBqATX8GkfRN6QJPfJng47dETTM="
         }
       ]
     },
@@ -2152,7 +2300,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2110"
+          "Value": "3564"
         },
         {
           "Name": "Content-Type",
@@ -2160,11 +2308,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"nwznwKqsTjinIng5o0GFQ+XK63v//Pndw0azil3tTVg=\""
+          "Value": "\"3B0x1+HKlNxOyemPjBqATX8GkfRN6QJPfJng47dETTM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 13 May 2025 04:05:26 GMT"
+          "Value": "Wed, 14 May 2025 00:24:08 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2174,52 +2322,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-nwznwKqsTjinIng5o0GFQ+XK63v//Pndw0azil3tTVg="
-        }
-      ]
-    },
-    {
-      "Route": "JS/reviewutils.lvjnbtnx1y.js",
-      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\JS\\reviewutils.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2110"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"nwznwKqsTjinIng5o0GFQ+XK63v//Pndw0azil3tTVg=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 13 May 2025 04:05:26 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "lvjnbtnx1y"
-        },
-        {
-          "Name": "label",
-          "Value": "JS/reviewutils.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-nwznwKqsTjinIng5o0GFQ+XK63v//Pndw0azil3tTVg="
+          "Value": "sha256-3B0x1+HKlNxOyemPjBqATX8GkfRN6QJPfJng47dETTM="
         }
       ]
     },

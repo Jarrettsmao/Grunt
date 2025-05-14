@@ -73,7 +73,8 @@ async function SubmitReview(){
             submitButton.disabled = true;
 
             const formData = {
-                authorId: localStorage.getItem("UserId"),
+                authorId: localStorage.getItem("userId"),
+                authorName: localStorage.getItem("username"),
                 restaurantName: decodedName,
                 restaurantId: id,
                 reviewText: document.getElementById("reviewText").value,

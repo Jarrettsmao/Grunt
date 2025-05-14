@@ -122,7 +122,7 @@ async function restaurantSearch(mapCenter, restaurantName, zipCode){
             const name = place.displayName;
             const address = place.formattedAddress;
             const placeId = place.id;
-            const query = `${name} restaurant ${address}`;
+            // const query = `${name} restaurant ${address}`;
 
             const mapsUrl = new URL('/restaurants/page', window.location.origin);
             mapsUrl.searchParams.set('id', placeId);
@@ -159,7 +159,7 @@ async function areaCodeSearch(mapCenter) {
     const { LatLngBounds } = await google.maps.importLibrary("core");
 
     const request = {
-        fields: ["displayName", "location", "businessStatus", "formattedAddress"],
+        fields: ["id", "displayName", "location", "businessStatus", "formattedAddress"],
         locationRestriction: {
           center: mapCenter,
           radius: 5000
@@ -188,15 +188,17 @@ async function areaCodeSearch(mapCenter) {
 
             const name = place.displayName;
             const address = place.formattedAddress;
-            const query = `${name}, ${address}`;
-            const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
+            const placeId = place.id;
+            const mapsUrl = new URL('/restaurants/page', window.location.origin);
+            mapsUrl.searchParams.set('id', placeId);
+            mapsUrl.searchParams.set('name', name);
 
             marker.addListener("gmp-click", () => {
                 infoWindow.setContent(`
                     <strong>${name}</strong><br>
                     // use grunt rating here<br> 
                     ${address}<br>
-                    <a href="${mapsUrl}" target="_blank" rel="noopener noreferrer">View on Google Maps</a>`
+                    <a href="${mapsUrl}" target="_blank" rel="noopener noreferrer">View restaurant details</a>`
                 );
                 infoWindow.open(map, marker);
             })

@@ -10,6 +10,7 @@ public class ReviewInfo{
 
     public string? Id { get; set; }
     public string? authorId {get; set; }
+    public string authorName {get; set;} = null!;
     public string restaurantId {get; set; } = null!;
     public string restaurantName {get; set; } = null!;
     [BsonElement("reviewText")]

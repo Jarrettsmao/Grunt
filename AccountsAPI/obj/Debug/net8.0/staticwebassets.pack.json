@@ -25,12 +25,16 @@
       "PackagePath": "staticwebassets\\CSS\\reviewTemplate.css"
     },
     {
+      "Id": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\HTML\\Templates\\accountreviewtemplate.html",
+      "PackagePath": "staticwebassets\\HTML\\Templates\\accountreviewtemplate.html"
+    },
+    {
       "Id": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\HTML\\Templates\\header.html",
       "PackagePath": "staticwebassets\\HTML\\Templates\\header.html"
     },
     {
-      "Id": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\HTML\\Templates\\reviewTemplate.html",
-      "PackagePath": "staticwebassets\\HTML\\Templates\\reviewTemplate.html"
+      "Id": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\HTML\\Templates\\restaurantreviewtemplate.html",
+      "PackagePath": "staticwebassets\\HTML\\Templates\\restaurantreviewtemplate.html"
     },
     {
       "Id": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\HTML\\accountpage.html",

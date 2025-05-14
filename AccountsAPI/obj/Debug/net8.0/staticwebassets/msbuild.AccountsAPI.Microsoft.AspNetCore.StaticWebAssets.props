@@ -216,6 +216,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\HTML\signup.html'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\HTML\Templates\accountreviewtemplate.html'))">
+      <SourceType>Package</SourceType>
+      <SourceId>AccountsAPI</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/AccountsAPI</BasePath>
+      <RelativePath>HTML/Templates/accountreviewtemplate.html</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>hwa0pdrozb</Fingerprint>
+      <Integrity>zwvZsZIaXuW276hOBQJpm1jxbCORY0EFUK7NHcfoDqM=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\HTML\Templates\accountreviewtemplate.html'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\HTML\Templates\header.html'))">
       <SourceType>Package</SourceType>
       <SourceId>AccountsAPI</SourceId>
@@ -234,23 +252,23 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\HTML\Templates\header.html'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\HTML\Templates\reviewTemplate.html'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\HTML\Templates\restaurantreviewtemplate.html'))">
       <SourceType>Package</SourceType>
       <SourceId>AccountsAPI</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/AccountsAPI</BasePath>
-      <RelativePath>HTML/Templates/reviewTemplate.html</RelativePath>
+      <RelativePath>HTML/Templates/restaurantreviewtemplate.html</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>hwa0pdrozb</Fingerprint>
-      <Integrity>zwvZsZIaXuW276hOBQJpm1jxbCORY0EFUK7NHcfoDqM=</Integrity>
+      <Fingerprint>c3z66g1a6m</Fingerprint>
+      <Integrity>2HK7unug8OOKFVjbtgN5UtlCJU3C6BuwMB8OPlV60NY=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\HTML\Templates\reviewTemplate.html'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\HTML\Templates\restaurantreviewtemplate.html'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\JS\account.js'))">
       <SourceType>Package</SourceType>
@@ -354,8 +372,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>ly6tejkuaz</Fingerprint>
-      <Integrity>fYIUVBU5ChcKRvRzTxLi0cx/kDIEKpHQDh6UoBEXOVg=</Integrity>
+      <Fingerprint>j1p7ml1twn</Fingerprint>
+      <Integrity>eetOUafAwZ+jwVJDn5XuCcfS2fBaD3OH/8TXwnBYZ4Y=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\JS\restaurantreview.js'))</OriginalItemSpec>
@@ -372,8 +390,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>lvjnbtnx1y</Fingerprint>
-      <Integrity>nwznwKqsTjinIng5o0GFQ+XK63v//Pndw0azil3tTVg=</Integrity>
+      <Fingerprint>ccmrsmgrcq</Fingerprint>
+      <Integrity>3B0x1+HKlNxOyemPjBqATX8GkfRN6QJPfJng47dETTM=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\JS\reviewutils.js'))</OriginalItemSpec>
