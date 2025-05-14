@@ -57,6 +57,20 @@ public class SignUpController: Controller {
         return Ok(new { message = "Username updated successfully", username = request.username });
     }
     [Authorize]
+    [HttpPut("Edit/AreaCode")]
+    public async Task<IActionResult> EditAreaCode([FromBody] EditAreaCodeRequest request) {
+        if (string.IsNullOrEmpty(request.id)){
+            return BadRequest(new { message = "User ID is required"});
+        }
+
+        var user = await _mongoDBService.GetUserByIdAsync(request.id);
+        if (user == null){
+            return NotFound(new { message = "User not found"});
+        }
+        await _mongoDBService.EditAreaCodeAsync(request.id, request.areacode);
+        return Ok(new { message = "Area Code updated successfully", areacode = request.areacode });
+    }
+    [Authorize]
     [HttpDelete("Delete")]
     public async Task<IActionResult> Delete([FromBody] DeleteRequest deleteRequest) {
         if (string.IsNullOrEmpty(deleteRequest.id)){

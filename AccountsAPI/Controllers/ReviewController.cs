@@ -96,15 +96,4 @@ public class ReviewController: Controller {
             return NotFound(new {message = ex.Message});
         }
     }
-
-    // [HttpGet("GetNumReviews")]
-    // public async Task<IActionResult> GetNumberOfReviews([FromQuery] string placeId){
-    //     try {
-    //         var numReviews = await _reviewService.GetRestaurantNumReviewsByPlaceIdAsync(placeId);
-    //         return Ok(new {numReviews });
-    //     } catch (Exception ex){
-    //         return NotFound(new {message = ex.Message});
-    //     }
-        
-    // }
 }

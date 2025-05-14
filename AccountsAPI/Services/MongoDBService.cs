@@ -43,6 +43,17 @@ public class MongoDBService {
         return;
     }
 
+    public async Task EditAreaCodeAsync(string id, string ac) {
+        if (string.IsNullOrEmpty(ac)) {
+            throw new ArgumentException("Areacode cannot be null or empty.");
+        }
+        
+        FilterDefinition<UserInfo> filter = Builders<UserInfo>.Filter.Eq("Id", id);
+        UpdateDefinition<UserInfo> update = Builders<UserInfo>.Update.Set<string>("areacode", ac);
+        await _userCollection.UpdateOneAsync(filter, update);
+        return;
+    }
+
     public async Task DeleteAsync(string id) {
         FilterDefinition<UserInfo> filter = Builders<UserInfo>.Filter.Eq("Id", id);
         await _userCollection.DeleteOneAsync(filter);
