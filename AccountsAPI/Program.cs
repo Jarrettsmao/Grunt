@@ -3,9 +3,12 @@ using AccountsAPI.Models;
 using AccountsAPI.Services;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Newtonsoft.Json;
+using System.Threading.Tasks;
 
 var builder = WebApplication.CreateBuilder(args);
 
+//Add MongoDB settings, services, and authentication
 builder.Services.Configure<MongoDBSettings>(builder.Configuration.GetSection("MongoDB"));
 builder.Services.AddSingleton<MongoDBService>();
 builder.Services.AddSingleton<ReviewService>();
@@ -23,13 +26,9 @@ builder.Services.AddCors(options =>
 
 
 // Add services to the container.
-
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-// builder.Services.AddEndpointsApiExplorer();
-// builder.Services.AddSwaggerGen();
 
-//enables tokens
+//enables JWT tokens
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
     {
         options.TokenValidationParameters = new TokenValidationParameters {
@@ -45,23 +44,6 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
     };
     options.Events = new JwtBearerEvents
     {
-        // OnMessageReceived = context =>
-        // {
-        //     var authHeader = context.Request.Headers["Authorization"].ToString();
-        //     if (!string.IsNullOrEmpty(authHeader) && authHeader.StartsWith("Bearer "))
-        //     {
-        //         var token = authHeader.Substring("Bearer ".Length);
-        //         Console.WriteLine($"Stripped Token: {token}");
-        //         context.Token = token; // 🔥 THIS IS THE CRUCIAL LINE 🔥
-        //     }
-        //     else
-        //     {
-        //         Console.WriteLine("No valid Bearer token found.");
-        //     }
-
-        //     return Task.CompletedTask;
-        // },
-
         OnAuthenticationFailed = context =>
         {
             Console.WriteLine("Authentication failed: " + context.Exception.Message);
@@ -74,16 +56,15 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
 
 builder.Services.AddScoped<JwtService>();
 
+//Register HttpClient for OpenAI API calls
+builder.Services.AddHttpClient();
+
+//Register the new service for OpenAI interaction
+builder.Services.AddSingleton<OpenAIService>();
+
 builder.Services.AddAuthorization();
 
 var app = builder.Build();
-
-// // Configure the HTTP request pipeline.
-// if (app.Environment.IsDevelopment())
-// {
-//     app.UseSwagger();
-//     app.UseSwaggerUI();
-// }
 
 app.UseHttpsRedirection();
 

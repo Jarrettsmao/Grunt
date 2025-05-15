@@ -123,3 +123,4 @@ C:\Users\Boredom\Grunt\AccountsAPI\bin\Debug\net8.0\Microsoft.IdentityModel.Prot
 C:\Users\Boredom\Grunt\AccountsAPI\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\Boredom\Grunt\AccountsAPI\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\Boredom\Grunt\AccountsAPI\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\admin\OneDrive\Documents\GitHub\Grunt\AccountsAPI\bin\Debug\net8.0\Newtonsoft.Json.dll
