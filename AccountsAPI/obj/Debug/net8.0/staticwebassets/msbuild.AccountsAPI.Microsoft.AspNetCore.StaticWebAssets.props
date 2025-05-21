@@ -84,8 +84,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>ftkmb1zdtq</Fingerprint>
-      <Integrity>4xECSovld7xqQI2co5EPIuLo/9FfqTld4geEnYivUx8=</Integrity>
+      <Fingerprint>hd0udm6w7o</Fingerprint>
+      <Integrity>m/35fH7fprz5e5vA1ZHHUsuCwC8EsglO+Aj15ESkmIc=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CSS\restaurantreview.css'))</OriginalItemSpec>
@@ -192,8 +192,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>ulzgby1agg</Fingerprint>
-      <Integrity>QlttTMBq7QJ4vdV9tjbuwSi7fk9JjWqhtxKl8PfJ98s=</Integrity>
+      <Fingerprint>sgeia4f4f2</Fingerprint>
+      <Integrity>vONpOTMy3wkJl0zraHtg7nGom3lwjuuT0ajUSPqVZ/Q=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\HTML\restaurantreviewpage.html'))</OriginalItemSpec>
@@ -372,8 +372,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>4kc405ghny</Fingerprint>
-      <Integrity>bHP1AInx2mefFs98GqPTMzDMJ8rqJI6X6ut+LWxDaVU=</Integrity>
+      <Fingerprint>8bq3ve6vsc</Fingerprint>
+      <Integrity>9D7SWZr4fmFcalLiRecS+vPs1WI+vBhPnKuCwvj3fZo=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\JS\restaurantreview.js'))</OriginalItemSpec>

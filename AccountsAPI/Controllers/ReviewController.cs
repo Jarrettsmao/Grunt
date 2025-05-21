@@ -35,6 +35,20 @@ public class ReviewController: Controller {
         return await _reviewService.GetAsync();
     }
 
+    [Authorize]
+    [HttpPost("Cavemanify")]
+    public async Task<IActionResult> Cavemanify([FromBody] ReviewInfo reviewInfo)
+    {
+        if (string.IsNullOrEmpty(reviewInfo?.reviewText))
+        {
+            return BadRequest("Review text cannot be empty");
+        }
+
+        var cavemanReview = await _openAiService.ConvertToCavemanAsync(reviewInfo.reviewText);
+
+        return Ok(new { cavemanReview });
+    }
+
     // [Authorize]
     [HttpPost("PostReq")]
     public async Task<IActionResult> CreateReview([FromBody] ReviewInfo reviewInfo) {
@@ -48,16 +62,12 @@ public class ReviewController: Controller {
 
         await _reviewService.CheckRestaurantAsync(reviewInfo.restaurantId, reviewInfo.restaurantName);
 
-        var cavemanReview = await _openAiService.ConvertToCavemanAsync(reviewInfo.reviewText);
-
-        reviewInfo.reviewText = cavemanReview;
-
         await _reviewService.CreateReviewAsync(reviewInfo);
         return Ok(new { message = "Review submitted successfully!"});
     }
 
     //serving static files
-    // [HttpGet("{restaurantName}")]
+
     // [Authorize]
     [HttpGet("WriteReview")]
     public IActionResult GetAccountPage(string username){
@@ -84,8 +94,6 @@ public class ReviewController: Controller {
             Console.WriteLine(ex);
             return StatusCode(500, "An error occured while retrieving reviews.");
         }  
-
-
     }
 
     [HttpGet("GetRatingAndReviews")]

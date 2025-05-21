@@ -6,8 +6,9 @@ const stars = document.querySelectorAll('#starRating .fa-star');
 // });
 
 document.addEventListener("DOMContentLoaded", function() {
+    TranslateReview();
     SubmitReview();
-    displayRestaurantName()
+    DisplayRestaurantName()
 });
 
 let selectedRating = 0;
@@ -42,7 +43,7 @@ stars.forEach(function(star) {
     })
 });
 
-function displayRestaurantName() {
+function DisplayRestaurantName() {
     const params = new URLSearchParams(window.location.search);
 
     if (params.has('name')){
@@ -56,8 +57,56 @@ function displayRestaurantName() {
     }
 }
 
-async function SubmitReview(){
+async function TranslateReview(){
     const form = document.getElementById("reviewForm");
+    const translatedForm = document.getElementById("translatedForm");
+    const token = localStorage.getItem("token");
+
+    if (form){
+        form.addEventListener("submit", async function (event){
+
+            event.preventDefault();
+            const translateButton = document.getElementById("translateBtn");
+
+            if (!token){
+                alert("Please login before submitting a review.");
+                window.location.href = "/Accounts/Login";
+            }
+
+            translateButton.disabled = true;
+
+            const formData = {
+                reviewText: document.getElementById("translateReviewText").value
+            };
+
+            try {
+                const response = await fetch ("https://localhost:8080/Reviews/Cavemanify", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Authorization": `Bearer ${token}`
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                const result = await response.json();
+                reviewText.disabled = false; // Enable textarea
+                reviewBtn.disabled = false;          // Enable submit button
+
+                if (response.ok) {
+                    document.getElementById('reviewText').value = result.cavemanReview;
+                } else {
+                    alert(result.message);
+                } 
+            } catch (error){
+                console.error('Error:', error);
+            }
+        });
+    }
+}
+
+async function SubmitReview(){
+    const form = document.getElementById("translatedForm");
     const token = localStorage.getItem("token");
 
     const params = new URLSearchParams(window.location.search);
@@ -120,9 +169,6 @@ async function SubmitReview(){
                 console.error("Error submitting review:", error);
                 submitButton.disabled = false
             } 
-            // finally {
-            //     submitButton.disabled = false;
-            // }
         });
     }
 }

@@ -345,7 +345,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1634"
+          "Value": "1977"
         },
         {
           "Name": "Content-Type",
@@ -353,22 +353,22 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"4xECSovld7xqQI2co5EPIuLo/9FfqTld4geEnYivUx8=\""
+          "Value": "\"m/35fH7fprz5e5vA1ZHHUsuCwC8EsglO+Aj15ESkmIc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 14 May 2025 01:23:16 GMT"
+          "Value": "Wed, 21 May 2025 05:20:03 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-4xECSovld7xqQI2co5EPIuLo/9FfqTld4geEnYivUx8="
+          "Value": "sha256-m/35fH7fprz5e5vA1ZHHUsuCwC8EsglO+Aj15ESkmIc="
         }
       ]
     },
     {
-      "Route": "CSS/restaurantreview.ftkmb1zdtq.css",
+      "Route": "CSS/restaurantreview.hd0udm6w7o.css",
       "AssetFile": "CSS/restaurantreview.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -382,7 +382,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1634"
+          "Value": "1977"
         },
         {
           "Name": "Content-Type",
@@ -390,21 +390,21 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"4xECSovld7xqQI2co5EPIuLo/9FfqTld4geEnYivUx8=\""
+          "Value": "\"m/35fH7fprz5e5vA1ZHHUsuCwC8EsglO+Aj15ESkmIc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 14 May 2025 01:23:16 GMT"
+          "Value": "Wed, 21 May 2025 05:20:03 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "ftkmb1zdtq"
+          "Value": "hd0udm6w7o"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-4xECSovld7xqQI2co5EPIuLo/9FfqTld4geEnYivUx8="
+          "Value": "sha256-m/35fH7fprz5e5vA1ZHHUsuCwC8EsglO+Aj15ESkmIc="
         },
         {
           "Name": "label",
@@ -1083,7 +1083,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1819"
+          "Value": "2316"
         },
         {
           "Name": "Content-Type",
@@ -1091,22 +1091,22 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"QlttTMBq7QJ4vdV9tjbuwSi7fk9JjWqhtxKl8PfJ98s=\""
+          "Value": "\"vONpOTMy3wkJl0zraHtg7nGom3lwjuuT0ajUSPqVZ/Q=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 14 May 2025 01:23:03 GMT"
+          "Value": "Wed, 21 May 2025 05:26:59 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-QlttTMBq7QJ4vdV9tjbuwSi7fk9JjWqhtxKl8PfJ98s="
+          "Value": "sha256-vONpOTMy3wkJl0zraHtg7nGom3lwjuuT0ajUSPqVZ/Q="
         }
       ]
     },
     {
-      "Route": "HTML/restaurantreviewpage.ulzgby1agg.html",
+      "Route": "HTML/restaurantreviewpage.sgeia4f4f2.html",
       "AssetFile": "HTML/restaurantreviewpage.html",
       "Selectors": [],
       "ResponseHeaders": [
@@ -1120,7 +1120,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1819"
+          "Value": "2316"
         },
         {
           "Name": "Content-Type",
@@ -1128,21 +1128,21 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"QlttTMBq7QJ4vdV9tjbuwSi7fk9JjWqhtxKl8PfJ98s=\""
+          "Value": "\"vONpOTMy3wkJl0zraHtg7nGom3lwjuuT0ajUSPqVZ/Q=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 14 May 2025 01:23:03 GMT"
+          "Value": "Wed, 21 May 2025 05:26:59 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "ulzgby1agg"
+          "Value": "sgeia4f4f2"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-QlttTMBq7QJ4vdV9tjbuwSi7fk9JjWqhtxKl8PfJ98s="
+          "Value": "sha256-vONpOTMy3wkJl0zraHtg7nGom3lwjuuT0ajUSPqVZ/Q="
         },
         {
           "Name": "label",
@@ -1643,7 +1643,7 @@
       ]
     },
     {
-      "Route": "JS/restaurantreview.4kc405ghny.js",
+      "Route": "JS/restaurantreview.8bq3ve6vsc.js",
       "AssetFile": "JS/restaurantreview.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -1657,7 +1657,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4916"
+          "Value": "6558"
         },
         {
           "Name": "Content-Type",
@@ -1665,21 +1665,21 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"bHP1AInx2mefFs98GqPTMzDMJ8rqJI6X6ut+LWxDaVU=\""
+          "Value": "\"9D7SWZr4fmFcalLiRecS+vPs1WI+vBhPnKuCwvj3fZo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 14 May 2025 01:24:50 GMT"
+          "Value": "Wed, 21 May 2025 05:27:29 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "4kc405ghny"
+          "Value": "8bq3ve6vsc"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-bHP1AInx2mefFs98GqPTMzDMJ8rqJI6X6ut+LWxDaVU="
+          "Value": "sha256-9D7SWZr4fmFcalLiRecS+vPs1WI+vBhPnKuCwvj3fZo="
         },
         {
           "Name": "label",
@@ -1702,7 +1702,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4916"
+          "Value": "6558"
         },
         {
           "Name": "Content-Type",
@@ -1710,17 +1710,17 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"bHP1AInx2mefFs98GqPTMzDMJ8rqJI6X6ut+LWxDaVU=\""
+          "Value": "\"9D7SWZr4fmFcalLiRecS+vPs1WI+vBhPnKuCwvj3fZo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 14 May 2025 01:24:50 GMT"
+          "Value": "Wed, 21 May 2025 05:27:29 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-bHP1AInx2mefFs98GqPTMzDMJ8rqJI6X6ut+LWxDaVU="
+          "Value": "sha256-9D7SWZr4fmFcalLiRecS+vPs1WI+vBhPnKuCwvj3fZo="
         }
       ]
     },

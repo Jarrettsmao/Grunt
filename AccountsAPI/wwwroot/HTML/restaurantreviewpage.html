@@ -18,23 +18,30 @@
         </div>
         <div class="page-wrapper">
             <form id="reviewForm">
-            <div class="review-container">
-                <div class="rating-row">
-                    <div class="star-rating" id="starRating">
-                        <span class="fa fa-star default-star" data-value=1></span>
-                        <span class="fa fa-star" data-value=2></span>
-                        <span class="fa fa-star" data-value=3></span>
-                        <span class="fa fa-star" data-value=4></span>
-                        <span class="fa fa-star" data-value=5></span>
-                    </div>
-                    <div class="rating-label">How good? Show fingers!</div>
+                <div class="review-container" id="reviewContainer">
+                    <textarea class="invisTextArea" id="translateReviewText" name="translateReviewText" placeholder="Tell yum..."></textarea>
                 </div>
-                <textarea class="invisTextArea" id="reviewText" name="reviewText" placeholder="Tell yum..."></textarea>
-            </div>
-            <button type="submit" id="reviewBtn">Submit</button>     
-            <div id="ratingError" class="error-message">
-                Please select a star rating before submitting your review.
-            </div>
+                <button type="submit" id="translateBtn">Translate</button> 
+            </form>
+
+            <form id="translatedForm">
+                <div class="review-container" id="translatedContainer">
+                    <div class="rating-row">
+                        <div class="star-rating" id="starRating">
+                            <span class="fa fa-star default-star" data-value=1></span>
+                            <span class="fa fa-star" data-value=2></span>
+                            <span class="fa fa-star" data-value=3></span>
+                            <span class="fa fa-star" data-value=4></span>
+                            <span class="fa fa-star" data-value=5></span>
+                        </div>
+                        <div class="rating-label">How good? Show fingers!</div>
+                    </div>
+                    <textarea class="invisTextArea" id="reviewText" name="reviewText" placeholder="Caveman-style review..." disabled></textarea>
+                </div>   
+                <button type="submit" id="reviewBtn" disabled>Submit</button>
+                <div id="ratingError" class="error-message">
+                    Please select a star rating before submitting your review.
+                </div>
             </form>
         </div>
     </body>

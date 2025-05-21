@@ -30,17 +30,21 @@ html, body {
     padding: 1rem; 
 }
 
-/* #reviewForm{
-    height:200%;
-} */
+/* Individual form styling */
+#reviewForm, #translatedForm {
+    /* flex:0 1 45%;                         Allow both forms to take equal space */
+    max-width: 45%;                  /* Optional: limits the width of each form */
+    /* min-width: 300px;  */
+}
 
 .page-wrapper {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;   /* Space the forms out */
     align-items: flex-start;
-    padding-top: 15vh;
+    padding: 1rem 10%;                /* Adds padding to the left and right */
     height: 100vh;
     background-color: #f8f8f8;
+    flex-wrap: wrap;     
 }
 
 .star-rating {
