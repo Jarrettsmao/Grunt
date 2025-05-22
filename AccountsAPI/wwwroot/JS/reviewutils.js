@@ -4,18 +4,24 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 async function DeleteReview(button){
-    const reviewId = button.getAttribute("data-id"); //get review id from button's data-id attribute
+    reviewId = button.getAttribute("data-id"); //get review id from button's dconstata-id attribute
+    restaurantId = button.getAttribute("data-restId"); //get review id from button's dconstata-id attribute
 
     // document.getElementById("delete-btn").addEventListener("click", async function(){
         if (confirm("Are you sure you want to delete your review?")){
             try {
+                // const reviewData = {
+                //     id: reviewId,
+                //     // restaurantId: restaurantId
+                // };
+
                 const response = await fetch("https://localhost:8080/Reviews/Delete", {
                     method: "DELETE",
                     headers: {
                         "Content-Type": "application/json",
                         "Authorization": `Bearer ${localStorage.getItem("token")}`
                     },
-                    body: JSON.stringify({ id: reviewId})
+                    body: JSON.stringify({id: reviewId})
                 });
 
                 if (response.ok){
