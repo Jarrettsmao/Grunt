@@ -64,7 +64,7 @@ public class ReviewService {
         var restaurant = await _restaurantService.GetByRestaurantIdAsync(id);
 
         if(restaurant == null){
-            throw new Exception("Restaurant not found");
+            return 0.0;
         }
         return restaurant.averageRating;
     }
@@ -73,7 +73,7 @@ public class ReviewService {
         var restaurant = await _restaurantService.GetByRestaurantIdAsync(id);
 
         if(restaurant == null){
-            throw new Exception("Restaurant not found");
+            return 0.0;
         }
         return restaurant.totalReviews;
     }

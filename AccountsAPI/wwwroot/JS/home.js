@@ -75,8 +75,10 @@ function geocodeAndSearch(fullQuery, locationName, zipCode) {
             //decide between searching just zip or restaurant & zip
             if (locationName) {
                 restaurantSearch(location, locationName, zipCode);
-            } else {
+            } else if (Number.isInteger(zipCode)){
                 areaCodeSearch(location);
+            } else {
+                citySearch(location, zipCode);
             }
         } else {
             console.error("Geocode was not successful:", status);
@@ -100,13 +102,11 @@ async function restaurantSearch(mapCenter, restaurantName, zipCode){
         // locationBias: mapCenter
     };
 
-    console.log("rest search");
-
     try {
         const { places } = await Place.searchByText(request);
         createMarker(places);
     } catch (error) {
-    console.error("Error searching for restaurants:", error);
+        console.error("Error searching for restaurants:", error);
     }
 }
 
@@ -130,7 +130,35 @@ async function areaCodeSearch(mapCenter) {
         const { places } = await Place.searchNearby(request);
         createMarker(places);
     } catch (error) {
-    console.error("Nearby search failed:", error);
+        console.error("Nearby search failed:", error);
+    }
+}
+
+async function citySearch(mapCenter, cityName){
+    const { Place, SearchNearbyRankPreference } = await google.maps.importLibrary("places");
+    const areaCode = localStorage.getItem("areacode");
+
+    //build query
+    const cityQuery = `${cityName} ${areaCode}`;
+
+    const request = {
+        fields: ["id", "displayName", "location", "businessStatus", "formattedAddress"],
+        locationRestriction: {
+            center: mapCenter,
+            radius: 5000
+        },
+        includedPrimaryTypes: ["restaurant"], // You can modify the primary types if necessary
+        maxResultCount: 20,
+        rankPreference: SearchNearbyRankPreference.POPULARITY,
+        language: "en-US",
+        region: "us"
+    };
+
+    try {
+        const { places} = await Place.searchNearby(request);
+        createMarker(places);
+    } catch (error) {
+        console.error("City search failed:", error);
     }
 }
 
@@ -185,6 +213,7 @@ async function fetchRestaurantRating(placeId){
         const ratingUrl = new URL("https://localhost:8080/Reviews/GetRatingAndReviews", window.location.origin);
         ratingUrl.searchParams.set('placeId', placeId);
         const response = await fetch(ratingUrl);
+
         const data = await response.json();
 
         //Handle missing data
