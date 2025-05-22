@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     navLinks.innerHTML = `
                     <a href="/HTML/accountpage.html">Account</a>
                     `;
-                    console.log(token);
+                    // console.log(token);
                 } else {
                     navLinks.innerHTML = `
                     <a href="/HTML/login.html" class="login">Login</a>

@@ -7,26 +7,31 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AccountsAPI.Services;
 
-public class ReviewService {
-    
+public class ReviewService
+{
+
     private readonly IMongoCollection<ReviewInfo> _reviewsCollection;
     private readonly MongoDBService _mongoDBService;
     private readonly RestaurantService _restaurantService;
 
-    public ReviewService(RestaurantService restaurantService, IOptions<MongoDBSettings> mongoDBSettings, MongoDBService mongoDBService) {
+    public ReviewService(RestaurantService restaurantService, IOptions<MongoDBSettings> mongoDBSettings, MongoDBService mongoDBService)
+    {
         MongoClient client = new MongoClient(mongoDBSettings.Value.ConnectionURI);
         IMongoDatabase database = client.GetDatabase(mongoDBSettings.Value.DatabaseName);
-        
+
         _reviewsCollection = database.GetCollection<ReviewInfo>("Reviews"); // Collection for Reviews
 
         _mongoDBService = mongoDBService;
         _restaurantService = restaurantService;
     }
 
-    public async Task<List<ReviewInfo>> GetAsync() {
+    public async Task<List<ReviewInfo>> GetAsync()
+    {
         return await _reviewsCollection.Find(new BsonDocument()).ToListAsync();
     }
-    public async Task<bool> CreateReviewAsync(ReviewInfo reviewInfo) {
+
+    public async Task<bool> CreateReviewAsync(ReviewInfo reviewInfo)
+    {
         await _reviewsCollection.InsertOneAsync(reviewInfo);
 
         var restaurant = await _restaurantService.GetByRestaurantIdAsync(reviewInfo.restaurantId);
@@ -37,20 +42,25 @@ public class ReviewService {
         return true;
     }
 
-    public async Task<List<ReviewInfo>> GetReviewsByAuthorIdAsync(string id){
+    public async Task<List<ReviewInfo>> GetReviewsByAuthorIdAsync(string id)
+    {
         var filter = Builders<ReviewInfo>.Filter.Eq(nameof(ReviewInfo.authorId), id);
         return await _reviewsCollection.Find(filter).ToListAsync();
     }
 
-    public async Task<List<ReviewInfo>> GetReviewsByRestaurantIdAsync(string id){
+    public async Task<List<ReviewInfo>> GetReviewsByRestaurantIdAsync(string id)
+    {
         var filter = Builders<ReviewInfo>.Filter.Eq(nameof(ReviewInfo.restaurantId), id);
         return await _reviewsCollection.Find(filter).ToListAsync();
     }
 
-    public async Task CheckRestaurantAsync(string restaurantId, string restaurantName){
+    public async Task CheckRestaurantAsync(string restaurantId, string restaurantName)
+    {
         var restaurant = await _restaurantService.GetByRestaurantIdAsync(restaurantId);
-        if (restaurant == null) {
-            var newRestaurant = new RestaurantInfo {
+        if (restaurant == null)
+        {
+            var newRestaurant = new RestaurantInfo
+            {
                 restaurantId = restaurantId,
                 restaurantName = restaurantName,
                 createdDate = DateTime.UtcNow
@@ -60,21 +70,31 @@ public class ReviewService {
         }
     }
 
-    public async Task<double> GetRestaurantRatingByPlaceIdAsync(string id){
+    public async Task<double> GetRestaurantRatingByPlaceIdAsync(string id)
+    {
         var restaurant = await _restaurantService.GetByRestaurantIdAsync(id);
 
-        if(restaurant == null){
+        if (restaurant == null)
+        {
             return 0.0;
         }
         return restaurant.averageRating;
     }
 
-    public async Task<double> GetRestaurantNumReviewsByPlaceIdAsync(string id){
+    public async Task<double> GetRestaurantNumReviewsByPlaceIdAsync(string id)
+    {
         var restaurant = await _restaurantService.GetByRestaurantIdAsync(id);
 
-        if(restaurant == null){
+        if (restaurant == null)
+        {
             return 0.0;
         }
         return restaurant.totalReviews;
     }
+    
+    public async Task DeleteAsync(string id) {
+        FilterDefinition<ReviewInfo> filter = Builders<ReviewInfo>.Filter.Eq("Id", id);
+        await _reviewsCollection.DeleteOneAsync(filter);
+        return;
+    } 
 }

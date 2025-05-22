@@ -102,8 +102,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>yeqzzj5xbp</Fingerprint>
-      <Integrity>ei9V9QlVA2ZQ4tAS0B/3U6Xds3lEy/HegCAm0uqWQ8U=</Integrity>
+      <Fingerprint>9sptgmh31z</Fingerprint>
+      <Integrity>N+D+jsX10kflSEaa/VqLFlDu+e5jLleQST0ZZi4bugY=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CSS\reviewTemplate.css'))</OriginalItemSpec>
@@ -228,8 +228,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>b2dzhj6fna</Fingerprint>
-      <Integrity>HdaZ110P692K6Bc81O64KELyfYCR2uM7x2nx78FLM44=</Integrity>
+      <Fingerprint>uq07p23xyf</Fingerprint>
+      <Integrity>eo+TQ8u3py2juR+dqaD/3qnLkmi1YWKvkdl8z6rZuEs=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\HTML\Templates\accountreviewtemplate.html'))</OriginalItemSpec>
@@ -318,8 +318,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>qmic1qm7et</Fingerprint>
-      <Integrity>UlL4FzOoN6d0o5VI/K7I56RONwbjGfywOlYAeTeAs1M=</Integrity>
+      <Fingerprint>5oas7drx8i</Fingerprint>
+      <Integrity>BdDeqOJqoFdWevlAsuaG+/vVk1KKhwKGNG9K4cdLNjo=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\JS\loadheader.js'))</OriginalItemSpec>
@@ -390,8 +390,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>ccmrsmgrcq</Fingerprint>
-      <Integrity>3B0x1+HKlNxOyemPjBqATX8GkfRN6QJPfJng47dETTM=</Integrity>
+      <Fingerprint>k2uzyhxmjz</Fingerprint>
+      <Integrity>BKfw5X7qh2SWgFVp0go+n4dum4VFemBZ6FN0Vbax3R4=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\JS\reviewutils.js'))</OriginalItemSpec>

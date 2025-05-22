@@ -66,6 +66,18 @@ public class ReviewController: Controller {
         return Ok(new { message = "Review submitted successfully!"});
     }
 
+    [Authorize]
+    [HttpDelete("Delete")]
+    public async Task<IActionResult> Delete([FromBody] DeleteRequest deleteRequest)
+    {
+        if (string.IsNullOrEmpty(deleteRequest.id)){
+            return BadRequest(new { message = "Review ID is required"});
+        }
+        
+        await _reviewService.DeleteAsync(deleteRequest.id);
+        return NoContent();
+    }
+
     //serving static files
 
     // [Authorize]

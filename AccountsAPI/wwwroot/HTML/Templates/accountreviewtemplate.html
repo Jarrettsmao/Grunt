@@ -1,7 +1,14 @@
 <link rel="stylesheet" type="text/css" href="/CSS/reviewTemplate.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 
 <div class="review">
-    <div class="restaurant-name">{{restaurantName}}</div>
+    <div class="restaurant-name">{{restaurantName}}
+        <!-- Delete Button with Trash Can Icon -->
+        <button class="delete-btn" onclick="DeleteReview(this)" data-id="{{id}}">
+            <i class="fas fa-trash-alt"></i>
+        </button>
+    </div>
     <div class="rating-row">
         <div class="review-rating">⭐ {{rating}}</div>
         <div class="review-date">{{createdDate}}</div>
