@@ -30,8 +30,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>lmbac8nkh5</Fingerprint>
-      <Integrity>o4qTZeSIFdPRJiZccJzhz6txTicq+BeDlAfTkhAnwCk=</Integrity>
+      <Fingerprint>ei5zijjm63</Fingerprint>
+      <Integrity>pjSKQglZX5cre7/waYthVM5OOu5SSEWYFrqbcLHlnr0=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CSS\header.css'))</OriginalItemSpec>
@@ -138,8 +138,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>898jxkmssq</Fingerprint>
-      <Integrity>dF4RRqrEzYejDPvc1wlnTj23biQdWca1bVbFghGQ4KU=</Integrity>
+      <Fingerprint>slyalng2r5</Fingerprint>
+      <Integrity>sD4DqbMZMD0Q0+1xCdYUb5GNgMrvlcrm1VmPmFHEtEI=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\HTML\accountpage.html'))</OriginalItemSpec>
@@ -156,8 +156,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>mtfmi0i5rz</Fingerprint>
-      <Integrity>mqsqBb8wLJFcFQiHrCZGXWE1Jp321ljvVxJrcpjWGmw=</Integrity>
+      <Fingerprint>2qx6p4pxxc</Fingerprint>
+      <Integrity>xvaPHAXFK5zMpsCPA+13M+N+tmw11JSBqLpXFVWUacE=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\HTML\home.html'))</OriginalItemSpec>
@@ -174,8 +174,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>ldq9uwaw17</Fingerprint>
-      <Integrity>yesX9KsljxYoNSdmu7hiZatf1Wl0js2Jkva+A28H7gc=</Integrity>
+      <Fingerprint>5v0si0ln9k</Fingerprint>
+      <Integrity>n6pRI7+Hozer4zqkUHtC+aKl4CM7TtWxdy3+bALhYGI=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\HTML\login.html'))</OriginalItemSpec>
@@ -192,8 +192,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>8vh14012iu</Fingerprint>
-      <Integrity>tCSNq7EL7fFKR7AbmTGHMMwIuQ/BgbFxJz/sEKqSnec=</Integrity>
+      <Fingerprint>aost85j1pf</Fingerprint>
+      <Integrity>auLohaZ/sEYihlfNqThRbwjtUY3GIBRlfXoklQ5FU3I=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\HTML\restaurant.html'))</OriginalItemSpec>
@@ -210,8 +210,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>9svmynp03x</Fingerprint>
-      <Integrity>afh7rPfI0+kbCof7VcuYzLqHUsfrnqiS+nQDHocl3Vw=</Integrity>
+      <Fingerprint>texkcwfn7u</Fingerprint>
+      <Integrity>210Agab6gK64OmAzHy1oL9btDAaSWg0vcmTknj3yBTg=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\HTML\restaurantreviewpage.html'))</OriginalItemSpec>
@@ -228,8 +228,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>jk26habamw</Fingerprint>
-      <Integrity>fWRzEoZybJqJUjXftjU4Yc4+SnnXRnBJGxaWVa86aVQ=</Integrity>
+      <Fingerprint>5op0n9sy03</Fingerprint>
+      <Integrity>CwOcB42++w3073ehdfWUxBVfSvxSLEr7EOGqABwxGz8=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\HTML\signup.html'))</OriginalItemSpec>
@@ -246,8 +246,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>hdbfwlzmap</Fingerprint>
-      <Integrity>VSslWKedyrRRtYJnz0I5QbvgaWSvs3oSRxBtzKAQIYo=</Integrity>
+      <Fingerprint>jbqseaos23</Fingerprint>
+      <Integrity>wdWjvf8HwTeXrH0Z67anE+EZGr/FsYbKM5KwkhEzyyA=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\HTML\Templates\accountreviewtemplate.html'))</OriginalItemSpec>
@@ -264,8 +264,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>23ue0ta2j5</Fingerprint>
-      <Integrity>MrxmcdgDUJW79FGcM3x0By+Q8eby19kjuu2Wx1vuuoc=</Integrity>
+      <Fingerprint>ntm0z7cpl0</Fingerprint>
+      <Integrity>i/Jp7bDXqqctVc9gr9De71cWhg1LQfzt1k8AOK+IaYk=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\HTML\Templates\header.html'))</OriginalItemSpec>
@@ -282,8 +282,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>c3z66g1a6m</Fingerprint>
-      <Integrity>2HK7unug8OOKFVjbtgN5UtlCJU3C6BuwMB8OPlV60NY=</Integrity>
+      <Fingerprint>l3dk2gnrx5</Fingerprint>
+      <Integrity>UTHc2dttwsMkUvPBoGxkk9YhxxhX6vBjpsWVexk+DdU=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\HTML\Templates\restaurantreviewtemplate.html'))</OriginalItemSpec>
@@ -336,8 +336,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>5oas7drx8i</Fingerprint>
-      <Integrity>BdDeqOJqoFdWevlAsuaG+/vVk1KKhwKGNG9K4cdLNjo=</Integrity>
+      <Fingerprint>s71aa9gndf</Fingerprint>
+      <Integrity>WA2HvBWIeVa+dTGQpKezss8Pij7G8oZnQcFopYpLwi4=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\JS\loadheader.js'))</OriginalItemSpec>
@@ -390,8 +390,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>zbsi5602sn</Fingerprint>
-      <Integrity>ESP+0lHoN97MjnJzIFNnHhqSdXUhHxDlJIu+76IWo+E=</Integrity>
+      <Fingerprint>3uv9uvzb9f</Fingerprint>
+      <Integrity>a7MSBtJlDuh7K/GoyAPiIQO5S15XQ3Vo4JItZIehklI=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\JS\restaurantreview.js'))</OriginalItemSpec>

@@ -106,8 +106,7 @@ public class ReviewService
         var reviewInfo = await _reviewsCollection.FindOneAndDeleteAsync(filter);
 
         // Check if the review exists
-        if (reviewInfo == null)
-        {
+        if (reviewInfo == null){
             throw new Exception("Review not found.");
         }
 
@@ -115,20 +114,17 @@ public class ReviewService
         var restaurant = await _restaurantService.GetByRestaurantIdAsync(reviewInfo.restaurantId);
 
         // Check if the restaurant exists
-        if (restaurant == null)
-        {
+        if (restaurant == null){
             throw new Exception("Restaurant not found.");
         }
 
         // Update the total reviews and average rating
         int newTotalReviews = restaurant.totalReviews - 1;
         double newAvgRating;
-        if (newTotalReviews != 0)
-        {
+        if (newTotalReviews != 0){
             newAvgRating = ((restaurant.averageRating * restaurant.totalReviews) - reviewInfo.rating) / newTotalReviews;
         }
-        else
-        {
+        else{
             newAvgRating = 0;
         }
 

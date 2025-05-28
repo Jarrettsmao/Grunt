@@ -4,7 +4,7 @@ using MongoDB.Bson.Serialization.Attributes;
 using System.Text.Json.Serialization;
 namespace AccountsAPI.Models;
 
-public class ReviewInfo
+public class ReviewRequest
 {
     [BsonId]
     [BsonRepresentation(BsonType.ObjectId)]
@@ -18,5 +18,5 @@ public class ReviewInfo
     public string reviewText { get; set; } = null!;
     public int rating { get; set; }
     public DateTime createdDate { get; set; } = DateTime.UtcNow;
-    public byte[] reviewPhoto { get; set; } = null!;
+    public string reviewPhoto { get; set; } = null!;
 }

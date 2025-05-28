@@ -150,14 +150,16 @@ async function SubmitReview(){
 
             const photoInput = document.getElementById("reviewPhoto");
             if (photoInput && photoInput.files.length > 0) {
-                formData.append("reviewPhoto", photoInput.files[0]);
+                const file = photoInput.files[0];
+                const base64String = await ConvertToBase64(file);
+                formData.append("reviewPhoto", base64String);
             }
  
             try {
                 const response = await fetch("https://localhost:8080/Reviews/PostReq", {
                     method: "POST",
                     headers: {
-                        "Content-Type": "application/json",
+                        // "Content-Type": "application/json",
                         "Authorization": `Bearer ${token}`
                     },
                     body: formData
@@ -175,6 +177,15 @@ async function SubmitReview(){
             } 
         });
     }
+}
+
+function ConvertToBase64(file){
+    return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onloadend = () => resolve(reader.result.split(',')[1]);
+        reader.onerror = reject;
+        reader.readAsDataURL(file);
+    });
 }
 
 function HighlightStars(rating, isSelect) {
@@ -195,3 +206,4 @@ function HighlightStars(rating, isSelect) {
         }
     });
 }
+

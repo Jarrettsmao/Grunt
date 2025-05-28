@@ -51,16 +51,32 @@ public class ReviewController: Controller {
 
     // [Authorize]
     [HttpPost("PostReq")]
-    public async Task<IActionResult> CreateReview([FromBody] ReviewInfo reviewInfo) {
+    public async Task<IActionResult> CreateReview([FromForm] ReviewRequest reviewReq) {
         var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+        var reviewInfo = new ReviewInfo();
 
-        if (string.IsNullOrEmpty(userId)){
+        if (string.IsNullOrEmpty(userId))
+        {
             return Unauthorized("Invalid token - no user ID found");
         }
 
         reviewInfo.authorId = userId;
+        reviewInfo.authorName = reviewReq.authorName;
+        reviewInfo.restaurantName = reviewReq.restaurantName;
+        reviewInfo.restaurantId = reviewReq.restaurantId;
+        reviewInfo.reviewText = reviewReq.reviewText;
+        reviewInfo.rating = reviewReq.rating;
 
-        await _reviewService.CheckRestaurantAsync(reviewInfo.restaurantId, reviewInfo.restaurantName);
+        //Decode the Base64 image into byte array if present
+        if (!string.IsNullOrEmpty(reviewReq.reviewPhoto))
+        {
+            try {
+                reviewInfo.reviewPhoto = Convert.FromBase64String(reviewReq.reviewPhoto);
+            } catch (FormatException ex) {
+                return BadRequest("Invalid Base64 string format");
+            }
+        }
+        await _reviewService.CheckRestaurantAsync(reviewReq.restaurantId, reviewReq.restaurantName);
 
         await _reviewService.CreateReviewAsync(reviewInfo);
         return Ok(new { message = "Review submitted successfully!"});
