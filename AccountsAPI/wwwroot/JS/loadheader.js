@@ -16,8 +16,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     // console.log(token);
                 } else {
                     navLinks.innerHTML = `
-                    <a href="/HTML/login.html" class="login">Login</a>
-                    <a href="/HTML/signup.html" class="signup">Sign Up</a>
+                    <a href="/HTML/login.html" class="login" onclick="showBorder(this)">Login</a>
+                    <a href="/HTML/signup.html" class="signup" onclick="showBorder(this)">Sign Up</a>
                     `;
                 }
             }
@@ -26,3 +26,14 @@ document.addEventListener("DOMContentLoaded", function () {
             console.error("Failed to load header:", error);
         });
 });
+
+// Function to show border when clicked
+function showBorder(button) {
+    // Add border color when clicked
+    button.style.border = "solid 0.1rem #ffde59";
+    
+    // Optionally remove the border after a short delay (e.g., 2 seconds)
+    setTimeout(() => {
+        button.style.border = "none";
+    }, 2000); // Adjust the duration to how long you want the border to stay visible
+}

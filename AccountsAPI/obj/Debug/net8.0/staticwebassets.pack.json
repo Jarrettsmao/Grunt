@@ -25,6 +25,10 @@
       "PackagePath": "staticwebassets\\CSS\\reviewTemplate.css"
     },
     {
+      "Id": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\CSS\\style.css",
+      "PackagePath": "staticwebassets\\CSS\\style.css"
+    },
+    {
       "Id": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\HTML\\Templates\\accountreviewtemplate.html",
       "PackagePath": "staticwebassets\\HTML\\Templates\\accountreviewtemplate.html"
     },

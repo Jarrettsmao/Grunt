@@ -140,13 +140,17 @@ async function SubmitReview(){
 
             submitButton.disabled = true;
 
-            const formData = {
-                authorId: localStorage.getItem("userId"),
-                authorName: localStorage.getItem("username"),
-                restaurantName: decodedName,
-                restaurantId: id,
-                reviewText: document.getElementById("reviewText").value,
-                rating: selectedRating
+            const formData = new FormData();
+            formData.append("authorId", localStorage.getItem("userId"));
+            formData.append("authorName", localStorage.getItem("username"));
+            formData.append("restaurantName", decodedName);
+            formData.append("restaurantId", id);
+            formData.append("reviewText", document.getElementById("reviewText").value);
+            formData.append("rating", selectedRating);
+
+            const photoInput = document.getElementById("reviewPhoto");
+            if (photoInput && photoInput.files.length > 0) {
+                formData.append("reviewPhoto", photoInput.files[0]);
             }
  
             try {
@@ -156,7 +160,7 @@ async function SubmitReview(){
                         "Content-Type": "application/json",
                         "Authorization": `Bearer ${token}`
                     },
-                    body: JSON.stringify(formData)
+                    body: formData
                 });
 
                 if (response.ok){

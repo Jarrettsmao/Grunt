@@ -99,42 +99,42 @@ public class ReviewService
         return restaurant.totalReviews;
     }
     
-public async Task DeleteAsync(string id)
-{
-    // Delete the review
-    FilterDefinition<ReviewInfo> filter = Builders<ReviewInfo>.Filter.Eq("Id", id);
-    var reviewInfo = await _reviewsCollection.FindOneAndDeleteAsync(filter);
-
-    // Check if the review exists
-    if (reviewInfo == null)
+    public async Task DeleteAsync(string id)
     {
-        throw new Exception("Review not found.");
+        // Delete the review
+        FilterDefinition<ReviewInfo> filter = Builders<ReviewInfo>.Filter.Eq("Id", id);
+        var reviewInfo = await _reviewsCollection.FindOneAndDeleteAsync(filter);
+
+        // Check if the review exists
+        if (reviewInfo == null)
+        {
+            throw new Exception("Review not found.");
+        }
+
+        // Get the associated restaurant
+        var restaurant = await _restaurantService.GetByRestaurantIdAsync(reviewInfo.restaurantId);
+
+        // Check if the restaurant exists
+        if (restaurant == null)
+        {
+            throw new Exception("Restaurant not found.");
+        }
+
+        // Update the total reviews and average rating
+        int newTotalReviews = restaurant.totalReviews - 1;
+        double newAvgRating;
+        if (newTotalReviews != 0)
+        {
+            newAvgRating = ((restaurant.averageRating * restaurant.totalReviews) - reviewInfo.rating) / newTotalReviews;
+        }
+        else
+        {
+            newAvgRating = 0;
+        }
+
+        await _restaurantService.UpdateRating(reviewInfo.restaurantId, newTotalReviews, newAvgRating);
+
+        return;
     }
-
-    // Get the associated restaurant
-    var restaurant = await _restaurantService.GetByRestaurantIdAsync(reviewInfo.restaurantId);
-
-    // Check if the restaurant exists
-    if (restaurant == null)
-    {
-        throw new Exception("Restaurant not found.");
-    }
-
-    // Update the total reviews and average rating
-    int newTotalReviews = restaurant.totalReviews - 1;
-    double newAvgRating;
-    if (newTotalReviews != 0)
-    {
-        newAvgRating = ((restaurant.averageRating * restaurant.totalReviews) - reviewInfo.rating) / newTotalReviews;
-    }
-    else
-    {
-        newAvgRating = 0;
-    }
-
-    await _restaurantService.UpdateRating(reviewInfo.restaurantId, newTotalReviews, newAvgRating);
-
-    return;
-}
 
 }

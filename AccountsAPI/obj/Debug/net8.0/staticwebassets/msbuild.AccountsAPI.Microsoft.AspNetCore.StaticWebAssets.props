@@ -108,6 +108,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CSS\reviewTemplate.css'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CSS\style.css'))">
+      <SourceType>Package</SourceType>
+      <SourceId>AccountsAPI</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/AccountsAPI</BasePath>
+      <RelativePath>CSS/style.css</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>4kf7djxsk8</Fingerprint>
+      <Integrity>hLPAuTnH9logAL1hHCN8eXevpaOqouIChWdTz4yJxYg=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CSS\style.css'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\HTML\accountpage.html'))">
       <SourceType>Package</SourceType>
       <SourceId>AccountsAPI</SourceId>
@@ -192,8 +210,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>sgeia4f4f2</Fingerprint>
-      <Integrity>vONpOTMy3wkJl0zraHtg7nGom3lwjuuT0ajUSPqVZ/Q=</Integrity>
+      <Fingerprint>9svmynp03x</Fingerprint>
+      <Integrity>afh7rPfI0+kbCof7VcuYzLqHUsfrnqiS+nQDHocl3Vw=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\HTML\restaurantreviewpage.html'))</OriginalItemSpec>
@@ -228,8 +246,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>uq07p23xyf</Fingerprint>
-      <Integrity>eo+TQ8u3py2juR+dqaD/3qnLkmi1YWKvkdl8z6rZuEs=</Integrity>
+      <Fingerprint>hdbfwlzmap</Fingerprint>
+      <Integrity>VSslWKedyrRRtYJnz0I5QbvgaWSvs3oSRxBtzKAQIYo=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\HTML\Templates\accountreviewtemplate.html'))</OriginalItemSpec>
@@ -246,8 +264,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>9m5rxh3yzz</Fingerprint>
-      <Integrity>z1UZMWLzRkXouFYRJMucQrNEy54b6ciJrRMn0dtzYNs=</Integrity>
+      <Fingerprint>23ue0ta2j5</Fingerprint>
+      <Integrity>MrxmcdgDUJW79FGcM3x0By+Q8eby19kjuu2Wx1vuuoc=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\HTML\Templates\header.html'))</OriginalItemSpec>
@@ -372,8 +390,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>4p9qzeknqz</Fingerprint>
-      <Integrity>aFGs2AfNA62SKNmPLLsUJ4gHScbCnW78Y6A99jDWmLQ=</Integrity>
+      <Fingerprint>zbsi5602sn</Fingerprint>
+      <Integrity>ESP+0lHoN97MjnJzIFNnHhqSdXUhHxDlJIu+76IWo+E=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\JS\restaurantreview.js'))</OriginalItemSpec>

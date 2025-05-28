@@ -3,12 +3,14 @@
     <head>
         <meta charset="UTF-8">
         <title>Home</title>
-        <!-- <link rel="stylesheet" type="text/css" href="../CSS/style.css"> -->
+
         <script src="/JS/loadheader.js" defer></script>
         <script src="/JS/home.js" defer></script>
         <link rel="stylesheet" type="text/css" href="/CSS/home.css" defer></script>
+        <link rel="stylesheet" type="text/css" href="/CSS/style.css">
         <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
         ({key: "AIzaSyDGVEsXeqZgkIMc4RRR7ZRiDjbwXYeLPyU", v: "weekly"});</script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
       
     </head>
     <body>
@@ -18,7 +20,10 @@
         <div class="search-section">
             <input type="text" id="locationSearch" placeholder="Search for a restaurant">
             <input type="text" id="zipCodeSearch" placeholder="Enter city or area code">
-            <button id="searchBtn">Search</button>
+            <button id="searchBtn">
+                <i class="fas fa-eye"></i>
+                Search
+            </button>
         </div>
 
         <div id="map"></div>
