@@ -2,22 +2,22 @@ let userId;
 let username;
 
 document.addEventListener("DOMContentLoaded", function() {
-    checkToken();
+    CheckToken();
 
-    const userInfo = getUserInfoFromToken();
+    const userInfo = GetUserInfoFromToken();
     userId = userInfo.id;
     username = userInfo.username;
     localStorage.setItem("userId", userInfo.id);
     localStorage.setItem("username", userInfo.username);
     localStorage.setItem("areacode", userInfo.areacode);
 
-    displayWelcomeMessage();
-    displayAreaCode();
-    changeAreaCode();
-    deleteAccount();
-    changeUsername();
-    validateMatch();
-    logout();
+    DisplayWelcomeMessage();
+    DisplayAreaCode();
+    ChangeAreaCode();
+    DeleteAccount();
+    ChangeUsername();
+    ValidateMatch();
+    Logout();
 
     const newNameInput = document.getElementById("newName");
     const confirmNameInput = document.getElementById("confirmName");
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
     confirmNameInput.addEventListener("input", validateMatch);
 });
 
-async function checkToken(){
+async function CheckToken(){
     const token = localStorage.getItem("token");
     console.log(token);
 
@@ -56,7 +56,7 @@ async function checkToken(){
 }
 
 //function to display welcome message
-function displayWelcomeMessage() {
+function DisplayWelcomeMessage() {
     const username = localStorage.getItem("username"); // Retrieve username
     if (username) {
         const welcomeMessage = document.getElementById("welcomeMessage");
@@ -66,7 +66,7 @@ function displayWelcomeMessage() {
     }
 }
 
-function displayAreaCode(){
+function DisplayAreaCode(){
     const areacode = localStorage.getItem("areacode");
     if (areacode) {
         const areacodeMessage = document.getElementById("areacodeMessage");
@@ -77,7 +77,7 @@ function displayAreaCode(){
 }
 
 //function to handle account deletion
-function deleteAccount(){
+function DeleteAccount(){
     document.getElementById("deleteAccountBtn").addEventListener("click", async function(){
         // const userId = localStorage.getItem("userId");
         if (confirm("Are you sure you want to delete your account?")){
@@ -106,14 +106,14 @@ function deleteAccount(){
     });
 }
 
-function logout(){
+function Logout(){
     document.getElementById("logoutBtn").addEventListener("click", async function(){
         localStorage.clear();
         window.location.href = "/Accounts/Login";
     });
 }
 
-async function changeUsername(){
+async function ChangeUsername(){
     const form = document.getElementById("changeNameForm");
 
     if (form){
@@ -159,7 +159,7 @@ async function changeUsername(){
     }
 }
 
-async function changeAreaCode(){
+async function ChangeAreaCode(){
     const form = document.getElementById("changeZipForm");
 
     if (form){
@@ -205,7 +205,7 @@ async function changeAreaCode(){
     }
 }
 
-function validateMatch(){
+function ValidateMatch(){
     const newNameInput = document.getElementById("newName");
     const confirmNameInput = document.getElementById("confirmName");
     const warningMessage = document.getElementById("warningMessage");
@@ -219,7 +219,7 @@ function validateMatch(){
     }
 }
 
-function getUserInfoFromToken(){
+function GetUserInfoFromToken(){
     const token = localStorage.getItem("token");
     if (!token){
         return null;

@@ -3,11 +3,11 @@ let geocoder;
 let places;
 
 window.addEventListener("DOMContentLoaded", async () => {
-    await initMap();
-    setupSearchListeners();
+    await InitMap();
+    SetupSearchListeners();
 });
 
-async function initMap() {
+async function InitMap() {
     // Load libraries
     const { Map } = await google.maps.importLibrary("maps");
     const { Geocoder } = await google.maps.importLibrary("geocoding");
@@ -35,7 +35,7 @@ async function initMap() {
 
 }
 
-function setupSearchListeners() {
+function SetupSearchListeners() {
     const areaInput = document.getElementById("zipCodeSearch");
     const locationInput = document.getElementById("locationSearch");
     const button = document.getElementById("searchBtn");
@@ -48,7 +48,7 @@ function setupSearchListeners() {
         }
         
         const fullQuery = locationVal ? `${locationVal} ${zipVal}` : zipVal;
-        geocodeAndSearch(fullQuery, locationVal, zipVal);
+        GeocodeAndSearch(fullQuery, locationVal, zipVal);
     });
 
     [areaInput, locationInput].forEach(input => {
@@ -60,13 +60,13 @@ function setupSearchListeners() {
                     zipVal = localStorage.getItem("areacode");
                 }
                 const fullQuery = locationVal ? `${locationVal} ${zipVal}` : zipVal;
-                geocodeAndSearch(fullQuery, locationVal, zipVal);
+                GeocodeAndSearch(fullQuery, locationVal, zipVal);
             }
         });
     });
 }
 
-function geocodeAndSearch(fullQuery, locationName, zipCode) {
+function GeocodeAndSearch(fullQuery, locationName, zipCode) {
     geocoder.geocode({ address: fullQuery }, (results, status) => {
         if (status === "OK" && results.length > 0) {
             const location = results[0].geometry.location;
@@ -74,11 +74,11 @@ function geocodeAndSearch(fullQuery, locationName, zipCode) {
 
             //decide between searching just zip or restaurant & zip
             if (locationName) {
-                restaurantSearch(location, locationName, zipCode);
+                RestaurantSearch(location, locationName, zipCode);
             } else if (Number.isInteger(zipCode)){
-                areaCodeSearch(location);
+                AreaCodeSearch(location);
             } else {
-                citySearch(location, zipCode);
+                CitySearch(location, zipCode);
             }
         } else {
             console.error("Geocode was not successful:", status);
@@ -87,7 +87,7 @@ function geocodeAndSearch(fullQuery, locationName, zipCode) {
     });
 }
 
-async function restaurantSearch(mapCenter, restaurantName, zipCode){
+async function RestaurantSearch(mapCenter, restaurantName, zipCode){
     const { Place, SearchNearbyRankPreference } = await google.maps.importLibrary("places");
 
     // const restaurantName =     
@@ -104,13 +104,13 @@ async function restaurantSearch(mapCenter, restaurantName, zipCode){
 
     try {
         const { places } = await Place.searchByText(request);
-        createMarker(places);
+       CreateMarker(places);
     } catch (error) {
         console.error("Error searching for restaurants:", error);
     }
 }
 
-async function areaCodeSearch(mapCenter) {
+async function AreaCodeSearch(mapCenter) {
     const { Place, SearchNearbyRankPreference } = await google.maps.importLibrary("places");
 
     const request = {
@@ -128,13 +128,13 @@ async function areaCodeSearch(mapCenter) {
 
     try {
         const { places } = await Place.searchNearby(request);
-        createMarker(places);
+        CreateMarker(places);
     } catch (error) {
         console.error("Nearby search failed:", error);
     }
 }
 
-async function citySearch(mapCenter, cityName){
+async function CitySearch(mapCenter, cityName){
     const { Place, SearchNearbyRankPreference } = await google.maps.importLibrary("places");
     const areaCode = localStorage.getItem("areacode");
 
@@ -156,13 +156,13 @@ async function citySearch(mapCenter, cityName){
 
     try {
         const { places} = await Place.searchNearby(request);
-        createMarker(places);
+        CreateMarker(places);
     } catch (error) {
         console.error("City search failed:", error);
     }
 }
 
-async function createMarker(places){
+async function CreateMarker(places){
     const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
     const { LatLngBounds } = await google.maps.importLibrary("core");
 
@@ -188,7 +188,7 @@ async function createMarker(places){
         mapsUrl.searchParams.set('name', name);
 
         //Fetch rating from your API
-        const {rating, numReviews} = await fetchRestaurantRating(placeId);
+        const {rating, numReviews} = await FetchRestaurantRating(placeId);
 
         marker.addListener("gmp-click", () => {
             infoWindow.setContent(`
@@ -208,7 +208,7 @@ async function createMarker(places){
     }
 }
 
-async function fetchRestaurantRating(placeId){
+async function FetchRestaurantRating(placeId){
     try {
         const ratingUrl = new URL("https://localhost:8080/Reviews/GetRatingAndReviews", window.location.origin);
         ratingUrl.searchParams.set('placeId', placeId);

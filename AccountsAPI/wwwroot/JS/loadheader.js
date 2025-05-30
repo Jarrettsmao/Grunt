@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (navLinks){
                 if (token){
                     navLinks.innerHTML = `
-                    <a href="/HTML/accountpage.html">Account</a>
+                    <a href="/HTML/accountpage.html" class="account" onclick="showBorder(this)">Account</a>
                     `;
                     // console.log(token);
                 } else {

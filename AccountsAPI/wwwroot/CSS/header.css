@@ -41,7 +41,7 @@ html, body {
   /* gap: 20px; Add a gap between items, optional */
 }
 
-.signup{
+.signup, .account{
   border: none;
   border-radius: 0.3rem;
   padding: 0.5rem;
@@ -51,6 +51,6 @@ html, body {
   /* transition: all 0.3s ease; Smooth transition for the border */
 }
 
-.signup:focus .login:focus{
+.signup:focus, .login:focus, .account:focus{
   outline: none;
 }
