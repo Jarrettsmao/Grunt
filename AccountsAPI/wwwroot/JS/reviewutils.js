@@ -128,6 +128,14 @@ function DisplayReviews(reviews, type){
                 reviewHTML = reviewHTML.replace(`{{createdDate}}`, formattedDate);
                 reviewHTML = reviewHTML.replace(`{{restaurantName}}`, review.restaurantName);
                 reviewHTML = reviewHTML.replace(`{{id}}`, review.id);
+
+                if (review.reviewPhoto){
+                    reviewHTML = reviewHTML.replace(`{{reviewPhoto}}`, `data:image/jpeg;base64,${review.reviewPhoto}`);
+                } else {
+                    reviewHTML = reviewHTML.replace('<div class="review-photo">', '<div class="review-photo" style="display:none;">');
+                    reviewHTML = reviewHTML.replace('<img src="{{reviewPhoto}}" alt="Review Photo"/>', ''); // Remove the img tag
+                }
+
                 container.innerHTML += reviewHTML;
             });
         })

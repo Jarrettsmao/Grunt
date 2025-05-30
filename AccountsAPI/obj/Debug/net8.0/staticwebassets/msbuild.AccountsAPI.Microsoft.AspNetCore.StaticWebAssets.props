@@ -408,8 +408,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>yc91jzqhoc</Fingerprint>
-      <Integrity>oiSeDmkcsv5HhSGEcxwYo1D24DLRdqNKl0ssqYjS1tQ=</Integrity>
+      <Fingerprint>a52w6sa5br</Fingerprint>
+      <Integrity>3mjf3dNyeBdi0NDUJ0g2kr+fWqXvYS4kcgIi2b9WVbk=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\JS\reviewutils.js'))</OriginalItemSpec>

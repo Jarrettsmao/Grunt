@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7XQgqEERqytX9iVL9vcDWEhtx6h1yMk2EiX7IjXhDOg=",
+  "Hash": "oMrdBbzVbESghVBF8g0gAuOCxqPCmupMHhQBXoGfQEE=",
   "Source": "AccountsAPI",
   "BasePath": "_content/AccountsAPI",
   "Mode": "Default",
@@ -493,8 +493,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "yc91jzqhoc",
-      "Integrity": "oiSeDmkcsv5HhSGEcxwYo1D24DLRdqNKl0ssqYjS1tQ=",
+      "Fingerprint": "a52w6sa5br",
+      "Integrity": "3mjf3dNyeBdi0NDUJ0g2kr+fWqXvYS4kcgIi2b9WVbk=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\JS\\reviewutils.js"
@@ -2348,6 +2348,51 @@
       ]
     },
     {
+      "Route": "JS/reviewutils.a52w6sa5br.js",
+      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\JS\\reviewutils.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5692"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"3mjf3dNyeBdi0NDUJ0g2kr+fWqXvYS4kcgIi2b9WVbk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 30 May 2025 03:18:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "a52w6sa5br"
+        },
+        {
+          "Name": "label",
+          "Value": "JS/reviewutils.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-3mjf3dNyeBdi0NDUJ0g2kr+fWqXvYS4kcgIi2b9WVbk="
+        }
+      ]
+    },
+    {
       "Route": "JS/reviewutils.js",
       "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\JS\\reviewutils.js",
       "Selectors": [],
@@ -2358,7 +2403,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5586"
+          "Value": "5692"
         },
         {
           "Name": "Content-Type",
@@ -2366,11 +2411,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"oiSeDmkcsv5HhSGEcxwYo1D24DLRdqNKl0ssqYjS1tQ=\""
+          "Value": "\"3mjf3dNyeBdi0NDUJ0g2kr+fWqXvYS4kcgIi2b9WVbk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 30 May 2025 03:15:59 GMT"
+          "Value": "Fri, 30 May 2025 03:18:31 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2380,52 +2425,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-oiSeDmkcsv5HhSGEcxwYo1D24DLRdqNKl0ssqYjS1tQ="
-        }
-      ]
-    },
-    {
-      "Route": "JS/reviewutils.yc91jzqhoc.js",
-      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\JS\\reviewutils.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "5586"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"oiSeDmkcsv5HhSGEcxwYo1D24DLRdqNKl0ssqYjS1tQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 30 May 2025 03:15:59 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "yc91jzqhoc"
-        },
-        {
-          "Name": "label",
-          "Value": "JS/reviewutils.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-oiSeDmkcsv5HhSGEcxwYo1D24DLRdqNKl0ssqYjS1tQ="
+          "Value": "sha256-3mjf3dNyeBdi0NDUJ0g2kr+fWqXvYS4kcgIi2b9WVbk="
         }
       ]
     },
