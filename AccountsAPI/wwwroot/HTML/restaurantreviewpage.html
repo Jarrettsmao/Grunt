@@ -2,15 +2,22 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Restaurant Review Page</title>
+
         <link rel="stylesheet" type="text/css" href="/CSS/restaurantreview.css">
         <link rel="stylesheet" type="text/css" href="/CSS/style.css">
         
         <!-- for stars NOTE: replace with icons -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- for drawing -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js" defer></script>
         
         <script src="/JS/restaurantreview.js" defer></script>
         <script src="/JS/loadheader.js" defer></script>
+        <script src="/JS/drawingutils.js" defer></script>
+
     </head>
     <body>
         <div id="header-placeholder"></div>
@@ -39,14 +46,24 @@
                     </div>
                     <textarea class="invisTextArea" id="reviewText" name="reviewText" placeholder="Caveman-style review..." disabled></textarea>
                 </div>   
+
+                <!-- Drawing Canvas Section (Using p5.js) -->
+                <div id="drawing-container">
+                    <label for="drawingCanvas">Draw your review:</label>
+                    <div id="canvasWrapper">
+                        <canvas id="drawingCanvas"></canvas>
+                    </div>
+                    <button type="button" id="clearCanvas">Clear Drawing</button>
+                </div>
+
                 <button type="submit" id="reviewBtn" disabled>Submit</button>
                 <div id="ratingError" class="error-message">
                     Please select a star rating before submitting your review.
                 </div>
 
-                <label for="reviewPhoto"></label>
+                <!-- <label for="reviewPhoto"></label> -->
                 <!-- note this only accepts one image if want multiple needs the "multiple" key word -->
-                <input type="file" id="reviewPhoto" name="reviewPhoto" accept="image/*"> 
+                <!-- <input type="file" id="reviewPhoto" name="reviewPhoto" accept="image/*">  -->
             </form>
         </div>
     </body>

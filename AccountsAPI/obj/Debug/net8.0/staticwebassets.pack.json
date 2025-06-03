@@ -69,6 +69,10 @@
       "PackagePath": "staticwebassets\\JS\\account.js"
     },
     {
+      "Id": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\JS\\drawingutils.js",
+      "PackagePath": "staticwebassets\\JS\\drawingutils.js"
+    },
+    {
       "Id": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\JS\\home.js",
       "PackagePath": "staticwebassets\\JS\\home.js"
     },

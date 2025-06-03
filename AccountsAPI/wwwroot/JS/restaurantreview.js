@@ -140,6 +140,16 @@ async function SubmitReview(){
 
             submitButton.disabled = true;
 
+            if(!IsCanvasDrawn()){
+                const drawingAlert = confirm("You haven't drawn anything on the canvas. Are you sure you want to submit without drawing?");
+
+                // Check if the canvas has any drawing
+                if (!drawingAlert) {
+                    submitButton.disabled = false;
+                    return;    
+                }
+            }
+
             const formData = new FormData();
             formData.append("authorId", localStorage.getItem("userId"));
             formData.append("authorName", localStorage.getItem("username"));
@@ -148,14 +158,21 @@ async function SubmitReview(){
             formData.append("reviewText", document.getElementById("reviewText").value);
             formData.append("rating", selectedRating);
 
-            const photoInput = document.getElementById("reviewPhoto");
-            const height = 350;
-            const width = 350;
-            if (photoInput && photoInput.files.length > 0) {
-                const file = photoInput.files[0];
-                const resizedBase64String = await ResizeImage(file, height, width);
-                formData.append("reviewPhoto", resizedBase64String);
-            }
+            //allows for uploading photos
+            // const photoInput = document.getElementById("reviewPhoto");
+            // const height = 350;
+            // const width = 350;
+            // if (photoInput && photoInput.files.length > 0) {
+            //     const file = photoInput.files[0];
+            //     const resizedBase64String = await ResizeImage(file, height, width);
+            //     formData.append("reviewPhoto", resizedBase64String);
+            // }
+
+            // Get canvas drawing as base64 and append it to FormData
+            const canvasData = canvas.elt.toDataURL('image/png'); // Use canvas.elt to access the raw canvas element
+            const base64String = await ConvertToBase64(canvasData);
+            // console.log()
+            formData.append("reviewPhoto", base64String);
  
             try {
                 const response = await fetch("https://localhost:8080/Reviews/PostReq", {
@@ -183,10 +200,9 @@ async function SubmitReview(){
 
 function ConvertToBase64(file){
     return new Promise((resolve, reject) => {
-        const reader = new FileReader();
-        reader.onloadend = () => resolve(reader.result.split(',')[1]);
-        reader.onerror = reject;
-        reader.readAsDataURL(file);
+        // Split the data and remove the 'data:image/png;base64,' part
+        const base64 = file.split(',')[1]; // Get the part after the comma
+        resolve(base64);
     });
 }
 
@@ -209,29 +225,47 @@ function HighlightStars(rating, isSelect) {
     });
 }
 
-async function ResizeImage(file, width, height) {
-    // First, convert the file to a base64 string using the existing ConvertToBase64 function
-    const base64String = await ConvertToBase64(file);
+// async function ResizeImage(file, width, height) {
+//     // First, convert the file to a base64 string using the existing ConvertToBase64 function
+//     const base64String = await ConvertToBase64(file);
 
-    return new Promise((resolve, reject) => {
-        const img = new Image(); 
-        img.src = `data:image/jpeg;base64,${base64String}`
+//     return new Promise((resolve, reject) => {
+//         const img = new Image(); 
+//         img.src = `data:image/jpeg;base64,${base64String}`
 
-        img.onload = function () { 
-            const canvas = document.createElement("canvas"); 
-            const ctx = canvas.getContext("2d");  
+//         img.onload = function () { 
+//             const canvas = document.createElement("canvas"); 
+//             const ctx = canvas.getContext("2d");  
 
-            canvas.width = width;  
-            canvas.height = height; 
+//             canvas.width = width;  
+//             canvas.height = height; 
 
-            ctx.drawImage(img, 0, 0, width, height);  
+//             ctx.drawImage(img, 0, 0, width, height);  
 
-            const resizedBase64String = canvas.toDataURL("image/jpeg");  
-            resolve(resizedBase64String.split(',')[1]);  
-        };
+//             const resizedBase64String = canvas.toDataURL("image/jpeg");  
+//             resolve(resizedBase64String.split(',')[1]);  
+//         };
 
-        img.onerror = reject;  
-    });
+//         img.onerror = reject;  
+//     });
+// }
+
+function IsCanvasDrawn(){
+    console.log("checking canvas");
+    loadPixels();
+    const pixelsData = pixels;
+
+    //loop through the pixels to check if non-background data exists
+    for (let i = 0; i < pixelsData.length; i += 4) {
+        const r = pixelsData[i];     // Red channel
+        const g = pixelsData[i + 1]; // Green channel
+        const b = pixelsData[i + 2]; // Blue channel
+        const a = pixelsData[i + 3]; // Blue channel
+
+        // If any pixel is different from white return true
+        if (r !== 255 || g !== 255 || b !== 255 && a !==0) {
+            return true; 
+        }
+    }
+    return false;
 }
-
-

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "NtkrlTHE11EgPhWmoTeRc9RRgqTL9mhAQddNQ3tjdM8=",
+  "Hash": "etwuEjsKA4pf+6pPt5UoPMhAu4AuvSHt0FJc+XFwsms=",
   "Source": "AccountsAPI",
   "BasePath": "_content/AccountsAPI",
   "Mode": "Default",
@@ -262,8 +262,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "texkcwfn7u",
-      "Integrity": "210Agab6gK64OmAzHy1oL9btDAaSWg0vcmTknj3yBTg=",
+      "Fingerprint": "3mcsriexj4",
+      "Integrity": "JS48huW0uEr+kceuOZIpmirjALQWlCsMoAShkNbt0nc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\HTML\\restaurantreviewpage.html"
@@ -372,6 +372,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\JS\\account.js"
+    },
+    {
+      "Identity": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\JS\\drawingutils.js",
+      "SourceId": "AccountsAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\",
+      "BasePath": "_content/AccountsAPI",
+      "RelativePath": "JS/drawingutils#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "5ipweew5fc",
+      "Integrity": "47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\JS\\drawingutils.js"
     },
     {
       "Identity": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\JS\\home.js",
@@ -1446,6 +1467,51 @@
       ]
     },
     {
+      "Route": "HTML/restaurantreviewpage.3mcsriexj4.html",
+      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\HTML\\restaurantreviewpage.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3277"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JS48huW0uEr+kceuOZIpmirjALQWlCsMoAShkNbt0nc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 03 Jun 2025 05:23:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "3mcsriexj4"
+        },
+        {
+          "Name": "label",
+          "Value": "HTML/restaurantreviewpage.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-JS48huW0uEr+kceuOZIpmirjALQWlCsMoAShkNbt0nc="
+        }
+      ]
+    },
+    {
       "Route": "HTML/restaurantreviewpage.html",
       "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\HTML\\restaurantreviewpage.html",
       "Selectors": [],
@@ -1456,7 +1522,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2637"
+          "Value": "3277"
         },
         {
           "Name": "Content-Type",
@@ -1464,11 +1530,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"210Agab6gK64OmAzHy1oL9btDAaSWg0vcmTknj3yBTg=\""
+          "Value": "\"JS48huW0uEr+kceuOZIpmirjALQWlCsMoAShkNbt0nc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 03 Jun 2025 01:16:57 GMT"
+          "Value": "Tue, 03 Jun 2025 05:23:11 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1478,52 +1544,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-210Agab6gK64OmAzHy1oL9btDAaSWg0vcmTknj3yBTg="
-        }
-      ]
-    },
-    {
-      "Route": "HTML/restaurantreviewpage.texkcwfn7u.html",
-      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\HTML\\restaurantreviewpage.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2637"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"210Agab6gK64OmAzHy1oL9btDAaSWg0vcmTknj3yBTg=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 03 Jun 2025 01:16:57 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "texkcwfn7u"
-        },
-        {
-          "Name": "label",
-          "Value": "HTML/restaurantreviewpage.html"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-210Agab6gK64OmAzHy1oL9btDAaSWg0vcmTknj3yBTg="
+          "Value": "sha256-JS48huW0uEr+kceuOZIpmirjALQWlCsMoAShkNbt0nc="
         }
       ]
     },
@@ -1934,6 +1955,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-7sJQvQvPPFBRFMv3u+CmnftJ96ABvL/CNDeM4jtMnB4="
+        }
+      ]
+    },
+    {
+      "Route": "JS/drawingutils.5ipweew5fc.js",
+      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\JS\\drawingutils.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "0"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 03 Jun 2025 05:15:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5ipweew5fc"
+        },
+        {
+          "Name": "label",
+          "Value": "JS/drawingutils.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU="
+        }
+      ]
+    },
+    {
+      "Route": "JS/drawingutils.js",
+      "AssetFile": "C:\\Users\\admin\\OneDrive\\Documents\\GitHub\\Grunt\\AccountsAPI\\wwwroot\\JS\\drawingutils.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "0"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 03 Jun 2025 05:15:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU="
         }
       ]
     },
