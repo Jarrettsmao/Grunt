@@ -149,10 +149,12 @@ async function SubmitReview(){
             formData.append("rating", selectedRating);
 
             const photoInput = document.getElementById("reviewPhoto");
+            const height = 350;
+            const width = 350;
             if (photoInput && photoInput.files.length > 0) {
                 const file = photoInput.files[0];
-                const base64String = await ConvertToBase64(file);
-                formData.append("reviewPhoto", base64String);
+                const resizedBase64String = await ResizeImage(file, height, width);
+                formData.append("reviewPhoto", resizedBase64String);
             }
  
             try {
@@ -206,4 +208,30 @@ function HighlightStars(rating, isSelect) {
         }
     });
 }
+
+async function ResizeImage(file, width, height) {
+    // First, convert the file to a base64 string using the existing ConvertToBase64 function
+    const base64String = await ConvertToBase64(file);
+
+    return new Promise((resolve, reject) => {
+        const img = new Image(); 
+        img.src = `data:image/jpeg;base64,${base64String}`
+
+        img.onload = function () { 
+            const canvas = document.createElement("canvas"); 
+            const ctx = canvas.getContext("2d");  
+
+            canvas.width = width;  
+            canvas.height = height; 
+
+            ctx.drawImage(img, 0, 0, width, height);  
+
+            const resizedBase64String = canvas.toDataURL("image/jpeg");  
+            resolve(resizedBase64String.split(',')[1]);  
+        };
+
+        img.onerror = reject;  
+    });
+}
+
 
