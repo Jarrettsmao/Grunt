@@ -24,28 +24,52 @@ html, body {
 
 
 .review-container{
-    width:40vh;
     border: 0.1rem solid;
     border-radius: 4px; /* rounded corners */
     padding: 1rem; 
 }
 
+#reviewContainer{
+    width: 40vh;
+}
+
+#translatedContainer{
+    width: 50rem;
+}
+
 /* Individual form styling */
-#reviewForm, #translatedForm {
+#reviewForm {
     /* flex:0 1 45%;                         Allow both forms to take equal space */
     max-width: 45%;                  /* Optional: limits the width of each form */
     /* min-width: 300px;  */
-}
+} 
 
 .page-wrapper {
     display: flex;
-    justify-content: space-between;   /* Space the forms out */
-    align-items: flex-start;
+    justify-content: center;   /* Space the forms out */
+    align-items: center;
     padding: 1rem 10%;                /* Adds padding to the left and right */
     height: 100vh;
     background-color: #f8f8f8;
     flex-wrap: wrap;     
 }
+
+.input-drawing-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    width: 100%;
+}
+
+#input-container, #drawing-container{
+    width: 48%;
+}
+
+#translatedForm{
+    width: 100%;
+    margin-top: 2rem;
+}
+
 
 .star-rating {
     direction: ltr;

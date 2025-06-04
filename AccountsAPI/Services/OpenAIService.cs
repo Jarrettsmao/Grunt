@@ -26,12 +26,17 @@ public class OpenAIService{
 
     public async Task<string> ConvertToCavemanAsync(string review){
         var client = _httpClientFactory.CreateClient();
-        var prompt = $"Make this text sound like a caveman would speak it, and minimize two syllable words. Limit response to one sentence even if it does not reach max tokens. Remove unnecessary punctuation like quotes.\"{review}";
+
+        int  estimatedTokens = (int)Math.Ceiling(review.Length / 4.0);  // Rough estimate for tokens
+        int maxTokens = Math.Min(estimatedTokens, 100);  // Ensure a cap on max tokens (e.g., 100)
+        Console.WriteLine("Num tokens: " + maxTokens);
+
+        var prompt = $"Make this text sound like a caveman would speak it, and minimize two syllable words. Limit response to one sentence even if it does not reach max tokens. Eliminate repeating same phrases in response. Remove unnecessary punctuation like quotes.\"{review}";
 
         var openAiRequest = new {
             model = "gpt-4.1-nano",
             prompt = prompt,
-            max_tokens = 25
+            max_tokens = maxTokens
         };
 
         var jsonContent = JsonConvert.SerializeObject(openAiRequest);

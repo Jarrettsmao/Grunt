@@ -25,27 +25,15 @@
             <h1 id="restaurantName"></h1>
         </div>
         <div class="page-wrapper">
-            <form id="reviewForm">
-                <div class="review-container" id="reviewContainer">
-                    <textarea class="invisTextArea" id="translateReviewText" name="translateReviewText" placeholder="Tell yum..."></textarea>
-                </div>
-                <button type="submit" id="translateBtn">Translate</button> 
-            </form>
-
-            <form id="translatedForm">
-                <div class="review-container" id="translatedContainer">
-                    <div class="rating-row">
-                        <div class="star-rating" id="starRating">
-                            <span class="fa fa-star default-star" data-value=1></span>
-                            <span class="fa fa-star" data-value=2></span>
-                            <span class="fa fa-star" data-value=3></span>
-                            <span class="fa fa-star" data-value=4></span>
-                            <span class="fa fa-star" data-value=5></span>
+            <div class="input-drawing-container">
+                <div id="input-container">
+                    <form id="reviewForm">
+                        <div class="review-container" id="reviewContainer">
+                            <textarea class="invisTextArea" id="translateReviewText" name="translateReviewText" placeholder="Tell yum..."></textarea>
                         </div>
-                        <div class="rating-label">How good? Show fingers!</div>
-                    </div>
-                    <textarea class="invisTextArea" id="reviewText" name="reviewText" placeholder="Caveman-style review..." disabled></textarea>
-                </div>   
+                        <button type="submit" id="translateBtn">Translate</button> 
+                    </form>
+                </div>
 
                 <!-- Drawing Canvas Section (Using p5.js) -->
                 <div id="drawing-container">
@@ -55,16 +43,36 @@
                     </div>
                     <button type="button" id="clearCanvas">Clear Drawing</button>
                 </div>
+            </div>
 
-                <button type="submit" id="reviewBtn" disabled>Submit</button>
-                <div id="ratingError" class="error-message">
-                    Please select a star rating before submitting your review.
-                </div>
+            <div class="translated-container">
+                <form id="translatedForm">
+                    <div class="review-container" id="translatedContainer">
+                        <div class="rating-row">
+                            <div class="star-rating" id="starRating">
+                                <span class="fa fa-star default-star" data-value=1></span>
+                                <span class="fa fa-star" data-value=2></span>
+                                <span class="fa fa-star" data-value=3></span>
+                                <span class="fa fa-star" data-value=4></span>
+                                <span class="fa fa-star" data-value=5></span>
+                            </div>
+                            <div class="rating-label">How good? Show fingers!</div>
+                        </div>
+                        <textarea class="invisTextArea" id="reviewText" name="reviewText" placeholder="Caveman-style review..." disabled></textarea>
+                    </div>   
 
-                <!-- <label for="reviewPhoto"></label> -->
-                <!-- note this only accepts one image if want multiple needs the "multiple" key word -->
-                <!-- <input type="file" id="reviewPhoto" name="reviewPhoto" accept="image/*">  -->
-            </form>
+
+
+                    <button type="submit" id="reviewBtn" disabled>Submit</button>
+                    <div id="ratingError" class="error-message">
+                        Please select a star rating before submitting your review.
+                    </div>
+
+                    <!-- <label for="reviewPhoto"></label> -->
+                    <!-- note this only accepts one image if want multiple needs the "multiple" key word -->
+                    <!-- <input type="file" id="reviewPhoto" name="reviewPhoto" accept="image/*">  -->
+                </form>
+            </div>
         </div>
     </body>
 </html>

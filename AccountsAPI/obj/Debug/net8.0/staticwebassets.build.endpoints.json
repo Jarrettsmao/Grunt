@@ -345,7 +345,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1977"
+          "Value": "2273"
         },
         {
           "Name": "Content-Type",
@@ -353,22 +353,22 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"m/35fH7fprz5e5vA1ZHHUsuCwC8EsglO+Aj15ESkmIc=\""
+          "Value": "\"9K2z2VJx2QZDx+BHWm28crl0zAeKVXipLMmEuQOs3JU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 21 May 2025 05:20:03 GMT"
+          "Value": "Wed, 04 Jun 2025 06:25:17 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-m/35fH7fprz5e5vA1ZHHUsuCwC8EsglO+Aj15ESkmIc="
+          "Value": "sha256-9K2z2VJx2QZDx+BHWm28crl0zAeKVXipLMmEuQOs3JU="
         }
       ]
     },
     {
-      "Route": "CSS/restaurantreview.hd0udm6w7o.css",
+      "Route": "CSS/restaurantreview.wpht37hxl3.css",
       "AssetFile": "CSS/restaurantreview.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -382,7 +382,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1977"
+          "Value": "2273"
         },
         {
           "Name": "Content-Type",
@@ -390,21 +390,21 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"m/35fH7fprz5e5vA1ZHHUsuCwC8EsglO+Aj15ESkmIc=\""
+          "Value": "\"9K2z2VJx2QZDx+BHWm28crl0zAeKVXipLMmEuQOs3JU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 21 May 2025 05:20:03 GMT"
+          "Value": "Wed, 04 Jun 2025 06:25:17 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "hd0udm6w7o"
+          "Value": "wpht37hxl3"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-m/35fH7fprz5e5vA1ZHHUsuCwC8EsglO+Aj15ESkmIc="
+          "Value": "sha256-9K2z2VJx2QZDx+BHWm28crl0zAeKVXipLMmEuQOs3JU="
         },
         {
           "Name": "label",
@@ -1151,51 +1151,6 @@
       ]
     },
     {
-      "Route": "HTML/restaurantreviewpage.3mcsriexj4.html",
-      "AssetFile": "HTML/restaurantreviewpage.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "3277"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"JS48huW0uEr+kceuOZIpmirjALQWlCsMoAShkNbt0nc=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 03 Jun 2025 05:23:11 GMT"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "3mcsriexj4"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-JS48huW0uEr+kceuOZIpmirjALQWlCsMoAShkNbt0nc="
-        },
-        {
-          "Name": "label",
-          "Value": "HTML/restaurantreviewpage.html"
-        }
-      ]
-    },
-    {
       "Route": "HTML/restaurantreviewpage.html",
       "AssetFile": "HTML/restaurantreviewpage.html",
       "Selectors": [],
@@ -1210,7 +1165,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3277"
+          "Value": "3703"
         },
         {
           "Name": "Content-Type",
@@ -1218,17 +1173,62 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"JS48huW0uEr+kceuOZIpmirjALQWlCsMoAShkNbt0nc=\""
+          "Value": "\"N6fDayBfETzvwRQHxMuvuRlCDvzgNBNputj1bBjU7lk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 03 Jun 2025 05:23:11 GMT"
+          "Value": "Wed, 04 Jun 2025 06:23:34 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-JS48huW0uEr+kceuOZIpmirjALQWlCsMoAShkNbt0nc="
+          "Value": "sha256-N6fDayBfETzvwRQHxMuvuRlCDvzgNBNputj1bBjU7lk="
+        }
+      ]
+    },
+    {
+      "Route": "HTML/restaurantreviewpage.xqgkbz35vr.html",
+      "AssetFile": "HTML/restaurantreviewpage.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3703"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"N6fDayBfETzvwRQHxMuvuRlCDvzgNBNputj1bBjU7lk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 04 Jun 2025 06:23:34 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xqgkbz35vr"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-N6fDayBfETzvwRQHxMuvuRlCDvzgNBNputj1bBjU7lk="
+        },
+        {
+          "Name": "label",
+          "Value": "HTML/restaurantreviewpage.html"
         }
       ]
     },
@@ -1397,51 +1397,6 @@
       ]
     },
     {
-      "Route": "JS/drawingutils.5ipweew5fc.js",
-      "AssetFile": "JS/drawingutils.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "0"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 03 Jun 2025 05:15:40 GMT"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "5ipweew5fc"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU="
-        },
-        {
-          "Name": "label",
-          "Value": "JS/drawingutils.js"
-        }
-      ]
-    },
-    {
       "Route": "JS/drawingutils.js",
       "AssetFile": "JS/drawingutils.js",
       "Selectors": [],
@@ -1456,7 +1411,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "0"
+          "Value": "437"
         },
         {
           "Name": "Content-Type",
@@ -1464,17 +1419,62 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
+          "Value": "\"65Sl2YuwBNNrc1TPeEHFa0rQbidl8Cqw9ec2fIePfsk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 03 Jun 2025 05:15:40 GMT"
+          "Value": "Tue, 03 Jun 2025 06:02:21 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU="
+          "Value": "sha256-65Sl2YuwBNNrc1TPeEHFa0rQbidl8Cqw9ec2fIePfsk="
+        }
+      ]
+    },
+    {
+      "Route": "JS/drawingutils.vzqxqpz88k.js",
+      "AssetFile": "JS/drawingutils.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "437"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"65Sl2YuwBNNrc1TPeEHFa0rQbidl8Cqw9ec2fIePfsk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 03 Jun 2025 06:02:21 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vzqxqpz88k"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-65Sl2YuwBNNrc1TPeEHFa0rQbidl8Cqw9ec2fIePfsk="
+        },
+        {
+          "Name": "label",
+          "Value": "JS/drawingutils.js"
         }
       ]
     },
@@ -1821,7 +1821,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "8165"
+          "Value": "9664"
         },
         {
           "Name": "Content-Type",
@@ -1829,22 +1829,22 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"F56eXhhCyhimS2i2LWjYO60tYjj9LwRfmfEfYOtaoQg=\""
+          "Value": "\"rNKF697+V9t6T4qRgvs/2HpZE/xYYTdMrN/ZNMK2IDk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 03 Jun 2025 01:44:10 GMT"
+          "Value": "Tue, 03 Jun 2025 06:35:00 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-F56eXhhCyhimS2i2LWjYO60tYjj9LwRfmfEfYOtaoQg="
+          "Value": "sha256-rNKF697+V9t6T4qRgvs/2HpZE/xYYTdMrN/ZNMK2IDk="
         }
       ]
     },
     {
-      "Route": "JS/restaurantreview.psy7ui1lth.js",
+      "Route": "JS/restaurantreview.scew2cdslh.js",
       "AssetFile": "JS/restaurantreview.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -1858,7 +1858,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "8165"
+          "Value": "9664"
         },
         {
           "Name": "Content-Type",
@@ -1866,21 +1866,21 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"F56eXhhCyhimS2i2LWjYO60tYjj9LwRfmfEfYOtaoQg=\""
+          "Value": "\"rNKF697+V9t6T4qRgvs/2HpZE/xYYTdMrN/ZNMK2IDk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 03 Jun 2025 01:44:10 GMT"
+          "Value": "Tue, 03 Jun 2025 06:35:00 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "psy7ui1lth"
+          "Value": "scew2cdslh"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-F56eXhhCyhimS2i2LWjYO60tYjj9LwRfmfEfYOtaoQg="
+          "Value": "sha256-rNKF697+V9t6T4qRgvs/2HpZE/xYYTdMrN/ZNMK2IDk="
         },
         {
           "Name": "label",
