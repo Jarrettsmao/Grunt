@@ -121,3 +121,44 @@ html, body {
     display: none;
     color: red;
 }
+
+#drawing-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Center the content horizontally */
+    justify-content: center;  /* Optional: Center the content vertically */
+    gap: 1rem;  /* Space between the canvas controls */
+}
+
+#canvasWrapper {
+    position: relative;
+}
+
+#canvasControls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Center the label and button */
+    width: 100%;
+}
+
+#canvasControls label {
+    margin-bottom: 0.5rem;  /* Space between label and button */
+    font-size: 1.2rem;
+}
+
+#canvasControls button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+#canvasControls button:hover {
+    background-color: #45a049;  /* Darken the button color on hover */
+}
+
+

@@ -6,7 +6,8 @@ document.getElementById('clearCanvas').addEventListener('click', () => {
 });
 
 function setup() {
-    canvas = createCanvas(350, 350); 
+    let canvasSize = 480;
+    canvas = createCanvas(canvasSize, canvasSize); 
     canvas.parent('canvasWrapper');   
     background(255);
 }
