@@ -103,7 +103,7 @@ public class ReviewController: Controller {
         "wwwroot", "HTML", "restaurantreviewpage.html"), "text/html");
     }
 
-    // [Authorize]
+    // allows get reviews for either restaurant or user id
     [HttpGet("GetReviews")]
     public async Task<IActionResult> GetUserReviews([FromQuery] string restId = null!){   
 

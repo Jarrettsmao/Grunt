@@ -4,3 +4,11 @@ body {
     font-family: 'Pixelify Sans', sans-serif;
     font-size: 22px;
 }
+
+button {
+    font-family: 'Pixelify Sans', sans-serif;
+}
+
+button:hover{
+    cursor:grab;
+}

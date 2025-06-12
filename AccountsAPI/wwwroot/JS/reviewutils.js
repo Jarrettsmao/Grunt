@@ -41,7 +41,7 @@ async function DeleteReview(button){
 }
 
 async function GetUserReviews(){
-    const token = localStorage.getItem("token");
+   const token = localStorage.getItem("token");
     let url = new URL("https://localhost:8080/Reviews/GetReviews");
     const params = new URLSearchParams(window.location.search);
     const id = params.get("id");
@@ -68,7 +68,7 @@ async function GetUserReviews(){
     } catch (error) {
         console.error("Error fetching reviews:", error);
     }
-}
+} 
 
 function DisplayReviews(reviews, type){
     const container = document.getElementById("userReviews");
@@ -77,6 +77,7 @@ function DisplayReviews(reviews, type){
         container.innerHTML = "<p>No reviews yet.</p>";
         return;
     }
+    //this is for list for restaurant reviews
     if (type === "Restaurant"){
         fetch('/HTML/Templates/restaurantreviewtemplate.html').then(function(response) {
             return response.text();
@@ -110,7 +111,11 @@ function DisplayReviews(reviews, type){
             container.innerHTML = "<p>There was an error loading the reviews.</p>";
         });
     } else {
-        //Fetch the review template HTML
+        // console.log("Review #: " + reviews.length);
+        const numReviewsContainer = document.getElementById('num-reviews');
+        numReviewsContainer.innerHTML = `Number of Reviews: ${reviews.length}`;
+
+        //this is for list of user reviews
         fetch('/HTML/Templates/accountreviewtemplate.html').then(function(response) {
             return response.text();
         }).then(function(template) {

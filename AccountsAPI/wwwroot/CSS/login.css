@@ -2,23 +2,6 @@ body{
     background-color: #621d1a;
 }
 
-#signupForm{
-    padding-top: 5rem;
-    color: #ffde59;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* min-height: 100vh; */
-    margin: 0;
-    flex-direction: column;
-}
-
-#title{
-    color:#ffde59;
-    text-align: center;
-    margin-top: 5rem;
-}
-
 label{
     color:#ffde59;
     text-align: center;
@@ -31,16 +14,34 @@ input {
     height: 1.5rem;
 }
 
-#signupBtn{
+#title{
+    color:#ffde59;
+    text-align: center;
+    margin-top: 5rem;
+}
+
+#loginForm{
+    padding-top: 5rem;
+    color: #ffde59;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* min-height: 100vh; */
+    margin-bottom: 1rem;
+    flex-direction: column;
+}
+
+#loginBtn{
     border: none;
     border-radius: 0.3rem;
     padding: 0.5rem;
+    /* margin-top: 2.5rem; */
     background-color: #ea6e1d;
     font-size: 1.5rem;
     /* color:#ffde59; */
 }
 
-#login-section{
+#signup-section{
     margin-top: 1.5rem;
     font-size: 1.2rem;
     text-align: center;

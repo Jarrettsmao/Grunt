@@ -225,6 +225,7 @@ function HighlightStars(rating, isSelect) {
     });
 }
 
+//made to resize images from upload
 // async function ResizeImage(file, width, height) {
 //     // First, convert the file to a base64 string using the existing ConvertToBase64 function
 //     const base64String = await ConvertToBase64(file);

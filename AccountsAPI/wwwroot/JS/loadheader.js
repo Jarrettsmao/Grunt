@@ -16,8 +16,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     // console.log(token);
                 } else {
                     navLinks.innerHTML = `
-                    <a href="/HTML/login.html" class="login" onclick="showBorder(this)">Login</a>
-                    <a href="/HTML/signup.html" class="signup" onclick="showBorder(this)">Sign Up</a>
+                    <a href="/Accounts/Login" class="login" onclick="showBorder(this)">Login</a>
+                    <a href="/Accounts/Signup" class="signup" onclick="showBorder(this)">Sign Up</a>
                     `;
                 }
             }
