@@ -72,7 +72,7 @@ function GeocodeAndSearch(fullQuery, locationName, zipCode) {
             const location = results[0].geometry.location;
             map.setCenter(location);
 
-            //decide between searching just zip or restaurant & zip
+            //decide between searching  zip, city, or restaurant & zip
             if (locationName) {
                 RestaurantSearch(location, locationName, zipCode);
             } else if (Number.isInteger(zipCode)){
@@ -87,10 +87,9 @@ function GeocodeAndSearch(fullQuery, locationName, zipCode) {
     });
 }
 
-async function RestaurantSearch(mapCenter, restaurantName, zipCode){
+async function RestaurantSearch(/*mapCenter,*/ restaurantName, zipCode){
     const { Place, SearchNearbyRankPreference } = await google.maps.importLibrary("places");
 
-    // const restaurantName =     
     const textQuery = `${restaurantName} restaurant ${zipCode}`;
 
     const request = {
@@ -148,7 +147,7 @@ async function CitySearch(mapCenter, cityName){
             radius: 5000
         },
         includedPrimaryTypes: ["restaurant"], // You can modify the primary types if necessary
-        maxResultCount: 20,
+        // maxResultCount: 20,
         rankPreference: SearchNearbyRankPreference.POPULARITY,
         language: "en-US",
         region: "us"
@@ -226,3 +225,74 @@ async function FetchRestaurantRating(placeId){
         return { rating: 'N/A', numReviews: 0 };  // Return defaults in case of an error
     }
 }
+
+// async function GetTopRestaurants(location){
+//     console.log("getting top restaurants");
+
+//     const { Place, SearchNearbyRankPreference } = await google.maps.importLibrary("places");
+
+//     const request = {
+//         fields:["id", "displayName"],
+//         locationRestriction: {
+//             center: location,
+//             radius: 3000
+//         },
+//         includedPrimaryTypes:["restaurant"],
+//         maxResultCount: 3,
+//         rankPreference: SearchNearbyRankPreference.POPULARITY,
+//         language: "en-US",
+//         region: "us"
+//     };
+
+//     try {
+//         const { places } = await Place.searchNearby(request);
+
+//         // // Sort places by popularity if it's available, and take the top 3
+//         // const top3Places = places
+//         //     .sort((a, b) => b.popularity - a.popularity)  // Sort descending by popularity
+//         //     .slice(0, 3);  // Take the top 3
+
+//         // // Return or log the top 3 places
+//         // console.log(top3Places);
+
+//         // // You can now return the data, use it elsewhere, or process it as needed
+//         // return top3Places;
+
+//         console.log("places: " + places);
+
+//         return places;
+//     } catch (error) {
+//         console.error("Nearby search failed:", error);
+//     }
+// }
+
+// function displayTopRatedPlaces(places) {
+//     console.log("displaying Top");
+
+//     const topRatedSection = document.querySelector('.top-rated-section');
+
+//     // Clear any existing content in the top-rated section
+//     topRatedSection.innerHTML = `<h2 id="top-rated-title">Top Rated Near Me</h2>`;
+
+//     // Create a list to display the top 3 places
+//     const list = document.createElement('ul');
+
+//     // Loop through the places and create a list item for each
+//     places.forEach((place, index) => {
+//         const listItem = document.createElement('li');
+        
+//         // Add content to the list item
+//         listItem.innerHTML = `
+//             <strong>${index + 1}. ${place.displayName}</strong>
+//             Rating: ${place.popularity || 'N/A'}
+//             Reviews: ${place.reviewCount || 'N/A'}
+//         `;
+        
+//         // Append the list item to the list
+//         list.appendChild(listItem);
+//     });
+
+//     // Append the list to the top-rated section
+//     topRatedSection.appendChild(list);
+// }
+

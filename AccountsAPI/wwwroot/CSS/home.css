@@ -1,8 +1,14 @@
+body {
+    background-color: #621d1a;
+}
+
 #map {
     height: 50rem;
     width: 60%;
     margin: auto;
 }
+
+/* Search Section */
 
 .search-section {
     display: flex;
@@ -33,4 +39,16 @@
 
 #searchBtn:hover {
     background-color: darkred;
+}
+
+.top-rated-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+    /* font-size: 3rem; */
+}
+
+#top-rated-title{
+    color:#ffde59;
 }

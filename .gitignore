@@ -1,0 +1,23 @@
+# Ignore the build directories for .NET projects
+bin/
+obj/
+
+# Ignore Visual Studio temporary files
+.vs/
+.vscode/
+
+# Ignore the user-specific files for Visual Studio
+.vs2019/
+.vs2017/
+
+# Ignore Rider IDE files
+.idea/
+
+# Ignore the NuGet package directory
+.nuget/
+
+# Ignore build logs
+*.log
+
+# Ignore local user settings
+userprefs/
