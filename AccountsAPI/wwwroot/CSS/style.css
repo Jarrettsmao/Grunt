@@ -12,3 +12,15 @@ button {
 button:hover{
     cursor:grab;
 }
+
+a {
+    color:#ffde59;
+}
+
+a:hover {
+    color: #c0392b;
+}
+
+/* a:visited {
+    color: #9b59b6;
+} */

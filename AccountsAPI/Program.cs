@@ -13,6 +13,7 @@ builder.Services.Configure<MongoDBSettings>(builder.Configuration.GetSection("Mo
 builder.Services.AddSingleton<MongoDBService>();
 builder.Services.AddSingleton<ReviewService>();
 builder.Services.AddSingleton<RestaurantService>();
+builder.Services.AddSingleton<BugService>();
 
 // Enable CORS
 builder.Services.AddCors(options =>

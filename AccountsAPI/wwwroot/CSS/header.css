@@ -30,11 +30,7 @@ html, body {
 .login{
   border: none;
   border-radius: 0.3rem;
-  padding-left: 1.7rem;
-  padding-right: 1.7rem;
-  padding-top: 0.7rem;
-  padding-bottom: 0.7rem;
-  margin-right: 0.7rem;
+  padding: 0.7rem 1.7rem;
   background-color: #ea6e1d;
   color: #ffde59;
   font-size: 1.5rem;
@@ -49,10 +45,7 @@ html, body {
 .signup, .account{
   border: none;
   border-radius: 0.3rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 0.7rem;
-  padding-bottom: 0.7rem;
+  padding: 0.7rem 1rem;
   background-color: #621d1a;
   color:#ffde59;
   margin-right: 2rem;

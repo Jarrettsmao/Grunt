@@ -1,0 +1,11 @@
+#about-link a {
+    /* display: block; */
+    margin-right: 3rem;
+}
+
+.main-footer {
+    width: 100%;
+    background-color: #2b0503;
+    padding: 1em 0em 1em 0em; /*top right bottom left*/
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }

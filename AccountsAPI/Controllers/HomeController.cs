@@ -19,12 +19,14 @@ namespace AccountsAPI.Controllers;
 
 [Controller]
 [Route("")]
-public class HomeController: Controller {
-    
+public class HomeController : Controller
+{
+
     // private readonly MongoDBService _mongoDBService;
     private readonly IConfiguration _configuration;
     // private readonly JwtService _jwtService;
-    public HomeController(IConfiguration configuration) {
+    public HomeController(IConfiguration configuration)
+    {
         // _mongoDBService = mongoDBService;
         _configuration = configuration;
         // _jwtService = jwtService;
@@ -32,8 +34,22 @@ public class HomeController: Controller {
 
     //serving static files
     [HttpGet("Home")]
-    public IActionResult GetAccountPage(){
+    public IActionResult GetAccountPage()
+    {
         return PhysicalFile(Path.Combine(Directory.GetCurrentDirectory(),
         "wwwroot", "HTML", "home.html"), "text/html");
+    }
+
+    [HttpGet("AboutUs")]
+    public IActionResult GetAboutUsPage()
+    {
+        return PhysicalFile(Path.Combine(Directory.GetCurrentDirectory(),
+        "wwwroot", "HTML", "aboutpage.html"), "text/html");
+    }
+    
+    [HttpGet("ReportBugs")]
+    public IActionResult GetReportBugsPage(){
+        return PhysicalFile(Path.Combine(Directory.GetCurrentDirectory(),
+        "wwwroot", "HTML", "reportbug.html"), "text/html");
     }
 }

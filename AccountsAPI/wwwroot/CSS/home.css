@@ -19,14 +19,14 @@ body {
 }
 
 .search-section input {
-    padding: 0.5rem;
+    padding: 0.7rem;
     border: 1px solid #ccc;
     border-radius: 0.3rem;
 }
 
 #searchBtn {
     padding: 0.5rem 1rem;
-    background-color: maroon;
+    background-color: #efb510;
     color: white;
     border: none;
     border-radius: 0.3rem;

@@ -21,8 +21,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const newNameInput = document.getElementById("newName");
     const confirmNameInput = document.getElementById("confirmName");
-    newNameInput.addEventListener("input", validateMatch);
-    confirmNameInput.addEventListener("input", validateMatch);
+    newNameInput.addEventListener("input", ValidateMatch);
+    confirmNameInput.addEventListener("input", ValidateMatch);
 });
 
 async function CheckToken(){
