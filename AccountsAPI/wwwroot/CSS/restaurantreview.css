@@ -37,18 +37,15 @@ html, body {
     width: 50rem;
 }
 
-/* Individual form styling */
 #reviewForm {
-    /* flex:0 1 45%;                         Allow both forms to take equal space */
-    max-width: 45%;                  /* Optional: limits the width of each form */
-    /* min-width: 300px;  */
+    max-width: 45%; 
 } 
 
 .page-wrapper {
     display: flex;
-    justify-content: center;   /* Space the forms out */
+    justify-content: center;
     align-items: center;
-    padding: 1rem 10%;                /* Adds padding to the left and right */
+    padding: 1rem 10%;        
     height: 100vh;
     background-color: #f8f8f8;
     flex-wrap: wrap;     

@@ -10,8 +10,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (navLinks){
                     navLinks.innerHTML = `
-                    <a href="/HTML/aboutpage.html" class="about" onclick="showBorder(this)">About Grunt</a>
-                    <a href="/HTML/reportbug.html" class="about" onclick="showBorder(this)">Report Bugs</a>
+                    <a href="/AboutUs" class="about" onclick="showBorder(this)">About Grunt</a>
+                    <a href="/ReportBugs" class="about" onclick="showBorder(this)">Report Bugs</a>
                     `;
             }
         })

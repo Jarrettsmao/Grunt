@@ -1,0 +1,25 @@
+img {
+    max-width: 100%;  /* Ensure the image doesn't stretch beyond its container */
+    height: auto;  /* Maintain aspect ratio */
+    display: block;  /* Prevent space below the image */
+    margin: 0 auto;  /* Center the image horizontally if needed */
+}
+
+#about-title {
+    text-align: center;
+}
+
+#why-title {
+    text-align: center;
+}
+
+#about-paragraph, #why-paragraph {
+    line-height: 2;  /* This will double-space the text */
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
+
+/* br {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+} */

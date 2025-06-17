@@ -1,0 +1,14 @@
+#title{
+    text-align: center;
+}
+
+#bug {
+    width: 60%; /* or set a specific value, e.g., 500px */
+    height: 30rem; /* Adjust the height */
+    padding: 10px; /* Add some padding for a better look */
+    font-size: 16px; /* Optional: increase text size for better readability */
+    box-sizing: border-box; /* Ensure padding is included in the width/height */
+    display: block;
+    margin: 0 auto;
+    resize: none;
+}

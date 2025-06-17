@@ -26,7 +26,23 @@ public class BugController : Controller
     }
 
     [HttpPost("MakeReport")]
-    public async Task<IActionResult> MakeReport([FromBody] BugReport bugReport) {
+    public async Task<IActionResult> MakeReport([FromForm] BugReportReq brr) {
+        var bugReport = new BugReport();
+
+        bugReport.report = brr.report;
+        
+        if (!string.IsNullOrEmpty(brr.picture))
+        {
+            try
+            {
+                bugReport.picture = Convert.FromBase64String(brr.picture);
+            }
+            catch (FormatException ex)
+            {
+                return BadRequest("Invalid Base64 string format");
+            }
+        }
+
         await _bugService.CreateBugReportAsync(bugReport);
         return Ok(new { message = "Report created successfully!"});
     }

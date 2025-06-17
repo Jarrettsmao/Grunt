@@ -4,20 +4,27 @@
         <meta charset="UTF-8">
         <title>Report Bug</title>
         <link rel="stylesheet" type="text/css" href="/CSS/style.css">
-        <!-- <link rel="stylesheet" type="text/css" href="/CSS/login.css"> -->
+        <link rel="stylesheet" type="text/css" href="/CSS/reportbug.css">
         <!-- <script src="/JS/login.js" defer></script> -->
         <script src="/JS/loadheader.js" defer></script>
         <script src="/JS/loadfooter.js" defer></script>
+        <script src="/JS/reportbug.js" defer></script>
     </head>
     <body>
         <div id="header-placeholder"></div>
         
         <h1 id="title">Report Bug:</h1>
         <form id="bugForm">
-            <input type="email" id="email" name="email" required>
+            <textarea id="bug" required placeholder=
+            "Please give a detailed description of what you were doing, and a description of the bug that occurred. Feel free to upload a screenshot of the issue."></textarea>
     
             <button type="submit" id="bugBtn">Submit</button>
+
+            <!-- <label for="reviewPhoto"></label> -->
+            <!-- note this only accepts one image if want multiple needs the "multiple" key word -->
         </form>
+
+        <input type="file" id="bugPhoto" name="bugPhoto" accept="image/*"> 
 
         <div id="footer-placeholder"></div>
     </body>
