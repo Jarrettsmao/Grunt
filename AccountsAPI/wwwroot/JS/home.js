@@ -194,7 +194,7 @@ async function CreateMarker(places){
                 <strong>${name}</strong><br>
                 ⭐${rating} (${numReviews})<br> 
                 ${address}<br>
-                <a href="${mapsUrl}" target="_blank" rel="noopener noreferrer">View restaurant details</a>`
+                <a href="${mapsUrl}" target="_blank" rel="noopener noreferrer" id="marker">View restaurant details</a>`
             );
             infoWindow.open(map, marker);
         })

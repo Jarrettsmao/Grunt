@@ -15,16 +15,20 @@
         
         <h1 id="title">Report Bug:</h1>
         <form id="bugForm">
-            <textarea id="bug" required placeholder=
-            "Please give a detailed description of what you were doing, and a description of the bug that occurred. Feel free to upload a screenshot of the issue."></textarea>
-    
-            <button type="submit" id="bugBtn">Submit</button>
-
+            
+            <div id="textarea-container">
+                <textarea id="bug" required placeholder=
+                "Please give a detailed description of what you were doing, and a description of the bug that occurred. Feel free to upload a screenshot of the issue."></textarea>
+                <div id="input">
+                    <input type="file" id="bugPhoto" name="bugPhoto" accept="image/*"> <br>
+                </div>
+            </div>
+            <button type="submit" class="submitBtn">Submit</button>
             <!-- <label for="reviewPhoto"></label> -->
             <!-- note this only accepts one image if want multiple needs the "multiple" key word -->
         </form>
 
-        <input type="file" id="bugPhoto" name="bugPhoto" accept="image/*"> 
+        
 
         <div id="footer-placeholder"></div>
     </body>
