@@ -1,9 +1,13 @@
+/* General Styling */
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    font-family: 'Pixelify Sans', sans-serif;  /* Add a consistent font for better readability */
+    font-size: 1rem;
 }
 
+/* Textarea Styles */
 .invisTextArea {
     resize: none;
     width: 100%;
@@ -16,41 +20,44 @@ html, body {
     box-shadow: none;
 }
 
-#name-container{
+/* Containers */
+#name-container {
     padding: 0.1rem;
     text-align: center;
-    background-color: #f8f8f8;
+    color: #ffde59;
 }
 
-
-.review-container{
+.review-container {
     border: 0.1rem solid;
-    border-radius: 4px; /* rounded corners */
-    padding: 1rem; 
+    border-radius: 4px;
+    padding: 1rem;
+    background-color: aliceblue;
 }
 
-#reviewContainer{
+#reviewContainer {
     width: 40vh;
+    height: 90%;
 }
 
-#translatedContainer{
+#translatedContainer {
     width: 50rem;
 }
 
-#reviewForm {
-    max-width: 45%; 
-} 
+/* #reviewForm {
+    max-width: 45%;
+} */
 
+/* Page Wrapper (Centering & Layout) */
 .page-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem 10%;        
+    padding: 1rem 10%;
     height: 100vh;
-    background-color: #f8f8f8;
-    flex-wrap: wrap;     
+    flex-wrap: wrap;
 }
 
+/* Input-Drawing Container */
 .input-drawing-container {
     display: flex;
     justify-content: space-between;
@@ -58,26 +65,42 @@ html, body {
     width: 100%;
 }
 
-#input-container, #drawing-container{
+#input-container, #drawing-container {
     width: 48%;
 }
 
-#translatedForm{
-    width: 100%;
-    margin-top: 2rem;
+#input-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+#translate-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
 
+/* Translated Form */
+#translatedForm {
+    width: 100%;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+}
+
+/* Star Rating Styles */
 .star-rating {
     direction: ltr;
-    font-size: 2em; /* font size is twice the size of the parent */
+    font-size: 2em;
     display: inline-block;
 }
 
 .default-star {
     cursor: pointer;
-    /* color: #ccc; Gray */
-    /* transition: color 0.2s ease; */
 }
 
 .hovered {
@@ -85,46 +108,49 @@ html, body {
 }
 
 .selected {
-    color: gold; 
+    color: gold;
 }
 
 .rating-row {
     display: flex;
-    align-items: center; /* vertically center */
-    gap: 10px; /* optional spacing between stars and text */
+    align-items: center;
+    gap: 10px;
 }
 
 .star-rating {
     display: flex;
 }
 
+/* label */
+
 .rating-label {
     font-size: 1rem;
     color: #727272;
 }
 
+/* Buttons */
 #reviewBtn {
-    background-color: red;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    height: 3.5vh;
-    width: 10vh;
-    font-size: 1rem; 
-    cursor: pointer;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
 }
 
+#translateBtn{
+    margin-top: 2rem;
+}
+
+/* Error Message */
 .error-message {
     display: none;
     color: red;
 }
 
+/* Drawing Container (Canvas and Controls) */
 #drawing-container {
     display: flex;
     flex-direction: column;
-    align-items: center;  /* Center the content horizontally */
-    justify-content: center;  /* Optional: Center the content vertically */
-    gap: 1rem;  /* Space between the canvas controls */
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
 }
 
 #canvasWrapper {
@@ -134,20 +160,21 @@ html, body {
 #canvasControls {
     display: flex;
     flex-direction: column;
-    align-items: center;  /* Center the label and button */
+    align-items: center;
     width: 100%;
 }
 
 #canvasControls label {
-    margin-bottom: 0.5rem;  /* Space between label and button */
+    margin-bottom: 0.5rem;
     font-size: 1.2rem;
+    color: #ffde59;
 }
 
 #canvasControls button {
     padding: 0.5rem 1rem;
     font-size: 1rem;
     cursor: pointer;
-    background-color: #4CAF50;
+    background-color: #ea6e1d;
     color: white;
     border: none;
     border-radius: 4px;
@@ -155,7 +182,5 @@ html, body {
 }
 
 #canvasControls button:hover {
-    background-color: #45a049;  /* Darken the button color on hover */
+    background-color: #45a049;  /* Darken button on hover */
 }
-
-

@@ -1,22 +1,23 @@
-img {
+#caveman {
     max-width: 100%;  /* Ensure the image doesn't stretch beyond its container */
     height: auto;  /* Maintain aspect ratio */
     display: block;  /* Prevent space below the image */
     margin: 0 auto;  /* Center the image horizontally if needed */
+    margin-bottom: 5rem;
 }
 
-#about-title {
+#about-title, #why-title {
     text-align: center;
+    color:#ffde59;
+    margin-top: 5rem;
 }
 
-#why-title {
-    text-align: center;
-}
 
 #about-paragraph, #why-paragraph {
     line-height: 2;  /* This will double-space the text */
-    margin-left: 10rem;
-    margin-right: 10rem;
+    margin-left: 15rem;
+    margin-right: 15rem;
+    color:#a5521c;
 }
 
 /* br {

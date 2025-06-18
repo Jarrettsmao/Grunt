@@ -56,3 +56,7 @@ html, body {
 .signup:focus, .login:focus, .account:focus{
   outline: none;
 }
+
+#homeBtn{
+  margin-left: 0.5rem;
+}
