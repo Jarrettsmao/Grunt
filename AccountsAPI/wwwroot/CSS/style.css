@@ -4,7 +4,7 @@ body {
     font-family: 'Pixelify Sans', sans-serif;
     font-size: 22px;
     height: 100%;
-    /* display: flex; */
+    display: flex;
     flex-direction: column;
     background-color: #621d1a;
 }
@@ -31,9 +31,6 @@ a:hover {
 
 #footer-placeholder{
     margin-top: auto;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
 }
 
 .submitBtn{
@@ -42,4 +39,5 @@ a:hover {
     padding: 0.5rem;
     background-color: #ea6e1d;
     font-size: 1.5rem;
+    text-align: center;
 }
