@@ -30,6 +30,9 @@ public class BugController : Controller
         var bugReport = new BugReport();
 
         bugReport.report = brr.report;
+
+        Console.WriteLine("running");
+        Console.WriteLine(brr.picture);
         
         if (!string.IsNullOrEmpty(brr.picture))
         {

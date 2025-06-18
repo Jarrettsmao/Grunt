@@ -49,8 +49,10 @@ async function SubmitBugReport() {
             if (photoInput && photoInput.files.length > 0) {
                 const file = photoInput.files[0];
                 picture = await ConvertToBase64(file);
+
+                console.log(picture);
                 // Append the photo directly without resizing
-                formData.append("picture", file);
+                formData.append("picture", picture);
             }
             formData.append("report", bugDescription);
 
@@ -66,7 +68,7 @@ async function SubmitBugReport() {
                 if (response.ok) {
                     const result = await response.json();
                     alert("Bug report submitted successfully!");
-                    // window.location.href = "/bugs"; // Redirect to the bugs page or some other location
+                    window.location.href = "/ReportBugs"; // Redirect to the bugs page or some other location
                     console.log("Bug report submitted.");
                 } else {
                     const result = await response.json();
