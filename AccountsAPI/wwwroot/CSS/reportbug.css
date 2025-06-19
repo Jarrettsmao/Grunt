@@ -16,6 +16,8 @@
     box-sizing: border-box;
     margin-top: 5rem;
     resize: none;
+    border: 0.1rem solid;
+    border-radius: 4px;
 }
 
 #bugForm{

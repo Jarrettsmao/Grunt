@@ -21,6 +21,14 @@ document.addEventListener("DOMContentLoaded", function () {
                     `;
                 }
             }
+
+            //Attach border effects to all buttons
+            // const buttons = document.querySelectorAll('button'); //targets all <button> elements
+            // buttons.forEach(button => {
+            //     button.addEventListener('click', function(){
+            //         showBorder(button);
+            //     });
+            // });
         })
         .catch(function(error){
             console.error("Failed to load header:", error);
@@ -30,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // Function to show border when clicked
 function showBorder(button) {
     // Add border color when clicked
-    button.style.border = "solid 0.1rem #ffde59";
+    button.style.border = "solid 5rem #ffde59";
     
     // Optionally remove the border after a short delay (e.g., 2 seconds)
     setTimeout(() => {

@@ -65,6 +65,8 @@ async function TranslateReview(){
     if (form){
         form.addEventListener("submit", async function (event){
 
+            console.log("translate");
+
             event.preventDefault();
             const translateButton = document.getElementById("translateBtn");
 
@@ -74,6 +76,8 @@ async function TranslateReview(){
             }
 
             translateButton.disabled = true;
+
+            console.log(document.getElementById("translateReviewText").value);
 
             const formData = {
                 reviewText: document.getElementById("translateReviewText").value
@@ -225,6 +229,26 @@ function HighlightStars(rating, isSelect) {
     });
 }
 
+function IsCanvasDrawn(){
+    console.log("checking canvas");
+    loadPixels();
+    const pixelsData = pixels;
+
+    //loop through the pixels to check if non-background data exists
+    for (let i = 0; i < pixelsData.length; i += 4) {
+        const r = pixelsData[i];     // Red channel
+        const g = pixelsData[i + 1]; // Green channel
+        const b = pixelsData[i + 2]; // Blue channel
+        const a = pixelsData[i + 3]; // Blue channel
+
+        // If any pixel is different from white return true
+        if (r !== 255 || g !== 255 || b !== 255 && a !==0) {
+            return true; 
+        }
+    }
+    return false;
+}
+
 //made to resize images from upload
 // async function ResizeImage(file, width, height) {
 //     // First, convert the file to a base64 string using the existing ConvertToBase64 function
@@ -251,22 +275,4 @@ function HighlightStars(rating, isSelect) {
 //     });
 // }
 
-function IsCanvasDrawn(){
-    console.log("checking canvas");
-    loadPixels();
-    const pixelsData = pixels;
 
-    //loop through the pixels to check if non-background data exists
-    for (let i = 0; i < pixelsData.length; i += 4) {
-        const r = pixelsData[i];     // Red channel
-        const g = pixelsData[i + 1]; // Green channel
-        const b = pixelsData[i + 2]; // Blue channel
-        const a = pixelsData[i + 3]; // Blue channel
-
-        // If any pixel is different from white return true
-        if (r !== 255 || g !== 255 || b !== 255 && a !==0) {
-            return true; 
-        }
-    }
-    return false;
-}

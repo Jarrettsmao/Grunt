@@ -1,85 +1,77 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Restaurant Review Page</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Review Page</title>
 
-        <link rel="stylesheet" type="text/css" href="/CSS/restaurantreview.css">
-        <link rel="stylesheet" type="text/css" href="/CSS/style.css">
-        
-        <!-- for stars NOTE: replace with icons -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/CSS/restaurantreview.css">
+    <link rel="stylesheet" type="text/css" href="/CSS/style.css">
 
-        <!-- for drawing -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js" defer></script>
-        
-        <script src="/JS/restaurantreview.js" defer></script>
-        <script src="/JS/loadheader.js" defer></script>
-        <script src="/JS/drawingutils.js" defer></script>
-        <script src="/JS/loadfooter.js" defer></script>
+    <!-- for stars NOTE: replace with icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    </head>
-    <body>
-        <div id="header-placeholder"></div>
-        <div id="name-container">
-            <h1 id="restaurantName"></h1>
-        </div>
-        <div class="page-wrapper">
-            <div class="input-drawing-container">
-                <div id="input-container">
-                    <form id="reviewForm">
-                        <div class="review-container" id="reviewContainer">
-                            <textarea class="invisTextArea" id="translateReviewText" name="translateReviewText" placeholder="Tell yum..."></textarea>
-                        </div>
-                        <div id="translate-container">
-                            <button type="submit" id="translateBtn" class="submitBtn">Translate</button> 
-                        </div>
-                    </form>
-                </div>
+    <!-- for drawing -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js" defer></script>
 
-                <!-- Drawing Canvas Section (Using p5.js) -->
-                <div id="drawing-container">
-                    <div id="canvasWrapper">
-                        <!-- <canvas id="drawingCanvas"></canvas> -->
-                    </div>
-                    <div id="canvasControls">
-                        <label for="drawingCanvas">Draw your review:</label>
-                        <button type="button" id="clearCanvas">Clear Drawing</button>
-                    </div>
-                </div>
-            </div>
+    <script src="/JS/restaurantreview.js" defer></script>
+    <script src="/JS/loadheader.js" defer></script>
+    <script src="/JS/drawingutils.js" defer></script>
+    <script src="/JS/loadfooter.js" defer></script>
 
-            <div class="translated-container">
-                <form id="translatedForm">
-                    <div class="review-container" id="translatedContainer">
-                        <div class="rating-row">
-                            <div class="star-rating" id="starRating">
-                                <span class="fa fa-star default-star" data-value=1></span>
-                                <span class="fa fa-star" data-value=2></span>
-                                <span class="fa fa-star" data-value=3></span>
-                                <span class="fa fa-star" data-value=4></span>
-                                <span class="fa fa-star" data-value=5></span>
-                            </div>
-                            <div class="rating-label">How good? Show fingers!</div>
-                        </div>
-                        <textarea class="invisTextArea" id="reviewText" name="reviewText" placeholder="Caveman-style review..." disabled></textarea>
-                    </div>   
-
-
-
-                    <button type="submit" id="reviewBtn" class="submitBtn" disabled>Submit</button>
-                    <div id="ratingError" class="error-message">
-                        Please select a star rating before submitting your review.
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    <div id="name-container">
+        <h1 id="restaurantName"></h1>
+    </div>
+    <div class="page-wrapper">
+        <div class="input-drawing-container">
+            <div id="input-container">
+                <form id="reviewForm">
+                    <div class="review-container" id="reviewContainer">
+                        <textarea class="invisTextArea" id="translateReviewText" name="translateReviewText" placeholder="Tell yum..."></textarea>
                     </div>
 
-                    <!-- <label for="reviewPhoto"></label> -->
-                    <!-- note this only accepts one image if want multiple needs the "multiple" key word -->
-                    <!-- <input type="file" id="reviewPhoto" name="reviewPhoto" accept="image/*">  -->
+                    <div id="translate-btn-container">
+                        <button type="submit" id="translateBtn" class="submitBtn">Translate</button>
+                    </div>
                 </form>
             </div>
+
+            <!-- Drawing Canvas Section (Using p5.js) -->
+            <div id="drawing-container">
+                <div id="canvasWrapper">
+                    <!-- <canvas id="drawingCanvas"></canvas> -->
+                </div>
+            </div>
         </div>
 
-        <div id="footer-placeholder"></div>
-    </body>
+        <!-- Translated Review Section -->
+        <div class="translated-container">
+            <form id="translatedForm">
+                <div class="review-container" id="translatedContainer">
+                    <div class="rating-row">
+                        <div class="star-rating" id="starRating">
+                            <span class="fa fa-star default-star" data-value="1"></span>
+                            <span class="fa fa-star" data-value="2"></span>
+                            <span class="fa fa-star" data-value="3"></span>
+                            <span class="fa fa-star" data-value="4"></span>
+                            <span class="fa fa-star" data-value="5"></span>
+                        </div>
+                        <div class="rating-label">How good? Show fingers!</div>
+                    </div>
+                    <textarea class="invisTextArea" id="reviewText" name="reviewText" placeholder="Caveman-style review..." disabled></textarea>
+                </div>
+
+                <button type="submit" id="reviewBtn" class="submitBtn" disabled>Submit</button>
+                <div id="ratingError" class="error-message">
+                    Please select a star rating before submitting your review.
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+</body>
 </html>

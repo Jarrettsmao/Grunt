@@ -60,22 +60,25 @@ html, body {
 /* Input-Drawing Container */
 .input-drawing-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     gap: 2rem;
     width: 100%;
+    margin-bottom: 10rem;
 }
 
-#input-container, #drawing-container {
+/* #input-container, #drawing-container {
     width: 48%;
-}
+} */
 
 #input-container{
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* height: 30rem; */
 }
 
-#translate-container{
+#translated-container{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -134,8 +137,15 @@ html, body {
     margin-bottom: 5rem;
 }
 
-#translateBtn{
+/* #translateBtn{
     margin-top: 2rem;
+} */
+
+#translate-btn-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    margin-top: 20px;  
 }
 
 /* Error Message */
@@ -155,14 +165,23 @@ html, body {
 
 #canvasWrapper {
     position: relative;
+    display: flex;
+    flex-direction: row;      
+    justify-content: flex-end; 
+    gap: 1rem;                
+    width: 100%;              
+    align-items: center;     
 }
 
-#canvasControls {
+/* #canvasWrapper canvas {
+    flex-grow: 1;
+} */
+
+/* #canvasControls {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: flex-end;
     width: 100%;
-}
+} */
 
 #canvasControls label {
     margin-bottom: 0.5rem;

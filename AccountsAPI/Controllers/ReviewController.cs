@@ -49,7 +49,7 @@ public class ReviewController: Controller {
         return Ok(new { cavemanReview });
     }
 
-    // [Authorize]
+    [Authorize]
     [HttpPost("PostReq")]
     public async Task<IActionResult> CreateReview([FromForm] ReviewRequest reviewReq) {
         var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
