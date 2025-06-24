@@ -9,7 +9,19 @@
             </a> 
         </div>
         <div class="nav-right" id="nav-links">
-            
+            <!-- Default login/signup links will be here, hidden if token is present -->
+            <a href="/Accounts/Login" class="login" id="loginLink">Login</a>
+            <a href="/Accounts/Signup" class="signup" id="signupLink">Sign Up</a>
+
+            <!-- Account dropdown, hidden if token is not present -->
+            <div class="dropdown">
+                <button class="account" onclick="toggleDropdown()">Account</button>
+                <div id="accountDropdown" class="dropdown-content">
+                    <a href="/HTML/accountpage.html">Profile</a>
+                    <a href="/Accounts/Settings">Settings</a>
+                    <a href="javascript:void(0)" id="logoutBtn">Logout</a>
+                </div>
+            </div>
         </div>
     </nav>
     

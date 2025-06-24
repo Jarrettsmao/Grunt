@@ -5,35 +5,55 @@ document.addEventListener("DOMContentLoaded", function () {
             // console.log("header content", data);
             document.getElementById('header-placeholder').innerHTML = data;
 
-            const navLinks = document.getElementById('nav-links');
             const token = localStorage.getItem("token");
 
-            if (navLinks){
-                if (token){
-                    navLinks.innerHTML = `
-                    <a href="/HTML/accountpage.html" class="account" onclick="showBorder(this)">Account</a>
-                    `;
-                    // console.log(token);
+            // Get references to elements
+            const navLinks = document.getElementById('nav-links');
+            const loginLink = document.getElementById('loginLink');
+            const accountDropdown = document.getElementById('accountDropdown');
+            const dropDown = document.getElementById('dropDown');
+        
+            if (navLinks) {
+                if (token) {
+                    // Show Account dropdown and hide Login/Signup
+                    loginLink.style.display = 'none';
+                    signupLink.style.display = 'none';
                 } else {
-                    navLinks.innerHTML = `
-                    <a href="/Accounts/Login" class="login" onclick="showBorder(this)">Login</a>
-                    <a href="/Accounts/Signup" class="signup" onclick="showBorder(this)">Sign Up</a>
-                    `;
+                    // Show Login/Signup links and hide Account dropdown
+                    loginLink.style.display = 'inline-block';
+                    signupLink.style.display = 'inline-block';
+                    dropDown.style.display = 'none';
                 }
             }
-
-            //Attach border effects to all buttons
-            // const buttons = document.querySelectorAll('button'); //targets all <button> elements
-            // buttons.forEach(button => {
-            //     button.addEventListener('click', function(){
-            //         showBorder(button);
-            //     });
-            // });
         })
         .catch(function(error){
             console.error("Failed to load header:", error);
         });
 });
+
+function toggleDropdown() {
+    const dropdown = document.getElementById("accountDropdown");
+    if (dropdown) {
+        console.log("dropdown");
+        dropdown.classList.toggle("show");
+    } else {
+        console.log("Dropdown not found");
+    }
+}
+
+window.onclick = function(event) {
+    if (!event.target.matches('.account')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        // var i;
+        for (var i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+    
+    }
+}
 
 // Function to show border when clicked
 function showBorder(button) {
