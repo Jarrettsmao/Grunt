@@ -14,12 +14,12 @@
             <a href="/Accounts/Signup" class="signup" id="signupLink">Sign Up</a>
 
             <!-- Account dropdown, hidden if token is not present -->
-            <div class="dropdown">
+            <div class="dropdown" id="dropDown">
                 <button class="account" onclick="toggleDropdown()">Account</button>
                 <div id="accountDropdown" class="dropdown-content">
-                    <a href="/HTML/accountpage.html">Profile</a>
-                    <a href="/Accounts/Settings">Settings</a>
-                    <a href="javascript:void(0)" id="logoutBtn">Logout</a>
+                    <a href="/Accounts/Home" id="profileLink">Profile</a>
+                    <!-- <a href="/Accounts/Settings">Settings</a> -->
+                    <a href="javascript:void(0)" id="logoutBtn" onclick="logout()">Logout</a>
                 </div>
             </div>
         </div>

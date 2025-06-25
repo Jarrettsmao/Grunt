@@ -2,6 +2,16 @@ document.addEventListener("DOMContentLoaded", function () {
     fetch('/HTML/Templates/header.html')
         .then(response => response.text())
         .then(data => {
+            document.getElementById(`header-placeholder`).innerHTML = data;
+
+            const username = localStorage.getItem("username");
+
+            const profileLink = document.getElementById("profileLink");
+
+            if (username){
+                profileLink.href = `/Accounts/${username}`;
+            }
+            
             // console.log("header content", data);
             document.getElementById('header-placeholder').innerHTML = data;
 
@@ -10,7 +20,6 @@ document.addEventListener("DOMContentLoaded", function () {
             // Get references to elements
             const navLinks = document.getElementById('nav-links');
             const loginLink = document.getElementById('loginLink');
-            const accountDropdown = document.getElementById('accountDropdown');
             const dropDown = document.getElementById('dropDown');
         
             if (navLinks) {
@@ -34,7 +43,6 @@ document.addEventListener("DOMContentLoaded", function () {
 function toggleDropdown() {
     const dropdown = document.getElementById("accountDropdown");
     if (dropdown) {
-        console.log("dropdown");
         dropdown.classList.toggle("show");
     } else {
         console.log("Dropdown not found");
@@ -64,4 +72,9 @@ function showBorder(button) {
     setTimeout(() => {
         button.style.border = "none";
     }, 2000); // Adjust the duration to how long you want the border to stay visible
+}
+
+function logout(){
+    localStorage.clear();
+    window.location.href = "/Accounts/Login";
 }
