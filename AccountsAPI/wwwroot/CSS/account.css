@@ -3,6 +3,11 @@ button:disabled {
     cursor: not-allowed;
 }
 
-#toggleReviewBtn{
-    display: block;
+#welcomeMessage{
+    text-align: center;
+}
+
+.username{
+    font-weight: bold;
+    color: #ffde59;
 }

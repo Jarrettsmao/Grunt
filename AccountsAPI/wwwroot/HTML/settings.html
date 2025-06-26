@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Settings Page</title>
+        <!-- <link rel="stylesheet" type="text/css" href="/CSS/account.css"> -->
+        <link rel="stylesheet" type="text/css" href="/CSS/style.css">
+        
+        <script src="/JS/settingsutils.js" defer></script>
+        <script src="/JS/loadheader.js" defer></script>
+        <script src="/JS/loadfooter.js" defer></script>
+        
+    </head>
+    <body>
+        <div id="header-placeholder"></div>
+
+        <div id="areacodeMessage"></div>
+        <form id="changeZipForm">
+            <label for="newZip">Change Area Code:</label>
+            <input type="text" id="newZip" name="newZip" required>
+    
+            <button type="submit" id="submitBtn">Change Zip Code</button>
+        </form>
+
+        <form id="changeNameForm">
+            <label for="newName">New Username:</label>
+            <input type="text" id="newName" name="newName" required>
+    
+            <label for="confirmName">Confirm New Username:</label>
+            <input type="text" id="confirmName" name="confirmName" required>
+
+            <p id="warningMessage" style="color: red; display: none;">Usernames do not match!</p>
+    
+            <button type="submit" id="submitBtn">Change Username</button>
+        </form>
+
+        <!-- <button id="deleteAccountBtn">Delete Account</button>  -->
+        <img id="deleteAccountBtn" src="/Pictures/crossbones-icons.png" alt="Delete Account" width="30" height="30" style="cursor: pointer;">
+
+        <div id="footer-placeholder"></div>
+    </body>
+</html> 

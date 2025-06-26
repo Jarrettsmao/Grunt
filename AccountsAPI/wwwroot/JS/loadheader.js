@@ -5,17 +5,14 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById(`header-placeholder`).innerHTML = data;
 
             const username = localStorage.getItem("username");
+            const token = localStorage.getItem("token");
 
             const profileLink = document.getElementById("profileLink");
-
+            const settingsLink = document.getElementById("settingsLink");
             if (username){
                 profileLink.href = `/Accounts/${username}`;
+                settingsLink.href = `/Accounts/${username}/Settings`;
             }
-            
-            // console.log("header content", data);
-            document.getElementById('header-placeholder').innerHTML = data;
-
-            const token = localStorage.getItem("token");
 
             // Get references to elements
             const navLinks = document.getElementById('nav-links');
@@ -59,7 +56,6 @@ window.onclick = function(event) {
             openDropdown.classList.remove('show');
           }
         }
-    
     }
 }
 

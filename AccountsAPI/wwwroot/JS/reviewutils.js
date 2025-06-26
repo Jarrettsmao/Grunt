@@ -199,7 +199,7 @@ function displayAllReviews(reviews, template){
 
     let startingIndex = reviews.length-2; //need to subtract an extra 1 so it is lower than the initial 3
     startingIndex = startingIndex - initialReviewCount;
-    console.log(startingIndex);
+    // console.log(startingIndex);
     for (let i = startingIndex; i >= 0; i--){
         const review = reviews[i];
         var reviewHTML = template;
@@ -229,14 +229,14 @@ function displayAllReviews(reviews, template){
 
 function toggleReviewVisibility(reviews, template, button, initialReviewCount){
     const container = document.getElementById("userReviews");
-    console.log("running");
+    // console.log("running");
 
     if (button.textContent === "Show More"){
         //change text to show less when expanding
         button.textContent = "Show Less";
         displayAllReviews(reviews, template);
     } else {
-        console.log("else");
+        // console.log("else");
         button.textContent = "Show More";
         //Hide extra reviews
         container.innerHTML = ""; //clear existing reviews
