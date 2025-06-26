@@ -1,3 +1,6 @@
+//Initial shown reviews
+const initialReviewCount = 2;
+
 document.addEventListener("DOMContentLoaded", function() {
     getUserReviews();
     // DeleteReview();
@@ -78,18 +81,16 @@ function displayReviews(reviews, type){
         return;
     }
 
-    //Initial shown reviews
-    const initialReviewCount = 3;
-
     //this is for list for restaurant reviews
     if (type === "Restaurant"){
         fetch('/HTML/Templates/restaurantreviewtemplate.html').then(function(response) {
             return response.text();
         }).then(function(template) {
             //Show the last 'initialReviewCount' reviews
-            // const reviewsToDisplay = reviews.slice(-initialReviewCount);
 
-            for (let i = 0; i < initialReviewCount; i++){
+            const startingIndex = reviews.length-1;
+
+            for (let i = startingIndex; i >= startingIndex-initialReviewCount; i--){
                 const review = reviews[i];
                 var reviewHTML = template;
                 var rawDate = new Date(review.createdDate);
@@ -139,7 +140,10 @@ function displayReviews(reviews, type){
             return response.text();
         }).then(function(template) {
             // Show the last 'initialReviewCount' reviews
-            for (let i = 0; i < initialReviewCount; i++){
+
+            const startingIndex = reviews.length-1;
+
+            for (let i = startingIndex; i >= startingIndex-initialReviewCount; i--){
                 const review = reviews[i];
                 var reviewHTML = template;
                 var rawDate = new Date(review.createdDate);
@@ -193,9 +197,10 @@ function displayReviews(reviews, type){
 function displayAllReviews(reviews, template){
     const container = document.getElementById("userReviews");
 
-    let initialReviewCount = 3;
-
-    for (let i = initialReviewCount; i < reviews.length; i++){
+    let startingIndex = reviews.length-2; //need to subtract an extra 1 so it is lower than the initial 3
+    startingIndex = startingIndex - initialReviewCount;
+    console.log(startingIndex);
+    for (let i = startingIndex; i >= 0; i--){
         const review = reviews[i];
         var reviewHTML = template;
         var rawDate = new Date(review.createdDate);
@@ -235,7 +240,8 @@ function toggleReviewVisibility(reviews, template, button, initialReviewCount){
         button.textContent = "Show More";
         //Hide extra reviews
         container.innerHTML = ""; //clear existing reviews
-        for (let i = 0; i < initialReviewCount; i++){
+        const startingIndex = reviews.length-1;
+        for (let i = startingIndex; i >= startingIndex-initialReviewCount; i--){
             const review = reviews[i];
             var reviewHTML = template;
             var rawDate = new Date(review.createdDate);

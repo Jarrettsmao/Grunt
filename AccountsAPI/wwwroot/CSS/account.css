@@ -2,4 +2,7 @@ button:disabled {
     background-color: #ccc;
     cursor: not-allowed;
 }
-  
+
+#toggleReviewBtn{
+    display: block;
+}
