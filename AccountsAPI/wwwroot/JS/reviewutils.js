@@ -133,7 +133,7 @@ function displayReviews(reviews, type){
     } else {
         //Show number of reviews
         const numReviewsContainer = document.getElementById('num-reviews');
-        numReviewsContainer.innerHTML = `Number of Reviews: ${reviews.length}`;
+        numReviewsContainer.innerHTML = `I wrote <span class="goldbold">${reviews.length}</span> reviews`;
 
         //this is for list of user reviews
         fetch('/HTML/Templates/accountreviewtemplate.html').then(function(response) {

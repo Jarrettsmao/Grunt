@@ -7,7 +7,38 @@ button:disabled {
     text-align: center;
 }
 
-.username{
+.goldbold{
     font-weight: bold;
     color: #ffde59;
+}
+
+#num-reviews{
+    font-size: 2rem;;
+}
+
+img {
+    padding: 0.5rem;
+}
+
+/* containers */
+#num-reviews-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#num-reviews-background{
+    display: flex;
+    background-color: #924a1c;
+    gap: 1rem;
+}
+
+#toggleBtnContainer {
+    display: flex;
+    align-items: center;         
+    justify-content: center;     
+    width: 100%;                 
+    margin: 0 auto;              
+    padding-bottom: 3rem;
 }

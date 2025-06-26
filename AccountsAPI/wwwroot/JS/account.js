@@ -49,7 +49,7 @@ function DisplayWelcomeMessage() {
     const username = localStorage.getItem("username"); // Retrieve username
     if (username) {
         const welcomeMessage = document.getElementById("welcomeMessage");
-         welcomeMessage.innerHTML = `UGG! <span class="username">${username}</span> Here! Good!`; 
+         welcomeMessage.innerHTML = `UGG! <span class="goldbold">${username}</span> Here! Good!`; 
     } else {
         console.log("Username not found.");
     }

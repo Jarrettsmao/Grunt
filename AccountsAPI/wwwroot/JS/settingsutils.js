@@ -54,13 +54,6 @@ function DeleteAccount(){
     });
 }
 
-// function Logout(){
-//     document.getElementById("logoutBtn").addEventListener("click", async function(){
-//         localStorage.clear();
-//         window.location.href = "/Accounts/Login";
-//     });
-// }
-
 async function ChangeUsername(){
     const form = document.getElementById("changeNameForm");
 
