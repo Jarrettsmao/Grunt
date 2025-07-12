@@ -113,7 +113,12 @@ function displayReviews(reviews, type){
                     reviewHTML = reviewHTML.replace('<img src="{{reviewPhoto}}" alt="Review Photo"/>', ''); // Remove the img tag
                 }
 
-                container.innerHTML += reviewHTML;
+                //create new div element for each review
+                const reviewElement = document.createElement('div');
+                reviewElement.classList.add('review');
+                reviewElement.innerHTML = reviewHTML;
+
+                container.appendChild(reviewElement);
             }
 
             //Add the "See More" button if there ar more than 3 reviews
@@ -169,7 +174,12 @@ function displayReviews(reviews, type){
                     reviewHTML = reviewHTML.replace('<img src="{{reviewPhoto}}" alt="Review Photo"/>', ''); // Remove the img tag
                 }
 
-                container.innerHTML += reviewHTML;
+                //create new div element for each review
+                const reviewElement = document.createElement('div');
+                reviewElement.classList.add('review');
+                reviewElement.innerHTML = reviewHTML;
+
+                container.appendChild(reviewElement);
             }
 
             // Add the "See More" button if there are more than 3 reviews
@@ -223,7 +233,12 @@ function displayAllReviews(reviews, template){
             reviewHTML = reviewHTML.replace('<img src="{{reviewPhoto}}" alt="Review Photo"/>', ''); // Remove the img tag
         }
 
-        container.innerHTML += reviewHTML;
+        //create new div element for each review
+        const reviewElement = document.createElement('div');
+        reviewElement.classList.add('review');
+        reviewElement.innerHTML = reviewHTML;
+
+        container.appendChild(reviewElement);
     }
 }
 
@@ -264,7 +279,12 @@ function toggleReviewVisibility(reviews, template, button, initialReviewCount){
                 reviewHTML = reviewHTML.replace('<img src="{{reviewPhoto}}" alt="Review Photo"/>', ''); // Remove the img tag
             }
 
-            container.innerHTML += reviewHTML;
+            //create new div element for each review
+            const reviewElement = document.createElement('div');
+            reviewElement.classList.add('review');
+            reviewElement.innerHTML = reviewHTML;
+
+            container.appendChild(reviewElement);
         }
     }
 }
