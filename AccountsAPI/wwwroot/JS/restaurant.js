@@ -2,11 +2,11 @@ let restaurantName;
 let restaurantId;
 
 document.addEventListener("DOMContentLoaded", function() {
-    displayRestaurantName();
+    displayRestaurantInfo();
     setRedirectReviewButton();
 });
 
-function displayRestaurantName(){
+function displayRestaurantInfo(){
     const params = new URLSearchParams(window.location.search);
 
     if (params.has('name')){

@@ -183,11 +183,14 @@ async function CreateMarker(places){
         const placeId = place.id;
 
         const mapsUrl = new URL('/restaurants/page', window.location.origin);
-        mapsUrl.searchParams.set('id', placeId);
-        mapsUrl.searchParams.set('name', name);
 
         //Fetch rating from your API
         const {rating, numReviews} = await FetchRestaurantRating(placeId);
+
+        mapsUrl.searchParams.set('id', placeId);
+        mapsUrl.searchParams.set('name', name);
+        mapsUrl.searchParams.set('rating', rating);
+        mapsUrl.searchParams.set('numReviews', numReviews);
 
         marker.addListener("gmp-click", () => {
             infoWindow.setContent(`

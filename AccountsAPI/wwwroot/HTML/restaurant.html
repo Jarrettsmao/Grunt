@@ -11,14 +11,22 @@
         <script src="/JS/loadfooter.js" defer></script>
         
     </head>
-    <body>
+    <body class="restaurant-page">
         <div id="header-placeholder"></div>
 
         <h1 id="restaurantName">Restaurant Name</h1>
+        <div id="restaurantInfo">
+            <div class="review-rating">⭐ {{rating}}</div>
+            <div class="num-reviews">{{numReviews}}</div>
+        </div>
+        <button type="button" id="reviewBtn" class="submitBtn">Write a review</button>  
 
         <div class="reviews-section" id="userReviews"></div>
+        <div id="toggleBtnContainer">
+            <button id="toggleReviewBtn" class="submitBtn"></button>
+        </div>
 
-        <button type="button" id="reviewBtn">Write a review</button>     
+   
 
         <div id="footer-placeholder"></div>
     </body>

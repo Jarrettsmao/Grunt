@@ -35,15 +35,6 @@ img {
     gap: 1rem;
 }
 
-#toggleBtnContainer {
-    display: flex;
-    align-items: center;         
-    justify-content: center;     
-    width: 100%;                 
-    margin: 0 auto;              
-    padding-bottom: 3rem;
-}
-
 .reviews-section {
     margin-top: 10rem;
     display: flex;

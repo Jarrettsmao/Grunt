@@ -1,0 +1,37 @@
+.restaurant-page{
+    background-color: #c59258;
+}
+
+.reviews-section {
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    
+    /* align-items: center; */
+    justify-content: flex-start;
+    gap: 1rem;
+    width: 100%;
+    max-width: 25rem;
+    margin: 0 auto;                 
+}
+
+#restaurantName{
+    text-align: center;
+}
+
+#restaurantInfo {
+    display: flex;
+    gap: 3rem;
+    align-items: center;            /* Vertically centers the items */
+    justify-content: center;        /* Horizontally centers the items */
+    flex-wrap: nowrap;
+    font-size: 2rem;
+}
+
+#reviewBtn {
+    width: auto;               /* Make sure it's not 100% width */
+    padding: 0.5rem 1rem;      /* Add some padding for better look */
+    margin: 1rem auto;         /* Center the button horizontally */
+    display: block;            /* Ensure the button is block-level and centered */
+    margin-bottom: 2rem;
+}

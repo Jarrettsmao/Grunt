@@ -48,6 +48,8 @@ async function getUserReviews(){
     let url = new URL("https://localhost:8080/Reviews/GetReviews");
     const params = new URLSearchParams(window.location.search);
     const id = params.get("id");
+    const rating = params.get("rating");
+    const numReviews = params.get("numReviews");
     let type;
 
     if (id){
@@ -64,7 +66,7 @@ async function getUserReviews(){
 
         if (response.ok){
             const reviews = await response.json();
-            displayReviews(reviews, type);
+            displayReviews(reviews, type, rating, numReviews);
         } else {
             console.error("Failed to load reviews");
         }
@@ -73,7 +75,7 @@ async function getUserReviews(){
     }
 } 
 
-function displayReviews(reviews, type){
+function displayReviews(reviews, type, rating, numReviews){
     const container = document.getElementById("userReviews");
 
     if (reviews.length === 0){
@@ -86,8 +88,20 @@ function displayReviews(reviews, type){
         fetch('/HTML/Templates/restaurantreviewtemplate.html').then(function(response) {
             return response.text();
         }).then(function(template) {
-            //Show the last 'initialReviewCount' reviews
+                // Set the rating and numReviews in the page
+            if (rating) {
+                document.querySelector('.review-rating').textContent = `⭐ ${rating}`;
+            } else {
+                document.querySelector('.review-rating').textContent = '⭐ N/A';
+            }
 
+            if (numReviews) {
+                document.querySelector('.num-reviews').textContent = `${numReviews} reviews`;
+            } else {
+                document.querySelector('.num-reviews').textContent = '0 reviews';
+            }
+
+            //Show the last 'initialReviewCount' reviews
             const startingIndex = reviews.length-1;
 
             for (let i = startingIndex; i >= startingIndex-initialReviewCount; i--){
@@ -105,7 +119,6 @@ function displayReviews(reviews, type){
                 reviewHTML = reviewHTML.replace(`{{createdDate}}`, formattedDate);
                 reviewHTML = reviewHTML.replace(`{{authorName}}`, review.authorName);
                 
-
                 if (review.reviewPhoto){
                     reviewHTML = reviewHTML.replace(`{{reviewPhoto}}`, `data:image/jpeg;base64,${review.reviewPhoto}`);
                 } else {
@@ -115,7 +128,7 @@ function displayReviews(reviews, type){
 
                 //create new div element for each review
                 const reviewElement = document.createElement('div');
-                reviewElement.classList.add('review');
+                reviewElement.classList.add('reviewOuter');
                 reviewElement.innerHTML = reviewHTML;
 
                 container.appendChild(reviewElement);
@@ -176,7 +189,7 @@ function displayReviews(reviews, type){
 
                 //create new div element for each review
                 const reviewElement = document.createElement('div');
-                reviewElement.classList.add('review');
+                reviewElement.classList.add('reviewOuter');
                 reviewElement.innerHTML = reviewHTML;
 
                 container.appendChild(reviewElement);
