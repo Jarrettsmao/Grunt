@@ -41,7 +41,7 @@ function DeleteAccount(){
     document.getElementById("deleteAccountBtn").addEventListener("click", async function(){
         if (confirm("Are you sure you want to delete your account?")){
             try {
-                const response = await fetch("https://localhost:8080/Accounts/Delete", {
+                const response = await fetch("/Accounts/Delete", {
                     method: "DELETE",
                     headers: {
                         "Content-Type": "application/json",
@@ -53,7 +53,7 @@ function DeleteAccount(){
                 if (response.ok){
                     alert("Friend gone...");
                     localStorage.clear();
-                    window.location.href = "https://localhost:8080/Home";
+                    window.location.href = "/Home";
                 } else {
                     alert("Failed to delete account.");
                 }
@@ -80,7 +80,7 @@ async function ChangeUsername(){
                 };
                 
                 try {
-                    const response = await fetch("https://localhost:8080/Accounts/Edit/Username", {
+                    const response = await fetch("/Accounts/Edit/Username", {
                         method: "PUT",
                         headers: {
                             "Content-Type": "application/json",
@@ -126,7 +126,7 @@ async function ChangeAreaCode(){
                 };
                 
                 try {
-                    const response = await fetch("https://localhost:8080/Accounts/Edit/AreaCode", {
+                    const response = await fetch("/Accounts/Edit/AreaCode", {
                         method: "PUT",
                         headers: {
                             "Content-Type": "application/json",

@@ -84,7 +84,7 @@ async function TranslateReview(){
             };
 
             try {
-                const response = await fetch ("https://localhost:8080/Reviews/Cavemanify", {
+                const response = await fetch ("/Reviews/Cavemanify", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
@@ -179,7 +179,7 @@ async function SubmitReview(){
             formData.append("reviewPhoto", base64String);
  
             try {
-                const response = await fetch("https://localhost:8080/Reviews/PostReq", {
+                const response = await fetch("/Reviews/PostReq", {
                     method: "POST",
                     headers: {
                         // "Content-Type": "application/json",

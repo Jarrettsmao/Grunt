@@ -20,7 +20,7 @@ async function SubmitForm(){
             };
             
             try {
-                const response = await fetch("https://localhost:8080/Accounts/SignUpReq", {
+                const response = await fetch("/Accounts/SignUpReq", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"

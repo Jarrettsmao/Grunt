@@ -212,7 +212,7 @@ async function CreateMarker(places){
 
 async function FetchRestaurantRating(placeId){
     try {
-        const ratingUrl = new URL("https://localhost:8080/Reviews/GetRatingAndReviews", window.location.origin);
+        const ratingUrl = new URL("/Reviews/GetRatingAndReviews", window.location.origin);
         ratingUrl.searchParams.set('placeId', placeId);
         const response = await fetch(ratingUrl);
 

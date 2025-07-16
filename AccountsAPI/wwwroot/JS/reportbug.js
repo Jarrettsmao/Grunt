@@ -57,7 +57,7 @@ async function SubmitBugReport() {
             formData.append("report", bugDescription);
 
             try {
-                const response = await fetch("https://localhost:8080/Bugs/MakeReport", {
+                const response = await fetch("/Bugs/MakeReport", {
                     method: "POST",
                     headers: {
                         "Authorization": `Bearer ${token}` // Attach JWT token for authentication

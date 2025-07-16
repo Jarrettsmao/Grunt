@@ -18,7 +18,7 @@ async function DeleteReview(button){
                 //     // restaurantId: restaurantId
                 // };
 
-                const response = await fetch("https://localhost:8080/Reviews/Delete", {
+                const response = await fetch("/Reviews/Delete", {
                     method: "DELETE",
                     headers: {
                         "Content-Type": "application/json",
@@ -31,7 +31,7 @@ async function DeleteReview(button){
                     alert("Words gone...");
                     button.closest('.review').remove();
                     // localStorage.clear();
-                    // window.location.href = "https://localhost:8080/Home";
+                    // window.location.href = "/Home";
                 } else {
                     alert("Failed to delete review.");
                 }
@@ -45,7 +45,7 @@ async function DeleteReview(button){
 
 async function getUserReviews(){
    const token = localStorage.getItem("token");
-    let url = new URL("https://localhost:8080/Reviews/GetReviews");
+    let url = new URL("/Reviews/GetReviews");
     const params = new URLSearchParams(window.location.search);
     const id = params.get("id");
     const rating = params.get("rating");

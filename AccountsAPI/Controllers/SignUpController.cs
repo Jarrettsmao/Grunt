@@ -114,7 +114,7 @@ public class SignUpController : Controller
         // string hashedUserId = GenerateHashedId(user.Id);
 
         //redirect user to unique account page
-        string userRedirectUrl = $"https://localhost:8080/Accounts/{user.username}";
+        string userRedirectUrl = $"/Accounts/{user.username}";
 
         var token = _jwtService.GenerateToken(user);
         return Ok(new

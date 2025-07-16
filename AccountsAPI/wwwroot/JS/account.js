@@ -25,7 +25,7 @@ async function CheckToken(){
     }
 
     try {
-        const response = await fetch(`https://localhost:8080/Accounts/ValidateToken`, {
+        const response = await fetch(`/Accounts/ValidateToken`, {
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${token}`

@@ -10,7 +10,7 @@ async function loginSubmit(event){
         password: document.getElementById("password").value,
     }
 
-    const response = await fetch("https://localhost:8080/Accounts/LoginReq", {
+    const response = await fetch("/Accounts/LoginReq", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
