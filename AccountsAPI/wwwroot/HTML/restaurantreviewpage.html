@@ -20,7 +20,7 @@
     <script src="/JS/loadfooter.js" defer></script>
 
 </head>
-<body id="restaurantReviewPage">
+<body id="restaurant-review-page">
     <div id="header-placeholder"></div>
     <div id="name-container">
         <h1 id="restaurantName"></h1>
@@ -29,19 +29,19 @@
         <div class="input-drawing-container">
             <div id="input-container">
                 <form id="reviewForm">
-                    <div class="review-container" id="reviewContainer">
-                        <textarea class="invisTextArea" id="translateReviewText" name="translateReviewText" placeholder="Tell yum..."></textarea>
+                    <div class="review-container" id="review-container">
+                        <textarea class="invis-text-area" id="translateReviewText" name="translateReviewText" placeholder="Tell yum..."></textarea>
                     </div>
 
                     <div id="translate-btn-container">
-                        <button type="submit" id="translateBtn" class="submitBtn">Translate</button>
+                        <button type="submit" id="translate-btn" class="submit-btn">Translate</button>
                     </div>
                 </form>
             </div>
 
             <!-- Drawing Canvas Section (Using p5.js) -->
             <div id="drawing-container">
-                <div id="canvasWrapper">
+                <div id="canvas-wrapper">
                     <!-- <canvas id="drawingCanvas"></canvas> -->
                 </div>
             </div>
@@ -49,10 +49,10 @@
 
         <!-- Translated Review Section -->
         <div class="translated-container">
-            <form id="translatedForm">
-                <div class="review-container" id="translatedContainer">
+            <form id="translated-form">
+                <div class="review-container" id="translated-rev-container">
                     <div class="rating-row">
-                        <div class="star-rating" id="starRating">
+                        <div class="star-rating" id="star-rating">
                             <span class="fa fa-star default-star" data-value="1"></span>
                             <span class="fa fa-star" data-value="2"></span>
                             <span class="fa fa-star" data-value="3"></span>
@@ -61,10 +61,10 @@
                         </div>
                         <div class="rating-label">How good? Show fingers!</div>
                     </div>
-                    <textarea class="invisTextArea" id="reviewText" name="reviewText" placeholder="Caveman-style review..." disabled></textarea>
+                    <textarea class="invis-text-area" id="reviewText" name="reviewText" placeholder="Caveman-style review..." disabled></textarea>
                 </div>
 
-                <button type="submit" id="reviewBtn" class="submitBtn" disabled>Submit</button>
+                <button type="submit" id="review-btn" class="submit-btn" disabled>Submit</button>
                 <div id="ratingError" class="error-message">
                     Please select a star rating before submitting your review.
                 </div>

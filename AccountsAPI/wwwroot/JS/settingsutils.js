@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
 function DisplayUsername(){
     const username = localStorage.getItem("username");
     if (username){
-        const usernameCont = document.getElementById("usernameCont");
+        const usernameCont = document.getElementById("username-container");
         usernameCont.textContent = `${username}`;
     } else {
         console.log("No username found.");
@@ -29,7 +29,7 @@ function DisplayUsername(){
 function DisplayAreaCode(){
     const areacode = localStorage.getItem("areacode");
     if (areacode) {
-        const areacodeMessage = document.getElementById("areacodeMessage");
+        const areacodeMessage = document.getElementById("areacode-message");
         areacodeMessage.textContent = `${areacode}`; 
     } else {
         console.log("No area code found.");
@@ -38,7 +38,7 @@ function DisplayAreaCode(){
 
 //function to handle account deletion
 function DeleteAccount(){
-    document.getElementById("deleteAccountBtn").addEventListener("click", async function(){
+    document.getElementById("deleteAccount-btn").addEventListener("click", async function(){
         if (confirm("Are you sure you want to delete your account?")){
             try {
                 const response = await fetch("/Accounts/Delete", {
@@ -66,7 +66,7 @@ function DeleteAccount(){
 }
 
 async function ChangeUsername(){
-    const form = document.getElementById("changeNameForm");
+    const form = document.getElementById("changeName-form");
 
     if (form){
         form.addEventListener("submit", async function (event) {
@@ -112,7 +112,7 @@ async function ChangeUsername(){
 }
 
 async function ChangeAreaCode(){
-    const form = document.getElementById("changeZipForm");
+    const form = document.getElementById("newzip-form");
 
     if (form){
         form.addEventListener("submit", async function (event) {
@@ -161,6 +161,7 @@ function ValidateMatch(){
     const newNameInput = document.getElementById("newName");
     const confirmNameInput = document.getElementById("confirmName");
     const warningMessage = document.getElementById("warningMessage");
+    const newNameBtn = document.getElementById("newname-btn");
 
     if (newNameInput.value !== confirmNameInput.value){
         warningMessage.style.display = "block";

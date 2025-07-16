@@ -1,5 +1,6 @@
 //Initial shown reviews
 const initialReviewCount = 2;
+const baseUrl = "https://localhost:8080";
 
 document.addEventListener("DOMContentLoaded", function() {
     getUserReviews();
@@ -30,8 +31,6 @@ async function DeleteReview(button){
                 if (response.ok){
                     alert("Words gone...");
                     button.closest('.review').remove();
-                    // localStorage.clear();
-                    // window.location.href = "/Home";
                 } else {
                     alert("Failed to delete review.");
                 }
@@ -45,7 +44,7 @@ async function DeleteReview(button){
 
 async function getUserReviews(){
    const token = localStorage.getItem("token");
-    let url = new URL("/Reviews/GetReviews");
+    let url = new URL("/Reviews/GetReviews", baseUrl);
     const params = new URLSearchParams(window.location.search);
     const id = params.get("id");
     const rating = params.get("rating");
@@ -128,7 +127,7 @@ function displayReviews(reviews, type, rating, numReviews){
 
                 //create new div element for each review
                 const reviewElement = document.createElement('div');
-                reviewElement.classList.add('reviewOuter');
+                reviewElement.classList.add('review-outer');
                 reviewElement.innerHTML = reviewHTML;
 
                 container.appendChild(reviewElement);
@@ -189,7 +188,7 @@ function displayReviews(reviews, type, rating, numReviews){
 
                 //create new div element for each review
                 const reviewElement = document.createElement('div');
-                reviewElement.classList.add('reviewOuter');
+                reviewElement.classList.add('review-outer');
                 reviewElement.innerHTML = reviewHTML;
 
                 container.appendChild(reviewElement);
@@ -248,7 +247,7 @@ function displayAllReviews(reviews, template){
 
         //create new div element for each review
         const reviewElement = document.createElement('div');
-        reviewElement.classList.add('reviewOuter');
+        reviewElement.classList.add('review-outer');
         reviewElement.innerHTML = reviewHTML;
 
         container.appendChild(reviewElement);
@@ -294,7 +293,7 @@ function toggleReviewVisibility(reviews, template, button, initialReviewCount){
 
             //create new div element for each review
             const reviewElement = document.createElement('div');
-            reviewElement.classList.add('reviewOuter');
+            reviewElement.classList.add('review-outer');
             reviewElement.innerHTML = reviewHTML;
 
             container.appendChild(reviewElement);

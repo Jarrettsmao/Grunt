@@ -3,12 +3,12 @@ let canvas;
 function setup() {
     let canvasSize = 500;
     canvas = createCanvas(canvasSize, canvasSize); 
-    canvas.parent('canvasWrapper');   
+    canvas.parent('canvas-wrapper');   
     background(255);
 
     // Create the Clear Drawing button inside the canvas
     clearButton = createButton('Clear Drawing');
-    clearButton.parent('canvasWrapper');  // Position button inside canvas area
+    clearButton.parent('canvas-wrapper');  // Position button inside canvas area
     clearButton.mousePressed(() => {
         clear();  // Clears the canvas
         background(255); // Set background to white

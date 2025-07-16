@@ -1,4 +1,4 @@
-const stars = document.querySelectorAll('#starRating .fa-star');
+const stars = document.querySelectorAll('#star-rating .fa-star');
 
 // adds transitiondelay from left to right of stars
 // stars.forEach(function(star, index){
@@ -59,7 +59,7 @@ function DisplayRestaurantName() {
 
 async function TranslateReview(){
     const form = document.getElementById("reviewForm");
-    const translatedForm = document.getElementById("translatedForm");
+    const translatedForm = document.getElementById("translated-form");
     const token = localStorage.getItem("token");
 
     if (form){
@@ -68,7 +68,7 @@ async function TranslateReview(){
             console.log("translate");
 
             event.preventDefault();
-            const translateButton = document.getElementById("translateBtn");
+            const translateButton = document.getElementById("translate-btn");
 
             if (!token){
                 alert("Please login before submitting a review.");
@@ -110,7 +110,7 @@ async function TranslateReview(){
 }
 
 async function SubmitReview(){
-    const form = document.getElementById("translatedForm");
+    const form = document.getElementById("translated-form");
     const token = localStorage.getItem("token");
 
     const params = new URLSearchParams(window.location.search);
@@ -122,7 +122,7 @@ async function SubmitReview(){
         form.addEventListener("submit", async function (event){
             event.preventDefault();
             
-            const submitButton = document.getElementById("reviewBtn");
+            const submitButton = document.getElementById("review-btn");
 
             if (selectedRating === 0){
                 const ratingError = document.getElementById("ratingError");

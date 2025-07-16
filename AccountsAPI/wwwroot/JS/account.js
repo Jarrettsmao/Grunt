@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 async function CheckToken(){
     const token = localStorage.getItem("token");
-    console.log(token);
+    // console.log(token);
 
     if (!token) {
         // alert("No token found, please log in.");

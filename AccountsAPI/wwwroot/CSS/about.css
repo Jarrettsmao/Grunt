@@ -1,3 +1,7 @@
+p{
+    font-weight: bold;
+}
+
 #caveman {
     max-width: 100%;  /* Ensure the image doesn't stretch beyond its container */
     height: auto;  /* Maintain aspect ratio */
@@ -19,12 +23,3 @@
     margin-right: 15rem;
     color:#a5521c;
 }
-
-p{
-    font-weight: bold;
-}
-
-/* br {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-} */

@@ -19,7 +19,7 @@
     border: none;
 }
 
-.reviewOuter{
+.review-outer{
     border: 0.25rem solid rgba(0, 0, 0, 0.4);
     border-radius: 1rem;
     padding: 1rem;
@@ -44,10 +44,10 @@
     /* background: none;               
     border: none;                    */
 
-    font-size: 1.2rem;              /* Set the icon size */
-    cursor: pointer;               /* Show pointer cursor on hover */
-    padding: 0;                     /* Remove any padding */
-    margin-left: 1rem;              /* Optional: Space between restaurant name and button */
+    font-size: 1.2rem;             
+    cursor: pointer;              
+    padding: 0;                    
+    margin-left: 1rem;              
     align-items: right;
 }
 
@@ -55,7 +55,7 @@
     margin-bottom: 1rem;
 }
 
-#toggleBtnContainer {
+#toggle-btn-container {
     display: flex;
     align-items: center;         
     justify-content: center;     

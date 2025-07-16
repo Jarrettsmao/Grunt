@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("loginForm").addEventListener("submit", loginSubmit);
+    document.getElementById("login-form").addEventListener("submit", loginSubmit);
 });
 
 async function loginSubmit(event){

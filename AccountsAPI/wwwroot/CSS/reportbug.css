@@ -21,7 +21,7 @@
     border-radius: 4px;
 }
 
-#bugForm{
+#bug-form{
     text-align: center;
 }
 
@@ -30,7 +30,7 @@
     width: auto;
 }
 
-#bugPhoto{
+#bug-photo{
     position: absolute; /* Position relative to the container */
     /* bottom: 10px; Align to the bottom of the textarea */
     /* right: 10px; Align to the right of the textarea */

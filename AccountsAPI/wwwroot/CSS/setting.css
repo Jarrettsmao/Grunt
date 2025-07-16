@@ -1,4 +1,9 @@
-#areacodeMessage{
+#username-container {
+    display: flex;
+    justify-content: center;
+}
+
+#areacode-message{
     justify-content: center;
     align-items: center;
     display: flex;
@@ -8,7 +13,8 @@
     color: #a5521c;
 }
 
-#newZipForm{
+/* zipcode forms and labels */
+#newzip-form{
     /* padding-top: 5rem; */
     color: #ffde59;
     display: flex;
@@ -19,26 +25,22 @@
     flex-direction: column;
 }
 
-#usernameCont {
-    display: flex;
-    justify-content: center;
-}
-
-#newZipBtn{
+#newzip-btn{
     font-size: 1.3rem;
     margin-bottom: 2rem;
 }
 
-#newZipLabel{
+#newzip-label{
     margin-bottom: 0.5rem;
     font-size: 1.8rem;
 }
 
-#newZip, .newNameInput{
+#newZip, .newname-input{
     margin-bottom: 1rem;
 }
 
-#changeNameForm{
+/* change name forms labels buttons */
+#changeName-form{
     /* padding-top: 5rem; */
     color: #ffde59;
     display: flex;
@@ -49,7 +51,7 @@
     flex-direction: column;
 }
 
-.newNameLabel{
+.newName-label{
     margin-bottom: 0.5rem;
     font-size: 1.8rem;
 }
@@ -58,11 +60,11 @@
     margin-bottom: 2rem;
 }
 
-#newNameBtn{
+#newname-btn{
     font-size: 1.3rem;
 }
 
-#deleteAccountBtn{
+#deleteAccount-btn{
     margin-top: 4rem;
     color: yellow;
     background-color: black;
