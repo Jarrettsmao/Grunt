@@ -1,0 +1,84 @@
+#areacodeMessage{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    /* margin-top: 3rem; */
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #a5521c;
+}
+
+#newZipForm{
+    /* padding-top: 5rem; */
+    color: #ffde59;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* min-height: 100vh; */
+    /* margin-bottom: 1rem; */
+    flex-direction: column;
+}
+
+#usernameCont {
+    display: flex;
+    justify-content: center;
+}
+
+#newZipBtn{
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+#newZipLabel{
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+}
+
+#newZip, .newNameInput{
+    margin-bottom: 1rem;
+}
+
+#changeNameForm{
+    /* padding-top: 5rem; */
+    color: #ffde59;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* min-height: 100vh; */
+    /* margin-bottom: 1rem; */
+    flex-direction: column;
+}
+
+.newNameLabel{
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+}
+
+#newName{
+    margin-bottom: 2rem;
+}
+
+#newNameBtn{
+    font-size: 1.3rem;
+}
+
+#deleteAccountBtn{
+    margin-top: 4rem;
+    color: yellow;
+    background-color: black;
+    max-width: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.5rem;
+    padding: 0.7rem;
+}
+
+input {
+    background-color: #a5521c;
+    width: 15rem;
+    height: 1.5rem;
+}

@@ -30,10 +30,10 @@ public class ReviewController: Controller {
     }
 
     // [Authorize]
-    [HttpGet]
-    public async Task<List<ReviewInfo>> Get(){
-        return await _reviewService.GetAsync();
-    }
+    // [HttpGet]
+    // public async Task<List<ReviewInfo>> Get(){
+    //     return await _reviewService.GetAsync();
+    // }
 
     [Authorize]
     [HttpPost("Cavemanify")]

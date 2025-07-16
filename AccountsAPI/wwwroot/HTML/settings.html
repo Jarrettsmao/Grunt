@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Settings Page</title>
-        <!-- <link rel="stylesheet" type="text/css" href="/CSS/account.css"> -->
+        <link rel="stylesheet" type="text/css" href="/CSS/setting.css">
         <link rel="stylesheet" type="text/css" href="/CSS/style.css">
         
         <script src="/JS/settingsutils.js" defer></script>
@@ -14,28 +14,30 @@
     <body>
         <div id="header-placeholder"></div>
 
+        <h1 id="usernameCont"></h1>
+
         <div id="areacodeMessage"></div>
-        <form id="changeZipForm">
-            <label for="newZip">Change Area Code:</label>
+        <form id="newZipForm">
+            <label for="newZip" id="newZipLabel">Change Area Code:</label>
             <input type="text" id="newZip" name="newZip" required>
     
-            <button type="submit" id="submitBtn">Change Zip Code</button>
+            <button type="submit" class="submitBtn" id="newZipBtn">Change Zip Code</button>
         </form>
 
         <form id="changeNameForm">
-            <label for="newName">New Username:</label>
-            <input type="text" id="newName" name="newName" required>
+            <label for="newName" class="newNameLabel">New Username:</label>
+            <input type="text" class="newNameInput" id="newName" name="newName" required>
     
-            <label for="confirmName">Confirm New Username:</label>
-            <input type="text" id="confirmName" name="confirmName" required>
+            <label for="confirmName" class="newNameLabel">Confirm New Username:</label>
+            <input type="text" class="newNameInput" id="confirmName" name="confirmName" required>
 
             <p id="warningMessage" style="color: red; display: none;">Usernames do not match!</p>
     
-            <button type="submit" id="submitBtn">Change Username</button>
+            <button type="submit" class="submitBtn" id="newNameBtn">Change Username</button>
         </form>
 
-        <!-- <button id="deleteAccountBtn">Delete Account</button>  -->
-        <img id="deleteAccountBtn" src="/Pictures/crossbones-icons.png" alt="Delete Account" width="30" height="30" style="cursor: pointer;">
+        <button id="deleteAccountBtn" class="submitBtn">Delete Account</button> 
+        <!-- <img id="deleteAccountBtn" src="/Pictures/crossbones-icons.png" alt="Delete Account" width="30" height="30" style="cursor: pointer;"> -->
 
         <div id="footer-placeholder"></div>
     </body>

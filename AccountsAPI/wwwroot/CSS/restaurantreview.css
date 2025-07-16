@@ -1,4 +1,8 @@
 /* General Styling */
+#restaurantReviewPage{
+    background-color: #c59258;
+}
+
 html, body {
     height: 100%;
     margin: 0;

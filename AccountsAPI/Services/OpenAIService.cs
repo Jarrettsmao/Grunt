@@ -44,15 +44,26 @@ public class OpenAIService{
 
         client.DefaultRequestHeaders.Add("Authorization", $"Bearer {_openAiApiKey}");
 
-        var response = await client.PostAsync("https://api.openai.com/v1/completions", content);
+        try
+        {
+            var response = await client.PostAsync("https://api.openai.com/v1/completions", content);
 
-        if (!response.IsSuccessStatusCode){
-            throw new Exception("Failed to communicate with OpenAI API");
+            if (!response.IsSuccessStatusCode)
+            {
+                throw new Exception("Failed to communicate with OpenAI API");
+            }
+
+            var responseContent = await response.Content.ReadAsStringAsync();
+            var openAiResponse = JsonConvert.DeserializeObject<OpenAiResponse>(responseContent);
+
+            return openAiResponse?.Choices[0]?.Text.Trim() ?? "N/A";
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"An error occurred: {ex.Message}");
+            throw;
         }
 
-        var responseContent = await response.Content.ReadAsStringAsync();
-        var openAiResponse = JsonConvert.DeserializeObject<OpenAiResponse>(responseContent);
 
-        return openAiResponse?.Choices[0]?.Text.Trim()??"N/A";
     }
 }

@@ -30,10 +30,10 @@ public class RestaurantController: Controller {
     }
 
     // [Authorize]
-    [HttpGet]
-    public async Task<List<RestaurantInfo>> Get(){
-        return await _restaurantService.GetAsync();
-    }
+    // [HttpGet]
+    // public async Task<List<RestaurantInfo>> Get(){
+    //     return await _restaurantService.GetAsync();
+    // }
 
     //change authorize
     // [Authorize]

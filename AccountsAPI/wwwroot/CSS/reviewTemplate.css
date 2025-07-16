@@ -20,9 +20,10 @@
 }
 
 .reviewOuter{
-    border: 0.25rem solid rgba(0, 0, 0, 0.3);
+    border: 0.25rem solid rgba(0, 0, 0, 0.4);
     border-radius: 1rem;
     padding: 1rem;
+    background-color: rgb(138, 138, 138);
 }
 
 .author-name{
@@ -35,7 +36,8 @@
     font-weight: bold;
     display: flex;
     justify-content: space-between; 
-    width: 100%;               
+    width: 100%; 
+    color: rgb(223, 223, 223);              
 }
 
 .delete-btn {

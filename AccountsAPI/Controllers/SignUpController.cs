@@ -156,6 +156,7 @@ public class SignUpController : Controller
         "wwwroot", "HTML", "signup.html"), "text/html");
     }
 
+    // [Authorize]
     [HttpGet("{username}/Settings")]
     public IActionResult GetSettingsPage(string username)
     {

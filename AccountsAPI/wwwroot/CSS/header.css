@@ -104,9 +104,9 @@ html, body {
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {
+/* .dropdown-content a:hover {
   background-color: #ddd;
-}
+} */
 
 /* Show the dropdown menu when toggled */
 .show {

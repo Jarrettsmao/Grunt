@@ -248,7 +248,7 @@ function displayAllReviews(reviews, template){
 
         //create new div element for each review
         const reviewElement = document.createElement('div');
-        reviewElement.classList.add('review');
+        reviewElement.classList.add('reviewOuter');
         reviewElement.innerHTML = reviewHTML;
 
         container.appendChild(reviewElement);
@@ -294,7 +294,7 @@ function toggleReviewVisibility(reviews, template, button, initialReviewCount){
 
             //create new div element for each review
             const reviewElement = document.createElement('div');
-            reviewElement.classList.add('review');
+            reviewElement.classList.add('reviewOuter');
             reviewElement.innerHTML = reviewHTML;
 
             container.appendChild(reviewElement);

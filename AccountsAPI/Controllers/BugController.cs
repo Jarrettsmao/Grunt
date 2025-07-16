@@ -19,11 +19,11 @@ public class BugController : Controller
         _bugService = bugService;
     }
 
-    [HttpGet]
-    public async Task<List<BugReport>> GetAllBugReportsAsync()
-    {
-        return await _bugService.GetAsync();
-    }
+    // [HttpGet]
+    // public async Task<List<BugReport>> GetAllBugReportsAsync()
+    // {
+    //     return await _bugService.GetAsync();
+    // }
 
     [Authorize]
     [HttpPost("MakeReport")]

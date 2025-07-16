@@ -20,6 +20,10 @@
     color:#a5521c;
 }
 
+p{
+    font-weight: bold;
+}
+
 /* br {
     margin-top: 2rem;
     margin-bottom: 2rem;

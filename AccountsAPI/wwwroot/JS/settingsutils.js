@@ -1,6 +1,7 @@
 let userId;
 
 document.addEventListener("DOMContentLoaded", function() {
+    DisplayUsername();
     DisplayAreaCode();
     ChangeAreaCode();
     DeleteAccount();
@@ -14,6 +15,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
     userId = localStorage.getItem("userId");
 });
+
+function DisplayUsername(){
+    const username = localStorage.getItem("username");
+    if (username){
+        const usernameCont = document.getElementById("usernameCont");
+        usernameCont.textContent = `${username}`;
+    } else {
+        console.log("No username found.");
+    }
+}
 
 function DisplayAreaCode(){
     const areacode = localStorage.getItem("areacode");
@@ -153,9 +164,9 @@ function ValidateMatch(){
 
     if (newNameInput.value !== confirmNameInput.value){
         warningMessage.style.display = "block";
-        submitBtn.disabled = true;
+        newNameBtn.disabled = true;
     } else {
         warningMessage.style.display = "none";
-        submitBtn.disabled = false;
+        newNameBtn.disabled = false;
     }
 }
