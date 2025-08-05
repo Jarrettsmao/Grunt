@@ -9,7 +9,7 @@ async function SubmitForm(){
         form.addEventListener("submit", async function (event){
             event.preventDefault();
 
-            const submitButton = document.getElementById("signup-btn");
+            const submitButton = document.getElementById("submit-btn");
             submitButton.disabled = true;
 
             const formData = {
