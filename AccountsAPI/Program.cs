@@ -13,8 +13,8 @@ Console.WriteLine($"Jwt:SecretKey is {(string.IsNullOrEmpty(jwtKey) ? "NOT set" 
 var openAiKey = builder.Configuration["OpenAI:SecretKey"];
 Console.WriteLine($"OpenAI:SecretKey is {(string.IsNullOrEmpty(jwtKey) ? "NOT set" : "set")}");
 
-Console.WriteLine($"Jwt:SecretKey is {jwtKey}");
-Console.WriteLine($"OpenAI:SecretKey is {openAiKey}");
+// Console.WriteLine($"Jwt:SecretKey is {jwtKey}");
+// Console.WriteLine($"OpenAI:SecretKey is {openAiKey}");
 
 //Add MongoDB settings, services, and authentication
 builder.Services.Configure<MongoDBSettings>(builder.Configuration.GetSection("MongoDB"));
