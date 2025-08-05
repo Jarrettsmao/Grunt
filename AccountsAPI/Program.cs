@@ -69,12 +69,12 @@ builder.Services.AddSingleton<OpenAIService>();
 builder.Services.AddAuthorization();
 
 //bind to Render.com's dynamic port
-// var port = Environment.GetEnvironmentVariable("PORT") ?? "10000";
-// builder.WebHost.UseUrls($"http://0.0.0.0:{port}");
+var port = Environment.GetEnvironmentVariable("PORT") ?? "10000";
+builder.WebHost.UseUrls($"http://0.0.0.0:{port}");
 
 var app = builder.Build();
 
-app.UseHttpsRedirection();
+// app.UseHttpsRedirection();
 
 // Enable CORS globally
 app.UseCors("AllowAll");
