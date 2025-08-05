@@ -6,7 +6,7 @@ WORKDIR /app
 COPY . ./
 
 # Restore and publish
-RUN dotnet publish -c Release -o /out
+RUN dotnet publish AccountsAPI/AccountsAPI.csproj -c Release -o /out
 
 # Stage 2: Runtime
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
