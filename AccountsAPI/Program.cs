@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 var builder = WebApplication.CreateBuilder(args);
 
+var jwtKey = builder.Configuration["Jwt:SecretKey"];
+Console.WriteLine($"Jwt:SecretKey is {(string.IsNullOrEmpty(jwtKey) ? "NOT set" : "set")}");
+
 //Add MongoDB settings, services, and authentication
 builder.Services.Configure<MongoDBSettings>(builder.Configuration.GetSection("MongoDB"));
 builder.Services.AddSingleton<MongoDBService>();
