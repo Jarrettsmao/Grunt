@@ -50,6 +50,8 @@ public class OpenAIService{
 
             if (!response.IsSuccessStatusCode)
             {
+                var error = await response.Content.ReadAsStringAsync();
+                Console.WriteLine($"OpenAI API Error: {response.StatusCode} - {error}");
                 throw new Exception("Failed to communicate with OpenAI API");
             }
 

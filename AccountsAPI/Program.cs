@@ -20,7 +20,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll", policy =>
         policy.WithOrigins(
-            "https://localhost:8080",
+            "http://localhost:8080",
             "https://grunt.onrender.com"
         )  // Allow all origins (for development purposes, you can restrict later)
               .AllowAnyMethod()
@@ -69,18 +69,18 @@ builder.Services.AddSingleton<OpenAIService>();
 builder.Services.AddAuthorization();
 
 //bind to Render.com's dynamic port
-var port = Environment.GetEnvironmentVariable("PORT") ?? "10000";
-builder.WebHost.UseUrls($"http://0.0.0.0:{port}");
+// var port = Environment.GetEnvironmentVariable("PORT") ?? "10000";
+// builder.WebHost.UseUrls($"http://0.0.0.0:{port}");
 
 var app = builder.Build();
 
-// app.UseHttpsRedirection();
-
-app.UseAuthentication();
-app.UseAuthorization();
+app.UseHttpsRedirection();
 
 // Enable CORS globally
 app.UseCors("AllowAll");
+
+app.UseAuthentication();
+app.UseAuthorization();
 
 //Enable static file serving
 app.UseStaticFiles();

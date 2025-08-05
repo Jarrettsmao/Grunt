@@ -59,16 +59,16 @@ function DisplayRestaurantName() {
 
 async function TranslateReview(){
     const form = document.getElementById("reviewForm");
-    const translatedForm = document.getElementById("translated-form");
-    const token = localStorage.getItem("token");
 
     if (form){
         form.addEventListener("submit", async function (event){
-
-            console.log("translate");
+            // console.log("translate");
 
             event.preventDefault();
             const translateButton = document.getElementById("translate-btn");
+            const translatedForm = document.getElementById("translated-form");
+            const token = localStorage.getItem("token");
+            const reviewBtn = document.getElementById("translate-btn");
 
             if (!token){
                 alert("Please login before submitting a review.");
@@ -95,7 +95,7 @@ async function TranslateReview(){
 
                 const result = await response.json();
                 reviewText.disabled = false; // Enable textarea
-                reviewBtn.disabled = false;          // Enable submit button
+                reviewBtn.disabled = false; // Enable submit button
 
                 if (response.ok) {
                     document.getElementById('reviewText').value = result.cavemanReview;
