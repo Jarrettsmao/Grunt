@@ -68,7 +68,7 @@ async function TranslateReview(){
             const translateButton = document.getElementById("translate-btn");
             const translatedForm = document.getElementById("translated-form");
             const token = localStorage.getItem("token");
-            const reviewBtn = document.getElementById("translate-btn");
+            const reviewBtn = document.getElementById("review-btn");
 
             if (!token){
                 alert("Please login before submitting a review.");
