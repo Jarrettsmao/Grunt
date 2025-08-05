@@ -173,9 +173,9 @@ async function SubmitReview(){
             // }
 
             // Get canvas drawing as base64 and append it to FormData
-            const canvasData = canvas.elt.toDataURL('image/png'); // Use canvas.elt to access the raw canvas element
-            const base64String = await ConvertToBase64(canvasData);
-            // console.log()
+            // const canvasData = canvas.elt.toDataURL('image/png'); // Use canvas.elt to access the raw canvas element
+            // const base64String = await ConvertToBase64(canvasData);
+            const base64String = await ResizeCanvasToBase64(canvas.elt, 350, 350);
             formData.append("reviewPhoto", base64String);
  
             try {
@@ -202,13 +202,22 @@ async function SubmitReview(){
     }
 }
 
-function ConvertToBase64(file){
-    return new Promise((resolve, reject) => {
-        // Split the data and remove the 'data:image/png;base64,' part
-        const base64 = file.split(',')[1]; // Get the part after the comma
-        resolve(base64);
-    });
+async function ResizeCanvasToBase64(originalCanvas, targetWidth, targetHeight) {
+    // Create an off-screen canvas
+    const resizedCanvas = document.createElement("canvas");
+    resizedCanvas.width = targetWidth;
+    resizedCanvas.height = targetHeight;
+
+    const ctx = resizedCanvas.getContext("2d");
+
+    // Draw the original canvas content onto the new canvas
+    ctx.drawImage(originalCanvas, 0, 0, targetWidth, targetHeight);
+
+    // Get the base64 string from the resized canvas
+    const resizedDataURL = resizedCanvas.toDataURL("image/png");
+    return resizedDataURL.split(',')[1]; // remove the data:image/png;base64, part
 }
+
 
 function HighlightStars(rating, isSelect) {
     stars.forEach(function(star) {
