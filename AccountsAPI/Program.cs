@@ -19,7 +19,10 @@ builder.Services.AddSingleton<BugService>();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll", policy =>
-        policy.WithOrigins("https://localhost:8080")  // Allow all origins (for development purposes, you can restrict later)
+        policy.WithOrigins(
+            "https://localhost:8080",
+            "https://grunt.onrender.com"
+        )  // Allow all origins (for development purposes, you can restrict later)
               .AllowAnyMethod()
               .AllowAnyHeader()
               .AllowCredentials());

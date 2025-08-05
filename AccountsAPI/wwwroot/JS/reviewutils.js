@@ -1,6 +1,6 @@
 //Initial shown reviews
 const initialReviewCount = 2;
-const baseUrl = "https://localhost:8080";
+const baseUrl = "https://grunt.onrender.com";
 
 document.addEventListener("DOMContentLoaded", function() {
     getUserReviews();
